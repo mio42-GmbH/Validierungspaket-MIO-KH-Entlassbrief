@@ -1,0 +1,25 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Glucose_Concentration_German" />
+  <version value="1.2.1" />
+  <name value="KBV_CS_Base_Glucose_Concentration_German" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <contact>
+    <telecom>
+      <system value="url" />
+      <value value="http://www.kbv.de" />
+    </telecom>
+  </contact>
+  <description value="Dieses Codesystem enthält alle notwendigen Codes zur Beschreibung der Glukose-Konzentration" />
+  <caseSensitive value="true" />
+  <content value="complete" />
+  <concept>
+    <code value="Blutzucker" />
+    <display value="Blutzucker" />
+  </concept>
+  <concept>
+    <code value="Gewebezucker" />
+    <display value="Gewebezucker" />
+  </concept>
+</CodeSystem>
