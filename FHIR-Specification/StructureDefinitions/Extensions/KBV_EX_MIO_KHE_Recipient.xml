@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="KBV-EX-MIO-KHE-Recipient"/>
+	<url value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Recipient"/>
+	<version value="1.0.0"/>
+	<name value="KBV_EX_MIO_KHE_Recipient"/>
+	<title value="KBV_EX_MIO_KHE_Recipient"/>
+	<status value="draft"/>
+	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+	<description value="Diese Extension enhält die Referenzen auf die empfangenden Personen."/>
+	<fhirVersion value="4.0.1"/>
+	<kind value="complex-type"/>
+	<abstract value="false"/>
+	<context>
+		<type value="element"/>
+		<expression value="Composition"/>
+	</context>
+	<type value="Extension"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="Extension">
+			<path value="Extension"/>
+			<definition value="Diese Extension enhält die Referenzen auf die möglichen empfangenden Personen."/>
+		</element>
+		<element id="Extension.url">
+			<path value="Extension.url"/>
+			<fixedUri value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Recipient"/>
+		</element>
+		<element id="Extension.value[x]">
+			<path value="Extension.value[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<min value="1"/>
+			<type>
+				<code value="Reference"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Extension.value[x]:valueReference">
+			<path value="Extension.value[x]"/>
+			<sliceName value="valueReference"/>
+			<min value="1"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Treating_Person_Role_Organization|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Extension.value[x]:valueReference.reference">
+			<path value="Extension.value[x].reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Extension.value[x]:valueReference.type">
+			<path value="Extension.value[x].type"/>
+			<max value="0"/>
+		</element>
+		<element id="Extension.value[x]:valueReference.identifier">
+			<path value="Extension.value[x].identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="Extension.value[x]:valueReference.display">
+			<path value="Extension.value[x].display"/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

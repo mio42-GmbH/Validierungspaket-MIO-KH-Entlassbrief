@@ -1,0 +1,40 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+  <url value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Practitioner_IHEXDS_Qualifikatoren_zahnaerztlicher_Autoren" />
+  <version value="1.2.1" />
+  <name value="KBV_VS_Base_Practitioner_IHEXDS_Qualifikatoren_zahnaerztlicher_Autoren" />
+  <title value="Qualifikatoren zahnärztlicher Autoren" />
+  <status value="active" />
+  <experimental value="false" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Qualifikatoren zahnärztlicher Autoren" />
+  <immutable value="false" />
+  <compose>
+    <include>
+      <system value="urn:oid:1.2.276.0.76.5.492" />
+      <concept>
+        <code value="1" />
+        <display value="Zahnarzt" />
+      </concept>
+      <concept>
+        <code value="2" />
+        <display value="FZA Allgemeine Zahnheilkunde" />
+      </concept>
+      <concept>
+        <code value="3" />
+        <display value="FZA Parodontologie" />
+      </concept>
+      <concept>
+        <code value="4" />
+        <display value="FZA Oralchirurgie" />
+      </concept>
+      <concept>
+        <code value="5" />
+        <display value="FZA Kieferorthopädie" />
+      </concept>
+      <concept>
+        <code value="6" />
+        <display value="FZA öffentliches Gesundheitswesen" />
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

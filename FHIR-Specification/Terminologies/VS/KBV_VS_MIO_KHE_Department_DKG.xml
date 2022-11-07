@@ -1,0 +1,421 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="KBV-VS-MIO-KHE-Department-DKG"/>
+    <url value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Department_DKG"/>
+    <version value="1.0.0"/>
+    <name value="KBV_VS_MIO_KHE_Department_DKG"/>
+    <title value="Fachabteilungsschlüssel"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Valueset enthält die Codes zur Beschreibung von Fachabteilungsschlüssel."/>
+    <immutable value="false"/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <compose>
+        <include>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <concept>
+                <code value="0100"/>
+                <display value="Innere Medizin"/>
+            </concept>
+            <concept>
+                <code value="0200"/>
+                <display value="Geriatrie"/>
+            </concept>
+            <concept>
+                <code value="0300"/>
+                <display value="Kardiologie"/>
+            </concept>
+            <concept>
+                <code value="0400"/>
+                <display value="Nephrologie"/>
+            </concept>
+            <concept>
+                <code value="0500"/>
+                <display value="Hämatologie und internistische Onkologie"/>
+            </concept>
+            <concept>
+                <code value="0600"/>
+                <display value="Endokrinologie"/>
+            </concept>
+            <concept>
+                <code value="0700"/>
+                <display value="Gastroenterologie"/>
+            </concept>
+            <concept>
+                <code value="0800"/>
+                <display value="Pneumologie"/>
+            </concept>
+            <concept>
+                <code value="0900"/>
+                <display value="Rheumatologie"/>
+            </concept>
+            <concept>
+                <code value="1000"/>
+                <display value="Pädiatrie"/>
+            </concept>
+            <concept>
+                <code value="1100"/>
+                <display value="Kinderkardiologie"/>
+            </concept>
+            <concept>
+                <code value="1200"/>
+                <display value="Neonatologie"/>
+            </concept>
+            <concept>
+                <code value="1300"/>
+                <display value="Kinderchirurgie"/>
+            </concept>
+            <concept>
+                <code value="1400"/>
+                <display value="Lungen- und Bronchialheilkunde"/>
+            </concept>
+            <concept>
+                <code value="1500"/>
+                <display value="Allgemeine Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="1600"/>
+                <display value="Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <code value="1700"/>
+                <display value="Neurochirurgie"/>
+            </concept>
+            <concept>
+                <code value="1800"/>
+                <display value="Gefäßchirurgie"/>
+            </concept>
+            <concept>
+                <code value="1900"/>
+                <display value="Plastische Chirurgie"/>
+            </concept>
+            <concept>
+                <code value="2000"/>
+                <display value="Thoraxchirurgie"/>
+            </concept>
+            <concept>
+                <code value="2100"/>
+                <display value="Herzchirurgie"/>
+            </concept>
+            <concept>
+                <code value="2200"/>
+                <display value="Urologie"/>
+            </concept>
+            <concept>
+                <code value="2300"/>
+                <display value="Orthopädie"/>
+            </concept>
+            <concept>
+                <code value="2316"/>
+                <display value="Orthopädie und Unfallchirurgie"/>
+            </concept>
+            <concept>
+                <code value="2400"/>
+                <display value="Frauenheilkunde und Geburtshilfe"/>
+            </concept>
+            <concept>
+                <code value="2425"/>
+                <display value="Frauenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="2500"/>
+                <display value="Geburtshilfe"/>
+            </concept>
+            <concept>
+                <code value="2600"/>
+                <display value="Hals-, Nasen-, Ohrenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="2700"/>
+                <display value="Augenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="2800"/>
+                <display value="Neurologie"/>
+            </concept>
+            <concept>
+                <code value="2900"/>
+                <display value="Allgemeine Psychiatrie"/>
+            </concept>
+            <concept>
+                <code value="3000"/>
+                <display value="Kinder- und Jugendpsychiatrie"/>
+            </concept>
+            <concept>
+                <code value="3100"/>
+                <display value="Psychosomatik/Psychotherapie"/>
+            </concept>
+            <concept>
+                <code value="3200"/>
+                <display value="Nuklearmedizin"/>
+            </concept>
+            <concept>
+                <code value="3300"/>
+                <display value="Strahlenheilkunde"/>
+            </concept>
+            <concept>
+                <code value="3400"/>
+                <display value="Dermatologie"/>
+            </concept>
+            <concept>
+                <code value="3500"/>
+                <display value="Zahn- und Kieferheilkunde, Mund- und Kieferchirurgie"/>
+            </concept>
+            <concept>
+                <code value="3600"/>
+                <display value="Intensivmedizin"/>
+            </concept>
+            <concept>
+                <code value="3700"/>
+                <display value="Sonstige Fachabteilung"/>
+            </concept>
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="375c84fe-4b94-11ed-830f-005056adfc4e"/>
+        <timestamp value="2022-10-14T09:45:47+02:00"/>
+        <total value="39"/>
+        <offset value="0"/>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0100"/>
+            <display value="Innere Medizin"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0200"/>
+            <display value="Geriatrie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0300"/>
+            <display value="Kardiologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0400"/>
+            <display value="Nephrologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0500"/>
+            <display value="Hämatologie und internistische Onkologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0600"/>
+            <display value="Endokrinologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0700"/>
+            <display value="Gastroenterologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0800"/>
+            <display value="Pneumologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="0900"/>
+            <display value="Rheumatologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1000"/>
+            <display value="Pädiatrie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1100"/>
+            <display value="Kinderkardiologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1200"/>
+            <display value="Neonatologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1300"/>
+            <display value="Kinderchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1400"/>
+            <display value="Lungen- und Bronchialheilkunde"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1500"/>
+            <display value="Allgemeine Chirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1600"/>
+            <display value="Unfallchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1700"/>
+            <display value="Neurochirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1800"/>
+            <display value="Gefäßchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="1900"/>
+            <display value="Plastische Chirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2000"/>
+            <display value="Thoraxchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2100"/>
+            <display value="Herzchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2200"/>
+            <display value="Urologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2300"/>
+            <display value="Orthopädie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2316"/>
+            <display value="Orthopädie und Unfallchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2400"/>
+            <display value="Frauenheilkunde und Geburtshilfe"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2425"/>
+            <display value="Frauenheilkunde"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2500"/>
+            <display value="Geburtshilfe"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2600"/>
+            <display value="Hals-, Nasen-, Ohrenheilkunde"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2700"/>
+            <display value="Augenheilkunde"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2800"/>
+            <display value="Neurologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="2900"/>
+            <display value="Allgemeine Psychiatrie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3000"/>
+            <display value="Kinder- und Jugendpsychiatrie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3100"/>
+            <display value="Psychosomatik/Psychotherapie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3200"/>
+            <display value="Nuklearmedizin"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3300"/>
+            <display value="Strahlenheilkunde"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3400"/>
+            <display value="Dermatologie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3500"/>
+            <display value="Zahn- und Kieferheilkunde, Mund- und Kieferchirurgie"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3600"/>
+            <display value="Intensivmedizin"/>
+        </contains>
+        <contains>
+            <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+            <version value="1.3.2"/>
+            <code value="3700"/>
+            <display value="Sonstige Fachabteilung"/>
+        </contains>
+    </expansion>
+</ValueSet>

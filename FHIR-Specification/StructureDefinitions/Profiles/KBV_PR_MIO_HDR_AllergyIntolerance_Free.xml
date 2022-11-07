@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+	<id value="KBV-PR-MIO-HDR-AllergyIntolerance-Free"/>
+	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_AllergyIntolerance_Free"/>
+	<version value="1.0.0"/>
+	<name value="KBV_PR_MIO_HDR_AllergyIntolerance_Free"/>
+	<title value="KBV_PR_MIO_HDR_AllergyIntolerance_Free"/>
+	<status value="draft"/>
+	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+	<description value="Dieses Profil bildet eine Allergie/Unverträglichkeit als Freitext ab."/>
+	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
+	<fhirVersion value="4.0.1"/>
+	<mapping>
+		<identity value="rim"/>
+		<uri value="http://hl7.org/v3"/>
+		<name value="RIM Mapping"/>
+	</mapping>
+	<mapping>
+		<identity value="w5"/>
+		<uri value="http://hl7.org/fhir/fivews"/>
+		<name value="FiveWs Pattern Mapping"/>
+	</mapping>
+	<mapping>
+		<identity value="v2"/>
+		<uri value="http://hl7.org/v2"/>
+		<name value="HL7 v2 Mapping"/>
+	</mapping>
+	<kind value="resource"/>
+	<abstract value="false"/>
+	<type value="AllergyIntolerance"/>
+	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance"/>
+	<derivation value="constraint"/>
+	<differential>
+		<element id="AllergyIntolerance">
+			<path value="AllergyIntolerance"/>
+			<definition value="Dieses Profil bildet eine Allergie/Unverträglichkeit als Freitext ab."/>
+		</element>
+		<element id="AllergyIntolerance.meta">
+			<path value="AllergyIntolerance.meta"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.meta.versionId">
+			<path value="AllergyIntolerance.meta.versionId"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.meta.lastUpdated">
+			<path value="AllergyIntolerance.meta.lastUpdated"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.meta.source">
+			<path value="AllergyIntolerance.meta.source"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.meta.profile">
+			<path value="AllergyIntolerance.meta.profile"/>
+			<min value="1"/>
+			<max value="1"/>
+			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_AllergyIntolerance_Free|1.0.0"/>
+		</element>
+		<element id="AllergyIntolerance.meta.security">
+			<path value="AllergyIntolerance.meta.security"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.meta.tag">
+			<path value="AllergyIntolerance.meta.tag"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.implicitRules">
+			<path value="AllergyIntolerance.implicitRules"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.language">
+			<path value="AllergyIntolerance.language"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.text">
+			<path value="AllergyIntolerance.text"/>
+		</element>
+		<element id="AllergyIntolerance.text.status">
+			<path value="AllergyIntolerance.text.status"/>
+			<patternCode value="extensions"/>
+		</element>
+		<element id="AllergyIntolerance.contained">
+			<path value="AllergyIntolerance.contained"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.identifier">
+			<path value="AllergyIntolerance.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus">
+			<path value="AllergyIntolerance.clinicalStatus"/>
+			<definition value="Beschreibt den Status einer Diagnose bzw. einer Erkrankung aus klinischer Sicht"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding">
+			<path value="AllergyIntolerance.clinicalStatus.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding.system">
+			<path value="AllergyIntolerance.clinicalStatus.coding.system"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding.version">
+			<path value="AllergyIntolerance.clinicalStatus.coding.version"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding.code">
+			<path value="AllergyIntolerance.clinicalStatus.coding.code"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding.display">
+			<path value="AllergyIntolerance.clinicalStatus.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.coding.userSelected">
+			<path value="AllergyIntolerance.clinicalStatus.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.clinicalStatus.text">
+			<path value="AllergyIntolerance.clinicalStatus.text"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus">
+			<path value="AllergyIntolerance.verificationStatus"/>
+			<definition value="Beschreibt die Kritikalität. Die Kritikalität gibt an, wie hoch Risiko dafür ist, dass die Exposition zu der Substanz eine schwerwiegende oder lebensbedrohliche Situation hervorruft."/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding">
+			<path value="AllergyIntolerance.verificationStatus.coding"/>
+			<min value="1"/>
+			<max value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding.system">
+			<path value="AllergyIntolerance.verificationStatus.coding.system"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding.version">
+			<path value="AllergyIntolerance.verificationStatus.coding.version"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding.code">
+			<path value="AllergyIntolerance.verificationStatus.coding.code"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding.display">
+			<path value="AllergyIntolerance.verificationStatus.coding.display"/>
+			<min value="1"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.coding.userSelected">
+			<path value="AllergyIntolerance.verificationStatus.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.verificationStatus.text">
+			<path value="AllergyIntolerance.verificationStatus.text"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.type">
+			<path value="AllergyIntolerance.type"/>
+			<definition value="Handelt es sich um eine Allergie oder eine Unverträglichkeit?"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.category">
+			<path value="AllergyIntolerance.category"/>
+			<definition value="Enthält die Kategorie der die Allergie oder Unverträglichkeit auslösenden Substanz gemäß den angegebenen Auswahlmöglichkeiten."/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.criticality">
+			<path value="AllergyIntolerance.criticality"/>
+			<definition value="Beschreibt die Kritikalität. Die Kritikalität gibt an, wie hoch Risiko dafür ist, dass die Exposition zu der Substanz eine schwerwiegende oder lebensbedrohliche Situation hervorruft."/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.code">
+			<path value="AllergyIntolerance.code"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="AllergyIntolerance.code.coding">
+			<path value="AllergyIntolerance.code.coding"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.code.text">
+			<path value="AllergyIntolerance.code.text"/>
+			<definition value="Hier kann die Bezeichnung der Substanz als Freitext eingetragen werden."/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="AllergyIntolerance.patient">
+			<path value="AllergyIntolerance.patient"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="AllergyIntolerance.patient.reference">
+			<path value="AllergyIntolerance.patient.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="AllergyIntolerance.patient.type">
+			<path value="AllergyIntolerance.patient.type"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.patient.identifier">
+			<path value="AllergyIntolerance.patient.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.patient.display">
+			<path value="AllergyIntolerance.patient.display"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.encounter">
+			<path value="AllergyIntolerance.encounter"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.onset[x]">
+			<path value="AllergyIntolerance.onset[x]"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.recordedDate">
+			<path value="AllergyIntolerance.recordedDate"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.recorder">
+			<path value="AllergyIntolerance.recorder"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.asserter">
+			<path value="AllergyIntolerance.asserter"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.lastOccurrence">
+			<path value="AllergyIntolerance.lastOccurrence"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.note">
+			<path value="AllergyIntolerance.note"/>
+			<max value="0"/>
+		</element>
+		<element id="AllergyIntolerance.reaction">
+			<path value="AllergyIntolerance.reaction"/>
+			<definition value="Dieses Element enthält Informationen über die Reaktion, die bei diesem/dieser PatientIn nach Exposition hervorgerufen wird."/>
+			<max value="0"/>
+		</element>
+	</differential>
+</StructureDefinition>

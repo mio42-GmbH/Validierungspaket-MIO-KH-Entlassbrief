@@ -1,0 +1,1381 @@
+<Bundle xmlns="http://hl7.org/fhir">
+	<id value="9bdde030-9938-4090-a207-1f24f2978325"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Bundle|1.0.0"/>
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:9bdde030-9938-4090-a207-1f24f2978325"/>
+	</identifier>
+	<type value="document"/>
+	<timestamp value="2022-06-04T16:55:05+02:00"/>
+	<entry>
+		<fullUrl value="urn:uuid:88b1060b-c472-4d85-9f86-e449719d736b"/>
+		<resource>
+			<Composition xmlns="http://hl7.org/fhir">
+				<id value="88b1060b-c472-4d85-9f86-e449719d736b"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Composition|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole_Person_In_Charge">
+					<valueReference>
+						<!-- verantwortliche Person -->
+						<reference value="urn:uuid:57857968-c27b-41d1-9242-94485081b7e2"/>
+					</valueReference>
+				</extension>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Practitioner">
+					<valueReference>
+						<!-- behandelnde Person -->
+						<reference value="urn:uuid:fb59fdb6-802d-49ac-850a-9e2c38250730"/>
+					</valueReference>
+				</extension>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_HealthcareService_Contact_Discharge_Management">
+					<valueReference>
+						<!-- Kontakt Entlassmanagement -->
+						<reference value="urn:uuid:3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+					</valueReference>
+				</extension>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Recipient">
+					<valueReference>
+						<!-- empfangende Person -->
+						<reference value="urn:uuid:92f0fdf1-ae7d-4df7-8ed4-7cb810b803cb"/>
+					</valueReference>
+				</extension>
+				<status value="final"/>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="373942005"/>
+						<display value="Discharge summary (record artifact)"/>
+					</coding>
+				</type>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<date value="2022-04-06"/>
+				<author>
+					<reference value="urn:uuid:57857968-c27b-41d1-9242-94485081b7e2"/>
+				</author>
+				<title value="Krankenhausentlassbrief"/>
+				<custodian>
+					<reference value="urn:uuid:b7db8439-d18e-4e37-9ed6-0d832df91798"/>
+				</custodian>
+				<section>
+					<title value="Falldaten"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<version value="2.71"/>
+							<code value="75218-8"/>
+							<display value="Case report"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:425ff2cd-986f-4532-a8b7-947cf8464ecd"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Einweisung"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="721927009"/>
+							<display value="Referral note (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:762e2308-014b-48b9-a3dc-ea64e3a3b93f"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Aufnahme"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="371542009"/>
+							<display value="Admission history and physical report (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:23c47181-0cd4-4b4d-a4ca-a0b17b3e1c1a"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Anamnese"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="1003642006"/>
+							<display value="Past medical history section (record artifact)"/>
+						</coding>
+					</code>
+					<!-- notwendig? Rückfrage an DKG, hat eigentlich keine Bedeutung -->
+					<section>
+						<title value="Abschnitt"/>
+						<code>
+							<coding>
+								<system value="http://loinc.org"/>
+								<version value="2.71"/>
+								<code value="35090-0"/>
+								<display value="Patient history"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:391caa0e-ad5e-4693-8824-06dc2ad33f07"/>
+						</entry>
+					</section>
+				</section>
+				<section>
+					<title value="Diagnosen und Infektionen/Besiedelungen durch multiresistente Erreger"/>
+					<code>
+						<coding>
+							<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Section_Codes"/>
+							<version value="1.0.0"/>
+							<code value="SectionDiagnosen"/>
+							<display value="Bereich Diagnosen"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:b10ce7de-33ae-4f0c-8585-45ecb6200c35"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:28668a3e-717a-433a-87ca-3112c5c9a62c"/>
+					</entry>
+					<section>
+						<title value="Infektion oder Besiedelung durch multiresistente Erreger"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+								<code value="439401001:246093002=409793007"/>
+								<display value="Diagnosis (observable entity) : Component (attribute) = Antimicrobial resistant bacteria (organism)"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:8fecea90-fb71-4807-9629-6d5a4b619442"/>
+						</entry>
+					</section>
+				</section>
+				<section>
+					<title value="Prozeduren"/>
+					<code>
+						<coding>
+							<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Section_Codes"/>
+							<version value="1.0.0"/>
+							<code value="SectionProzeduren"/>
+							<display value="Bereich Prozeduren"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:0d777b11-6570-4644-9ef7-d2e396a3667e"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Implantate"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="1184586001"/>
+							<display value="Medical device document section (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:f6fd29c4-c40a-440e-b5a8-23cd4b683da8"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Verlauf"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="444754002"/>
+							<display value="Hospital inpatient progress report (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:93a0ff4e-b54b-4334-b97d-3cd7840115d8"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Entlassungsbefund"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<version value="2.71"/>
+							<code value="10184-0"/>
+							<display value="Hospital discharge physical findings Narrative"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:1f35d7fa-facb-497d-83d4-3e92d245e91f"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Weiteres Prozedere und Empfehlungen, Veranlasste Leistungen und Nachfolgende Versorgungseinrichtung"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<version value="2.71"/>
+							<code value="8653-8"/>
+							<display value="Hospital Discharge instructions"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:0823103b-deda-436a-b932-a794abe76b12"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Medikation Entlassung"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<version value="2.71"/>
+							<code value="8654-6"/>
+							<display value="Hospital discharge medications"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:a31cf3b8-fe9c-47ba-a00f-ca02cd5eb5e7"/>
+					</entry>
+				</section>
+				<section>
+					<title value="AU bis"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="450771002"/>
+							<display value="Issuing of certificate of incapacity (procedure)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:81b2ec17-50b5-4aa0-b578-e1ceaf41d0a3"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Dokumentationseintrag"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="371524004"/>
+							<display value="Clinical report (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:3a83656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:d4679e22-705f-453f-ab17-2e74b3321b1e"/>
+					</entry>
+				</section>
+			</Composition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0d777b11-6570-4644-9ef7-d2e396a3667e"/>
+		<resource>
+			<Procedure>
+				<id value="0d777b11-6570-4644-9ef7-d2e396a3667e"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure|1.0.0"/>
+				</meta>
+				<status value="completed"/>
+				<code>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/dimdi/ops"/>
+						<version value="2022"/>
+						<code value="5-820.00"/>
+						<display value="Totalendoprothese: nicht zementiert"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<performedDateTime value="2020-04-02"/>
+				<note>
+					<text value="minimal-invasiv"/>
+				</note>
+			</Procedure>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:59e582b3-29ec-4998-8c86-3bd4fe84c7a2"/>
+		<resource>
+			<Practitioner>
+				<id value="59e582b3-29ec-4998-8c86-3bd4fe84c7a2"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Semmelbruch">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Semmelbruch"/>
+						</extension>
+					</family>
+					<given value="Petra"/>
+					<prefix value="Dr.">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+							<valueCode value="AC"/>
+						</extension>
+					</prefix>
+				</name>
+				<telecom>
+					<system value="phone">
+						<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+							<extension url="content">
+								<valueString value="Telefon"/>
+							</extension>
+						</extension>
+					</system>
+					<value value="030 0987654321"/>
+				</telecom>
+				<address>
+					<type value="both"/>
+					<line value="Straße 3">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Straße"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="3"/>
+						</extension>
+					</line>
+					<city value="Berlin"/>
+					<postalCode value="10103"/>
+				</address>
+				<qualification>
+					<code>
+						<coding>
+							<system value="urn:oid:1.2.276.0.76.5.514"/>
+							<code value="71004"/>
+							<display value="FA Orthopädie"/>
+						</coding>
+					</code>
+				</qualification>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:fb59fdb6-802d-49ac-850a-9e2c38250730"/>
+		<resource>
+			<Practitioner>
+				<id value="fb59fdb6-802d-49ac-850a-9e2c38250730"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Topp-Glücklich">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Topp-Glücklich"/>
+						</extension>
+					</family>
+					<given value="Hans"/>
+					<prefix value="Dr.">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+							<valueCode value="AC"/>
+						</extension>
+					</prefix>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:92f0fdf1-ae7d-4df7-8ed4-7cb810b803cb"/>
+		<resource>
+			<PractitionerRole>
+				<id value="92f0fdf1-ae7d-4df7-8ed4-7cb810b803cb"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Treating_Person_Role_Organization|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:59e582b3-29ec-4998-8c86-3bd4fe84c7a2"/>
+				</practitioner>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+						<code value="446050000"/>
+						<display value="Primary care physician (occupation)"/>
+					</coding>
+				</code>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:57857968-c27b-41d1-9242-94485081b7e2"/>
+		<resource>
+			<PractitionerRole>
+				<id value="57857968-c27b-41d1-9242-94485081b7e2"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Person_In_Charge_Position|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:fb59fdb6-802d-49ac-850a-9e2c38250730"/>
+				</practitioner>
+				<code>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Role_Care"/>
+						<version value="1.0.0"/>
+						<code value="OA"/>
+						<display value="Oberärztin/-arzt"/>
+					</coding>
+				</code>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:13ce81e1-fa69-46ea-9bfa-ac2d26a7103d"/>
+		<resource>
+			<PractitionerRole>
+				<id value="13ce81e1-fa69-46ea-9bfa-ac2d26a7103d"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Admitting_Person_Organization|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:59e582b3-29ec-4998-8c86-3bd4fe84c7a2"/>
+				</practitioner>
+				<organization>
+					<reference value="urn:uuid:d1a1f6c0-1a93-4306-a4b1-b5a84c5ca8fc"/>
+				</organization>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+		<resource>
+			<Patient>
+				<id value="55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Paul">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Paul"/>
+						</extension>
+					</family>
+					<given value="Pia"/>
+				</name>
+				<telecom>
+					<system value="phone">
+						<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+							<extension url="content">
+								<valueString value="Telefon"/>
+							</extension>
+						</extension>
+					</system>
+					<value value="030 123456789"/>
+				</telecom>
+				<gender value="female"/>
+				<birthDate value="1955-02-02"/>
+				<address>
+					<type value="both"/>
+					<line value="Straße 1">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Straße"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="1"/>
+						</extension>
+					</line>
+					<city value="Berlin"/>
+					<postalCode value="10101"/>
+					<country value="D"/>
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:b7db8439-d18e-4e37-9ed6-0d832df91798"/>
+		<resource>
+			<Organization>
+				<id value="b7db8439-d18e-4e37-9ed6-0d832df91798"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+				</meta>
+				<name value="Krankenhaus XYZ, Klinik für Orthopädie und Unfallchirugie"/>
+				<telecom>
+					<system value="phone">
+						<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+							<extension url="content">
+								<valueString value="Telefon"/>
+							</extension>
+						</extension>
+					</system>
+					<value value="030 12345"/>
+				</telecom>
+				<address>
+					<type value="both"/>
+					<line value="Straße 2">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Straße"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="2"/>
+						</extension>
+					</line>
+					<city value="Berlin"/>
+					<postalCode value="10102"/>
+					<country value="D"/>
+				</address>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:d1a1f6c0-1a93-4306-a4b1-b5a84c5ca8fc"/>
+		<resource>
+			<Organization>
+				<id value="d1a1f6c0-1a93-4306-a4b1-b5a84c5ca8fc"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+				</meta>
+				<name value="Orthopädische Praxis Dr. Semmelbruch"/>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:93a0ff4e-b54b-4334-b97d-3cd7840115d8"/>
+		<resource>
+			<Observation>
+				<id value="93a0ff4e-b54b-4334-b97d-3cd7840115d8"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Section_Inpatient_Stay|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="KHV"/>
+						<display value="Krankenhausverlauf"/>
+					</coding>
+					<text value="Implantation TEP"/>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueString value="Minimalinvasive Implantation einer nicht zementierten Totalendoprothese am Hüftgelenk rechts am 02.04.2020"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:391caa0e-ad5e-4693-8824-06dc2ad33f07"/>
+		<resource>
+			<Observation>
+				<id value="391caa0e-ad5e-4693-8824-06dc2ad33f07"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Section_Anamnesis|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="35090-0"/>
+						<display value="Patient history"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueString value="Anamnese Vorerkrankungen"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:a857dda6-8afe-4bcd-882b-fb123727efd9"/>
+		<resource>
+			<Observation>
+				<id value="a857dda6-8afe-4bcd-882b-fb123727efd9"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Physical_Findings|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="55286-9"/>
+						<display value="Physical exam by body areas"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueString value="Beckengeradstand, Leistendruckschmerz, Trendelenburgzeichen negativ"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:8fecea90-fb71-4807-9629-6d5a4b619442"/>
+		<resource>
+			<Observation>
+				<id value="8fecea90-fb71-4807-9629-6d5a4b619442"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Infection_By_Multi_Resistant_Pathogens|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="439401001:246093002=409793007"/>
+						<display value="Diagnosis (observable entity) : Component (attribute) = Antimicrobial resistant bacteria (organism)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueBoolean value="false"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:81b2ec17-50b5-4aa0-b578-e1ceaf41d0a3"/>
+		<resource>
+			<Observation>
+				<id value="81b2ec17-50b5-4aa0-b578-e1ceaf41d0a3"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Incapacity_To_Work|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="AUA"/>
+						<display value="Arbeitsunfähigkeit ausgestellt bis"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueDateTime value="2020-04-11"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:1f35d7fa-facb-497d-83d4-3e92d245e91f"/>
+		<resource>
+			<Observation>
+				<id value="1f35d7fa-facb-497d-83d4-3e92d245e91f"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Discharge_Report|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="10184-0"/>
+						<display value="Hospital discharge physical findings Narrative"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<valueString value="Reizlose und trockene Wunde, resorbierbare Nahtmaterial in situ, Mobilisation im 4. Punkt-Gang mit schmerzadaptierter Vollbelastung des operierten Beines"/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:52023535-f304-4ef5-97b5-aabeb0e213c9"/>
+		<resource>
+			<Medication>
+				<id value="52023535-f304-4ef5-97b5-aabeb0e213c9"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Medication|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+							<code value="763158003"/>
+							<display value="Medicinal product (product)">
+								<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+									<extension url="content">
+										<valueString value="Fertigarzneimittel"/>
+									</extension>
+								</extension>
+							</display>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<code>
+					<text value="Metamizol 500mg Filmtabletten"/>
+				</code>
+				<form>
+					<text value="Tabletten"/>
+				</form>
+				<ingredient>
+					<itemCodeableConcept>
+						<text value="Metamizol"/>
+					</itemCodeableConcept>
+					<strength>
+						<numerator>
+							<value value="500"/>
+							<unit value="mg"/>
+						</numerator>
+						<denominator>
+							<value value="1"/>
+							<unit value="Tablette"/>
+						</denominator>
+					</strength>
+				</ingredient>
+			</Medication>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:8017a4fc-6802-4ba3-8da0-2422d9e75d12"/>
+		<resource>
+			<Medication>
+				<id value="8017a4fc-6802-4ba3-8da0-2422d9e75d12"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Medication|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+							<code value="763158003"/>
+							<display value="Medicinal product (product)">
+								<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+									<extension url="content">
+										<valueString value="Fertigarzneimittel"/>
+									</extension>
+								</extension>
+							</display>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<code>
+					<text value="METFORMIN 1000 mg Filmtabletten"/>
+				</code>
+				<form>
+					<text value="Filmtabletten"/>
+				</form>
+				<ingredient>
+					<itemCodeableConcept>
+						<text value="Metformin"/>
+					</itemCodeableConcept>
+					<strength>
+						<numerator>
+							<value value="1000"/>
+							<unit value="mg"/>
+						</numerator>
+						<denominator>
+							<value value="1"/>
+							<unit value="Filmtablette"/>
+						</denominator>
+					</strength>
+				</ingredient>
+			</Medication>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:76b4ff3e-90fe-40c2-9576-45f986547b31"/>
+		<resource>
+			<Medication>
+				<id value="76b4ff3e-90fe-40c2-9576-45f986547b31"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Medication|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Medication_Type">
+					<valueCodeableConcept>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+							<code value="763158003"/>
+							<display value="Medicinal product (product)">
+								<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+									<extension url="content">
+										<valueString value="Fertigarzneimittel"/>
+									</extension>
+								</extension>
+							</display>
+						</coding>
+					</valueCodeableConcept>
+				</extension>
+				<code>
+					<text value="Dabigatran 110 mg Hartkapseln"/>
+				</code>
+				<form>
+					<text value="Kapseln"/>
+				</form>
+				<ingredient>
+					<itemCodeableConcept>
+						<text value="Dabigatran"/>
+					</itemCodeableConcept>
+					<strength>
+						<numerator>
+							<value value="110"/>
+							<unit value="mg"/>
+						</numerator>
+						<denominator>
+							<value value="1"/>
+							<unit value="Kapsel"/>
+						</denominator>
+					</strength>
+				</ingredient>
+			</Medication>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:816d4793-54f6-4ba0-b305-1384e8a9a270"/>
+		<resource>
+			<MedicationStatement>
+				<id value="816d4793-54f6-4ba0-b305-1384e8a9a270"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_MedicationStatement_Administration_Instruction|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<category>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="56445-0"/>
+						<display value="Medication summary Document"/>
+					</coding>
+				</category>
+				<medicationReference>
+					<reference value="urn:uuid:52023535-f304-4ef5-97b5-aabeb0e213c9"/>
+				</medicationReference>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<dosage>
+					<text value="1 – 1 – 1 – 1, Bedarf für 3 Tage mitgegeben"/>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:e01fc93a-bafe-4f20-a109-eae0b87b6da5"/>
+		<resource>
+			<MedicationStatement>
+				<id value="e01fc93a-bafe-4f20-a109-eae0b87b6da5"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_MedicationStatement_Administration_Instruction|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<category>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="56445-0"/>
+						<display value="Medication summary Document"/>
+					</coding>
+				</category>
+				<medicationReference>
+					<reference value="urn:uuid:8017a4fc-6802-4ba3-8da0-2422d9e75d12"/>
+				</medicationReference>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<dosage>
+					<text value="1 – 0 – 1 – 0, zu den Mahlzeiten"/>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:a3a0c4b6-3e1d-402c-964b-56da072a66fc"/>
+		<resource>
+			<MedicationStatement>
+				<id value="a3a0c4b6-3e1d-402c-964b-56da072a66fc"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_MedicationStatement_Administration_Instruction|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<category>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="56445-0"/>
+						<display value="Medication summary Document"/>
+					</coding>
+				</category>
+				<medicationReference>
+					<reference value="urn:uuid:8017a4fc-6802-4ba3-8da0-2422d9e75d12"/>
+				</medicationReference>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<dosage>
+					<text value="1 – 0 – 1 – 0"/>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:f723e76a-80cd-468d-b77d-4bc383542c00"/>
+		<resource>
+			<MedicationStatement>
+				<id value="f723e76a-80cd-468d-b77d-4bc383542c00"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_MedicationStatement_Administration_Instruction|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<category>
+					<coding>
+						<system value="http://loinc.org"/>
+						<version value="2.71"/>
+						<code value="56445-0"/>
+						<display value="Medication summary Document"/>
+					</coding>
+				</category>
+				<medicationReference>
+					<reference value="urn:uuid:76b4ff3e-90fe-40c2-9576-45f986547b31"/>
+				</medicationReference>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<dosage>
+					<text value="0 – 0 – 0 – 2, mindestens 35 Tage postoperativ, Bedarf für 3 Tage mitgegeben"/>
+				</dosage>
+			</MedicationStatement>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:a31cf3b8-fe9c-47ba-a00f-ca02cd5eb5e7"/>
+		<resource>
+			<List>
+				<id value="a31cf3b8-fe9c-47ba-a00f-ca02cd5eb5e7"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_List_Medication_Discharge|1.0.0"/>
+				</meta>
+				<status value="current"/>
+				<mode value="working"/>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<entry>
+					<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Progress_Medication">
+						<valueBoolean value="false"/>
+					</extension>
+					<item>
+						<reference value="urn:uuid:f723e76a-80cd-468d-b77d-4bc383542c00"/>
+					</item>
+				</entry>
+				<entry>
+					<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Progress_Medication">
+						<valueBoolean value="false"/>
+					</extension>
+					<item>
+						<reference value="urn:uuid:816d4793-54f6-4ba0-b305-1384e8a9a270"/>
+					</item>
+				</entry>
+				<entry>
+					<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Progress_Medication">
+						<valueBoolean value="true"/>
+					</extension>
+					<item>
+						<reference value="urn:uuid:e01fc93a-bafe-4f20-a109-eae0b87b6da5"/>
+					</item>
+				</entry>
+			</List>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+		<resource>
+			<HealthcareService>
+				<id value="3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management|1.0.0"/>
+				</meta>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="718675005"/>
+						<display value="Management of inpatient discharge (procedure)"/>
+					</coding>
+				</type>
+				<telecom>
+					<system value="phone"/>
+					<value value="030 1234567"/>
+				</telecom>
+				<availableTime>
+					<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Details">
+						<valueString value="Montag bis Freitag in der Zeit von 09:00 bis 19:00, Samstag 10:00 bis 14:00, Sonntag 10:00 bis 14:00 Uhr"/>
+					</extension>
+				</availableTime>
+			</HealthcareService>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:425ff2cd-986f-4532-a8b7-947cf8464ecd"/>
+		<resource>
+			<Encounter>
+				<id value="425ff2cd-986f-4532-a8b7-947cf8464ecd"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Discharge_Management">
+					<valueReference>
+						<reference value="urn:uuid:a82348fc-85db-4327-8c80-8a9b1f68f5be"/>
+					</valueReference>
+				</extension>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Support_Care_Insurance">
+					<valueReference>
+						<reference value="urn:uuid:e48193d5-7702-4f23-ba63-5b01711b622f"/>
+					</valueReference>
+				</extension>
+				<status value="finished"/>
+				<class>
+					<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+					<version value="2018-08-12"/>
+					<code value="_ActAccountCode"/>
+					<display value="ActAccountCode"/>
+				</class>
+				<serviceType>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+						<version value="1.4.0"/>
+						<code value="2316"/>
+						<display value="Orthopädie und Unfallchirurgie"/>
+					</coding>
+				</serviceType>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<period>
+					<start value="2022-04-01"/>
+					<end value="2022-04-06"/>
+				</period>
+				<hospitalization>
+					<admitSource>
+						<coding>
+							<system value="http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass"/>
+							<version value="1.4.0"/>
+							<code value="E"/>
+							<display value="Einweisung durch einen Arzt"/>
+						</coding>
+					</admitSource>
+					<dischargeDisposition>
+						<coding>
+							<system value="http://terminology.hl7.org/CodeSystem/discharge-disposition"/>
+							<version value="0.1.0"/>
+							<code value="home"/>
+							<display value="Home"/>
+						</coding>
+					</dischargeDisposition>
+				</hospitalization>
+			</Encounter>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:d4679e22-705f-453f-ab17-2e74b3321b1e"/>
+		<resource>
+			<DocumentReference>
+				<id value="d4679e22-705f-453f-ab17-2e74b3321b1e"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Submit_Document_Later">
+					<valueBoolean value="false"/>
+				</extension>
+				<status value="current"/>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<content>
+					<attachment>
+						<title value="Röntgen Hüfte vor Entlassung (Anhang)"/>
+						<creation value="2020-04-06"/>
+					</attachment>
+				</content>
+			</DocumentReference>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:3a83656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+		<resource>
+			<DocumentReference>
+				<id value="3a83656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Submit_Document_Later">
+					<valueBoolean value="false"/>
+				</extension>
+				<status value="current"/>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<description value="Fortgeschrittene Koxarthrose rechts, stark verminderter Gelenkspalt, mit ausgeprägter Geröllzystenbildung im rechten Femurkopf"/>
+				<content>
+					<attachment>
+						<title value="Röntgen Hüfte bei Aufnahme"/>
+						<creation value="2020-04-01"/>
+					</attachment>
+				</content>
+			</DocumentReference>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:f6fd29c4-c40a-440e-b5a8-23cd4b683da8"/>
+		<resource>
+			<Device>
+				<id value="55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant_Free|1.0.0"/>
+				</meta>
+				<patient>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</patient>
+				<note>
+					<text value="Minimalinvasive Hüftprothese zementfrei „Gehgut“, Typ C / Bestehend aus Hüftpfannenimplantat: Allofit Pfanne Gr. 54; Hersteller: Zimmer / Inlay: Durasul PE-Inlay Gr. 54/36; Hersteller: Zimmer /	Prothesenschaft: Avenir Complete Gr. 4; Hersteller: Zimmer / Prothesenkopf: Biolox Delta 36-M-Keramikkopf; Hersteller: Zimmer"/>
+				</note>
+			</Device>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:e48193d5-7702-4f23-ba63-5b01711b622f"/>
+		<resource>
+			<Consent>
+				<id value="e48193d5-7702-4f23-ba63-5b01711b622f"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Consent_Support_Care_Insurance|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<scope>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+						<version value="4.0.1"/>
+						<code value="patient-privacy"/>
+						<display value="Privacy Consent"/>
+					</coding>
+				</scope>
+				<category>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="EUDDKP"/>
+						<display value="Einwilligung Unterstützung durch die Kranken-/Pflegekasse"/>
+					</coding>
+				</category>
+				<patient>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</patient>
+				<policyRule>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="EUDDKPZ"/>
+						<display value="Einwilligung in die Unterstützung des Entlassmanagements durch die Kranken-/Pflegekasse zugestimmt"/>
+					</coding>
+				</policyRule>
+			</Consent>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:a82348fc-85db-4327-8c80-8a9b1f68f5be"/>
+		<resource>
+			<Consent>
+				<id value="a82348fc-85db-4327-8c80-8a9b1f68f5be"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Consent_Discharge_Management|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<scope>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+						<version value="4.0.1"/>
+						<code value="patient-privacy"/>
+						<display value="Privacy Consent"/>
+					</coding>
+				</scope>
+				<category>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="414925007+718675005"/>
+						<display value="Obtaining consent (procedure) + Management of inpatient discharge (procedure)"/>
+					</coding>
+				</category>
+				<patient>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</patient>
+				<policyRule>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="243796009:{363589002=718675005}{408730004=441898007}"/>
+						<display value="Situation with explicit context (situation) : { Associated procedure (attribute) = Management of inpatient discharge (procedure) } { Procedure context (attribute) = Consented (qualifier value) }"/>
+					</coding>
+				</policyRule>
+			</Consent>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:28668a3e-717a-433a-87ca-3112c5c9a62c"/>
+		<resource>
+			<Condition>
+				<id value="28668a3e-717a-433a-87ca-3112c5c9a62c"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/dimdi/icd-10-gm"/>
+						<version value="2020"/>
+						<code value="M16.1"/>
+						<display value="Sonstige primäre Koxarthrose"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<note>
+					<text value="rechts; Kellgren-Lawrence-Score 4"/>
+				</note>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:b10ce7de-33ae-4f0c-8585-45ecb6200c35"/>
+		<resource>
+			<Condition>
+				<id value="b10ce7de-33ae-4f0c-8585-45ecb6200c35"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/dimdi/icd-10-gm"/>
+						<version value="2020"/>
+						<code value="E11.90"/>
+						<display value="Diabetes mellitus, Typ 2"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<note>
+					<text value="Ohne Komplikationen, nicht als entgleist bezeichnet"/>
+				</note>
+			</Condition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:762e2308-014b-48b9-a3dc-ea64e3a3b93f"/>
+		<resource>
+			<ClinicalImpression>
+				<id value="762e2308-014b-48b9-a3dc-ea64e3a3b93f"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_ClinicalImpression_Referral|1.0.0"/>
+				</meta>
+				<status value="completed"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="721927009"/>
+						<display value="Referral note (record artifact)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<assessor>
+					<reference value="urn:uuid:13ce81e1-fa69-46ea-9bfa-ac2d26a7103d"/>
+				</assessor>
+				<summary value="Koxarthrose rechts"/>
+			</ClinicalImpression>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:23c47181-0cd4-4b4d-a4ca-a0b17b3e1c1a"/>
+		<resource>
+			<ClinicalImpression>
+				<id value="23c47181-0cd4-4b4d-a4ca-a0b17b3e1c1a"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_ClinicalImpression_Admission|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Medication">
+					<valueReference>
+						<reference value="urn:uuid:a3a0c4b6-3e1d-402c-964b-56da072a66fc"/>
+					</valueReference>
+				</extension>
+				<status value="completed"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+						<code value="371542009"/>
+						<display value="Admission history and physical report (record artifact)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<problem>
+					<reference value="urn:uuid:28668a3e-717a-433a-87ca-3112c5c9a62c"/>
+				</problem>
+				<investigation>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+							<code value="82832008"/>
+							<display value="General body state finding (finding)"/>
+						</coding>
+					</code>
+					<item>
+						<reference value="urn:uuid:a857dda6-8afe-4bcd-882b-fb123727efd9"/>
+					</item>
+				</investigation>
+			</ClinicalImpression>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:0823103b-deda-436a-b932-a794abe76b12"/>
+		<resource>
+			<CarePlan>
+				<id value="0823103b-deda-436a-b932-a794abe76b12"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Care_Plan|1.0.0"/>
+				</meta>
+				<status value="active"/>
+				<intent value="plan"/>
+				<subject>
+					<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+				</subject>
+				<activity>
+					<detail>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+								<code value="373873005"/>
+								<display value="Pharmaceutical / biologic product (product)"/>
+							</coding>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+								<code value="1141802005"/>
+								<display value="Assistive device (physical object)"/>
+							</coding>
+							<text value="Arzneimittel: Dabigatran 110 mg  Hartkapseln, N1; Metamizol 500mg Filmtabletten, N1 / Hilfsmittel: Unterarmgehstützen"/>
+						</code>
+						<status value="in-progress"/>
+						<description value="Wir entlassen Frau Paul heute aus unserer stationären Behandlung in die Häuslichkeit. Wir bitten um regelmäßige klinische Verlaufskontrollen. Ein Fadenzug ist bei dem resorbierbaren Nahtmaterial nicht notwendig. Eine AHB wurde von uns beantragt, Ort und Termin werden der Patientin vom Versicherungsträger direkt mitgeteilt."/>
+					</detail>
+				</activity>
+			</CarePlan>
+		</resource>
+	</entry>
+</Bundle>
