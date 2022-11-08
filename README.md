@@ -8,7 +8,7 @@ Alternatively, the dependencies can also be found here:
 
 - de.basisprofil.r4 0.9.13: https://simplifier.net/packages/de.basisprofil.r4/0.9.13
 - kbv.basis 1.2.1: https://simplifier.net/packages/kbv.basis/1.2.1
-- kbv.mio.khe 1.0.0-kommentierung: 
+- kbv.mio.khe 1.0.0-kommentierung: https://simplifier.net/packages/kbv.mio.kh-entlassbrief/1.0.0-kommentierung
 
 The version of the validator, which was used by the mio42 GmbH, is included. If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
 
