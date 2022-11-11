@@ -19,16 +19,16 @@ For a thorough documentation on the use of the validator, please follow this lin
 
 You can use the following command to validate the examples:
 
-REAL_EXAMPLE_1_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification\ -recurse
 ```
-REAL_EXAMPLE_2_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
 ```
 
-REAL_EXAMPLE_3_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
 ```
@@ -60,16 +60,16 @@ Eine Ausführliche Dokumentation zur Verwendung des Validators finden Sie hier:
 
 Zur Validierung der Beispiele können Sie folgenden Aufruf verwenden:
 
-REAL_EXAMPLE_1_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification\ -recurse
 ```
-REAL_EXAMPLE_2_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
 ```
 
-REAL_EXAMPLE_3_KBV_PR_MIO_ULB_Bundle:
+REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle:
 ```
 java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
 ```
