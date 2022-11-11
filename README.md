@@ -1,4 +1,4 @@
-# Validationpackage MIO Überleitungsbogen Version 1.0.0 Commenting Phase
+# Validationpackage MIO KH-Entlassbrief Version 1.0.0 Commenting Phase
 
 Disclaimer: This service is intended to help with the validation process. However, please note there is no claim to completeness, correctness or reliability.
 
@@ -36,7 +36,7 @@ java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle.xml -
 Please note that a current version of Java is required (we would recommend the most recent one).
 
 
-# Validierungspaket MIO Überleitungsbogen Version 1.0.0 Kommentierungsphase
+# Validierungspaket MIO KH-Entlassbrief Version 1.0.0 Kommentierungsphase
 
 Disclaimer: 
 Der Service zur Validierung erhebt keinen Anspruch auf Vollständigkeit, Korrektheit sowie Verbindlichkeit.
