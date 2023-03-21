@@ -1,0 +1,21 @@
+<MedicationStatement xmlns="http://hl7.org/fhir">
+	<id value="a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_MedicationStatement_Administration_Instruction|1.0.0"/>
+	</meta>
+	<status value="active"/>
+	<category>
+		<coding>
+			<system value="http://loinc.org"/>
+			<version value="2.71"/>
+			<code value="56445-0"/>
+			<display value="Medication summary Document"/>
+		</coding>
+	</category>
+	<medicationReference>
+		<reference value="uri:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	</medicationReference>
+	<subject>
+		<reference value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+</MedicationStatement>

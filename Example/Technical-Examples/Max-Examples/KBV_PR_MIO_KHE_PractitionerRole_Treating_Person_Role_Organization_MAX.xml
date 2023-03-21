@@ -1,0 +1,27 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+	<id value="db47483a-ae09-42b5-bf61-85598a01cc24"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Treating_Person_Role_Organization|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>behandelnde Person inkl. Rolle und der zugeordneten Einrichtung</h1>
+		</div>
+	</text>
+	<practitioner>
+		<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	</practitioner>
+	<organization>
+		<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	</organization>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+			<code value="446050000"/>
+			<display value="Primary care physician (occupation)"/>
+		</coding>
+		<text value="Weiterbehandelnder Arzt/Weiterbehandelnde Ärztin"/>
+	</code>
+</PractitionerRole>

@@ -1,0 +1,46 @@
+<Consent xmlns="http://hl7.org/fhir">
+	<id value="3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Consent_Discharge_Management|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Zustimmung in das Entlassmangement</h1>
+		</div>
+	</text>
+	<status value="active"/>
+	<scope>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+			<version value="4.0.1"/>
+			<code value="patient-privacy"/>
+			<display value="Privacy Consent"/>
+		</coding>
+	</scope>
+	<category>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="414925007+718675005"/>
+			<display value="Obtaining consent (procedure) + Management of inpatient discharge (procedure)"/>
+		</coding>
+	</category>
+	<patient>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</patient>
+	<policyRule>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="243796009:{363589002=718675005}{408730004=441898007}"/>
+			<display value="Situation with explicit context (situation) : { Associated procedure (attribute) = Management of inpatient discharge (procedure) } { Procedure context (attribute) = Consented (qualifier value) }"/>
+		</coding>
+	</policyRule>
+</Consent>
+
+
+
+
+
+

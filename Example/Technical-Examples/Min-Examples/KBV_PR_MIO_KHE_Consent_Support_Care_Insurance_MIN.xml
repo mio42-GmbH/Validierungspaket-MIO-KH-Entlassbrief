@@ -1,0 +1,34 @@
+<Consent xmlns="http://hl7.org/fhir">
+	<id value="f8e7ca6a-0b9f-4db7-8fac-86118b8b620d"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Consent_Support_Care_Insurance|1.0.0"/>
+	</meta>
+	<status value="active"/>
+	<scope>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+			<version value="4.0.1"/>
+			<code value="patient-privacy"/>
+			<display value="Privacy Consent"/>
+		</coding>
+	</scope>
+	<category>
+		<coding>
+			<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+			<version value="1.0.0"/>
+			<code value="EUDDKP"/>
+			<display value="Einwilligung Unterstützung durch die Kranken-/Pflegekasse"/>
+		</coding>
+	</category>
+	<patient>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</patient>
+	<policyRule>
+		<coding>
+			<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+			<version value="1.0.0"/>
+			<code value="EUDDKPZ"/>
+			<display value="Einwilligung in die Unterstützung des Entlassmanagements durch die Kranken-/Pflegekasse zugestimmt"/>
+		</coding>
+	</policyRule>
+</Consent>

@@ -1,0 +1,101 @@
+<Organization xmlns="http://hl7.org/fhir">
+	<id value="a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Organization</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Additional_Comment">
+		<valueString value="12345"/>
+	</extension>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<version value="2.9.0"/>
+				<code value="XX"/>
+				<display value="Organisations-ID"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/NamingSystem/arge-ik/iknr"/>
+		<value value="12345689"/>
+	</identifier>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="BSNR"/>
+				<display value="Betriebsstättennummer"/>
+			</coding>
+		</type>
+		<system value="https://fhir.kbv.de/NamingSystem/KBV_NS_Base_BSNR"/>
+		<value value="123456"/>
+	</identifier>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+				<version value="0.9.13"/>
+				<code value="KZVA"/>
+				<display value="KZVAbrechnungsnummer"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/NamingSystem/kzbv/kzvabrechnungsnummer"/>
+		<value value="123456789"/>
+	</identifier>
+	<name value="Allgemeinarzt Praxis Mustermann"/>
+	<telecom>
+		<system value="phone">
+			<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+				<extension url="content">
+					<valueString value="Telefon"/>
+				</extension>
+			</extension>
+		</system>
+		<value value="123456"/>
+	</telecom>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Charlottenburg"/>
+		</extension>
+		<use value="work"/>
+		<type value="both"/>
+		<text value="Lilienweg 38, 27961 Musterstadt"/>
+		<line value="Lilienweg 38">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Lilienweg"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="38"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+				<valueString value="Hinterhof"/>
+			</extension>
+		</line>
+		<city value="Musterstadt"/>
+		<postalCode value="27961"/>
+		<country value="D"/>
+	</address>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Charlottenburg"/>
+		</extension>
+		<use value="work"/>
+		<type value="postal"/>
+		<line value="Lilienweg 38">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+				<valueString value="12345678"/>
+			</extension>
+		</line>
+		<city value="Musterstadt"/>
+		<postalCode value="27961"/>
+		<country value="D"/>
+	</address>
+</Organization>

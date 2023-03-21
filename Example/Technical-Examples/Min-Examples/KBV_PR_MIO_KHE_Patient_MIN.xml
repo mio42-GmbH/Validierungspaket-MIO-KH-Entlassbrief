@@ -1,0 +1,16 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+	</meta>
+	<name>
+		<use value="official"/>
+		<family value="Max Moritz">
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+				<valueString value="Moritz"/>
+			</extension>
+		</family>
+		<given value="Max"/>
+	</name>
+	<birthDate value="1988-06-11"/>
+</Patient>

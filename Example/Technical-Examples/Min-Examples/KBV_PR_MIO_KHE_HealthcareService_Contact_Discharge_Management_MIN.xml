@@ -1,0 +1,29 @@
+<HealthcareService xmlns="http://hl7.org/fhir">
+	<id value="3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management|1.0.0"/>
+	</meta>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="718675005"/>
+			<display value="Management of inpatient discharge (procedure)"/>
+		</coding>
+	</type>
+	<telecom>
+		<system value="phone"/>
+		<value value="0301234567"/>
+	</telecom>
+	<availableTime>
+		<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Details">
+			<valueString value="Mo-Fr: 9-17 Uhr"/>
+		</extension>
+	</availableTime>
+</HealthcareService>
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<ClinicalImpression xmlns="http://hl7.org/fhir">
+	<id value="a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_ClinicalImpression_Admission|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Informationen zur Aufnahme</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Medication">
+		<valueReference>
+			<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+		</valueReference>
+	</extension>
+	<status value="completed"/>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="371542009"/>
+			<display value="Admission history and physical report (record artifact)"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<problem>
+		<reference value="urn:uuid:20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+	</problem>
+	<investigation>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+				<code value="82832008"/>
+				<display value="General body state finding (finding)"/>
+			</coding>
+		</code>
+		<item>
+			<reference value="urn:uuid:0c3da2a3-e15e-42ce-bdfc-bfd3fa6db0b3"/>
+		</item>
+		<item>
+			<reference value="urn:uuid:eb611e4b-6d5f-423e-8554-4d97eb627c2d"/>
+		</item>
+		<item>
+			<reference value="urn:uuid:5cef120b-7741-46ce-a6b6-1f9e9afb083e"/>
+		</item>
+	</investigation>
+	<summary value="Infoamtionen zur Aufnahme"/>
+</ClinicalImpression>

@@ -1,0 +1,25 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="14aa344f-2a06-4925-a92d-264b389a5b25"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Physical_Findings|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Körperlicher Untersuchungsbefund</h1>
+		</div>
+	</text>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<version value="2.71"/>
+			<code value="55286-9"/>
+			<display value="Physical exam by body areas"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<valueString value="test"/>
+</Observation>

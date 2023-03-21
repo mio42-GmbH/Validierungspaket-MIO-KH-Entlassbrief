@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="e9aeebde-270c-432e-9a53-bdfb9b749a0f"/>
+  <meta>
+    <profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Incapacity_To_Work|1.0.0"/>
+  </meta>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative" />
+        <version value="1.0.0" />
+        <code value="AUA" />
+        <display value="Arbeitsunfähigkeit ausgestellt bis" />
+    </coding>
+  </code>
+  <subject>
+    <reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+  </subject>
+  <valueDateTime value="2022-10-20"/>
+</Observation>

@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="1594409a-782a-4de8-9778-753a17cd23c9"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Infection_By_Multi_Resistant_Pathogens|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Infektion oder Besiedelung durch multiresistente Erreger</h1>
+		</div>
+	</text>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="439401001:246093002=409793007"/>
+			<display value="Diagnosis (observable entity) : Component (attribute) = Antimicrobial resistant bacteria (organism)"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<valueBoolean value="true"/>
+	<note>
+		<text value="Multiresistente Erreger"/>
+	</note>
+</Observation>

@@ -1,0 +1,17 @@
+<Condition xmlns="http://hl7.org/fhir">
+	<id value="20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0"/>
+	</meta>
+	<code>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/dimdi/alpha-id"/>
+			<version value="2020"/>
+			<code value="I6158"/>
+			<display value="Ichthyosiformes Ekzem"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+</Condition>

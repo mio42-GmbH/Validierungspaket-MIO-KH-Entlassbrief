@@ -1,0 +1,57 @@
+<Device xmlns="http://hl7.org/fhir">
+	<id value="18b69e52-9a21-4137-9ff9-6c4d43bba322"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Implantat</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Special_Approval">
+		<valueBoolean value="true"/>
+	</extension>
+	<identifier>
+		<use value="usual"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<code value="DL"/>
+			</coding>
+		</type>
+		<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		<value value="123456"/>
+	</identifier>
+	<definition>
+		<reference value="uuid:urn:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	</definition>
+	<udiCarrier>
+		<deviceIdentifier value="Implantat"/>
+	</udiCarrier>
+	<distinctIdentifier value="Implantat"/>
+	<manufactureDate value="2022-09-06"/>
+	<expirationDate value="2022-09-06"/>
+	<lotNumber value="abcdefghi"/>
+	<serialNumber value="123456abcdef"/>
+	<deviceName>
+		<name value="Gerät"/>
+		<type value="udi-label-name"/>
+	</deviceName>
+	<modelNumber value="345678910"/>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+			<code value="84683006"/>
+			<display value="Aortic valve prosthesis (physical object)"/>
+		</coding>
+		<text value="Implantat"/>
+	</type>
+	<patient>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</patient>
+</Device>
+
+
+

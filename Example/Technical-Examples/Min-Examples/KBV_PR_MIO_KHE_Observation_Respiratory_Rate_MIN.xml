@@ -1,0 +1,49 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="6262cf97-539d-4a9f-bf29-db4de01f75e6"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Respiratory_Rate|1.0.0"/>
+	</meta>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="vital-signs"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<version value="2.71"/>
+			<code value="9279-1"/>
+			<display value="Respiratory rate">
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+					<extension url="content">
+						<valueString value="Atemfrequenz"/>
+					</extension>
+				</extension>
+			</display>
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20210731"/>
+			<code value="86290005"/>
+			<display value="Respiratory rate (observable entity)">
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+					<extension url="content">
+						<valueString value="Atemfrequenz"/>
+					</extension>
+				</extension>
+			</display>
+		</coding>
+	</code>
+	<subject>
+		<reference value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<effectiveDateTime value="2022-08-16"/>
+	<valueQuantity>
+		<value value="12"/>
+		<unit value="per minute"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="/min"/>
+	</valueQuantity>
+</Observation>

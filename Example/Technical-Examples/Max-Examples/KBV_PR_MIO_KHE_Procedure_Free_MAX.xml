@@ -1,0 +1,19 @@
+<Procedure xmlns="http://hl7.org/fhir">
+	<id value="befc4f2f-54a2-470f-ae67-0d8ffce3ac7c"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure_Free|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Prozedur Freitext</h1>
+		</div>
+	</text>
+	<status value="completed"/>
+	<code>
+		<text value="Freitext"/>
+	</code>
+	<subject>
+		<reference value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+</Procedure>

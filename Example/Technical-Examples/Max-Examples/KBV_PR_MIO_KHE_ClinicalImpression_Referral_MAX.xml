@@ -1,0 +1,33 @@
+<ClinicalImpression xmlns="http://hl7.org/fhir">
+	<id value="a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_ClinicalImpression_Referral|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Informationen zur Einweisung</h1>
+		</div>
+	</text>
+	<status value="completed"/>
+	<code>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+			<code value="721927009"/>
+			<display value="Referral note (record artifact)"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<assessor>
+		<reference value="a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	</assessor>
+	<summary value="Informationen zur Einweisung"/>
+	<finding>
+		<itemReference>
+			<reference value="urn:uuid:20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+		</itemReference>
+	</finding>
+</ClinicalImpression>

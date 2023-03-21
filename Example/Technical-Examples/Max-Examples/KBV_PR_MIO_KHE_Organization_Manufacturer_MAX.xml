@@ -1,0 +1,60 @@
+<Organization xmlns="http://hl7.org/fhir">
+	<id value="a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization_Manufacturer|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Geräte-Hersteller</h1>
+		</div>
+	</text>
+	<name value="Allgemeinarzt Praxis Mustermann"/>
+	<telecom>
+		<system value="url">
+			<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Terminology_German">
+				<extension url="content">
+					<valueString value="URL"/>
+				</extension>
+			</extension>
+		</system>
+		<value value="123456"/>
+	</telecom>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Charlottenburg"/>
+		</extension>
+		<use value="work"/>
+		<type value="both"/>
+		<text value="Lilienweg 38, 27961 Musterstadt"/>
+		<line value="Lilienweg 38">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Lilienweg"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="38"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+				<valueString value="Hinterhof"/>
+			</extension>
+		</line>
+		<city value="Musterstadt"/>
+		<postalCode value="27961"/>
+		<country value="D"/>
+	</address>
+	<!-- <address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Charlottenburg"/>
+		</extension>
+		<use value="work"/>
+		<type value="postal"/>
+		<line value="Lilienweg 38">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+				<valueString value="Lilien"/>
+			</extension>
+		</line>
+		<city value="Musterstadt"/>
+		<postalCode value="27961"/>
+		<country value="D"/>
+	</address> -->
+</Organization>

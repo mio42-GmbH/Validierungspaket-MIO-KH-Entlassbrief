@@ -1,0 +1,9 @@
+<PractitionerRole xmlns="http://hl7.org/fhir">
+	<id value="db47483a-ae09-42b5-bf61-85598a01cc24"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Leading_Person_Position|1.0.0"/>
+	</meta>
+	<practitioner>
+		<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	</practitioner>
+</PractitionerRole>

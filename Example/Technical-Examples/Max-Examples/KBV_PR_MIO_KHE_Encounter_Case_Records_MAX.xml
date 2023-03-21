@@ -1,0 +1,64 @@
+<Encounter xmlns="http://hl7.org/fhir">
+	<id value="05257314-0fb3-405a-8c6e-672e4715dbf9"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Falldaten</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Discharge_Management">
+		<valueReference>
+			<reference value="c8b4a701-eb02-46aa-845e-7eb49dde8c30"/>
+		</valueReference>
+	</extension>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Support_Care_Insurance">
+		<valueReference>
+			<reference value="7ab835ae-3119-4bf6-875a-ed220a509778"/>
+		</valueReference>
+	</extension>
+	<status value="finished"/>
+	<class>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<version value="2018-08-12"/>
+		<code value="_ActAccountCode"/>
+		<display value="ActAccountCode"/>
+	</class>
+	<serviceType>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+			<version value="1.4.0"/>
+			<code value="0100"/>
+			<display value="Innere Medizin"/>
+		</coding>
+		<text value="Encounter"/>
+	</serviceType>
+	<subject>
+		<reference value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<period>
+		<start value="2022-09-06"/>
+		<end value="2022-11-06"/>
+	</period>
+	<hospitalization>
+		<admitSource>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass"/>
+				<version value="1.4.0"/>
+				<code value="E"/>
+				<display value="Einweisung durch einen Arzt"/>
+			</coding>
+		</admitSource>
+		<dischargeDisposition>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/discharge-disposition"/>
+				<version value="0.1.0"/>
+				<code value="home"/>
+				<display value="Home"/>
+			</coding>
+			<text value="Entlassung nach Hause"/>
+		</dischargeDisposition>
+	</hospitalization>
+</Encounter>
