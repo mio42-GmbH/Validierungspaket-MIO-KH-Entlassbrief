@@ -11,7 +11,8 @@ Alternatively, the dependencies can also be found here:
 - dvmd.kdl.r4.2022 2022 1.2: https://simplifier.net/packages/dvmd.kdl.r4.2022/2022.1.2
 
 The version of the validator, which was used by the mio42 GmbH is 6.3.10 and can be found here: 
-- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.3.10 
+- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.3.10
+
 If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
 - https://github.com/hapifhir/org.hl7.fhir.core/releases
   
