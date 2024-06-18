@@ -1,0 +1,37 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="5400d1f4-7299-47ff-b71d-a6bf2ad41c8d"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Glucose_Concentration|1.0.0"/>
+	</meta>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="vital-signs"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<version value="2.73"/>
+			<code value="15074-8"/>
+			<display value="Glucose [Moles/volume] in Blood"/>
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="434912009"/>
+			<display value="Blood glucose concentration (observable entity)"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<effectiveDateTime value="2022-08-16"/>
+	<valueQuantity>
+		<value value="60"/>
+		<unit value="mg/dL"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="mg/dL"/>
+	</valueQuantity>
+</Observation>

@@ -19,7 +19,7 @@
     <compose>
         <include>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <concept>
                 <code value="282290005"/>
                 <display value="Imaging interpretation (observable entity)"/>
@@ -33,79 +33,79 @@
                 <display value="Histopathology interpretation (observable entity)"/>
             </concept>
             <concept>
-                <code value="277034006:704321009=103693007"/>
-                <display value="Test interpretation (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
+                <code value="277034006:704321009=386053000"/>
+                <display value="Test interpretation (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
             </concept>
             <concept>
                 <code value="277034006:704321009=5880005"/>
                 <display value="Test interpretation (observable entity) : Characterizes (attribute) = Physical examination procedure (procedure)"/>
             </concept>
             <concept>
-                <code value="277034006:704321009=386053000"/>
-                <display value="Test interpretation (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
-            </concept>
-            <concept>
                 <code value="282288009"/>
                 <display value="Microbiology interpretation (observable entity)"/>
             </concept>
             <concept>
-                <code value="271906008:704321009=103693007"/>
-                <display value="Examination finding (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
+                <code value="271906008:704321009=386053000"/>
+                <display value="Examination finding (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
+            </concept>
+            <concept>
+                <code value="74964007"/>
+                <display value="Other (qualifier value)"/>
             </concept>
         </include>
     </compose>
     <expansion>
-        <identifier value="375c8527-4b94-11ed-830f-005056adfc4e"/>
-        <timestamp value="2022-10-14T09:45:47+02:00"/>
+        <identifier value="9d6c2c7c-dbac-11ee-9783-005056ad6c7c"/>
+        <timestamp value="2024-03-06T12:28:11+01:00"/>
         <total value="8"/>
         <offset value="0"/>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <code value="282290005"/>
             <display value="Imaging interpretation (observable entity)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <code value="277034006:704321009=386344002"/>
             <display value="Test interpretation (observable entity) : Characterizes (attribute) = Laboratory data interpretation (procedure)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <code value="271920001"/>
             <display value="Histopathology interpretation (observable entity)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
-            <code value="277034006:704321009=103693007"/>
-            <display value="Test interpretation (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
-            <code value="277034006:704321009=5880005"/>
-            <display value="Test interpretation (observable entity) : Characterizes (attribute) = Physical examination procedure (procedure)"/>
-        </contains>
-        <contains>
-            <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <code value="277034006:704321009=386053000"/>
             <display value="Test interpretation (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+            <code value="277034006:704321009=5880005"/>
+            <display value="Test interpretation (observable entity) : Characterizes (attribute) = Physical examination procedure (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
             <code value="282288009"/>
             <display value="Microbiology interpretation (observable entity)"/>
         </contains>
         <contains>
             <system value="http://snomed.info/sct"/>
-            <version value="http://snomed.info/sct/900000000000207008/version/20210131"/>
-            <code value="271906008:704321009=103693007"/>
-            <display value="Examination finding (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+            <code value="271906008:704321009=386053000"/>
+            <display value="Examination finding (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
+        </contains>
+        <contains>
+            <system value="http://snomed.info/sct"/>
+            <version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+            <code value="74964007"/>
+            <display value="Other (qualifier value)"/>
         </contains>
     </expansion>
 </ValueSet>

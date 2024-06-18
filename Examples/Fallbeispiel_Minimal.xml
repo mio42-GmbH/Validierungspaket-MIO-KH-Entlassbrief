@@ -1,0 +1,588 @@
+<Bundle xmlns="http://hl7.org/fhir">
+	<id value="0ab0b572-f981-4d84-95d0-64d1d6b59c37"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Bundle|1.0.0"/>
+	</meta>
+	<identifier>
+		<system value="urn:ietf:rfc:3986"/>
+		<value value="urn:uuid:0ab0b572-f981-4d84-95d0-64d1d6b59c37"/>
+	</identifier>
+	<type value="document"/>
+	<timestamp value="2024-01-09T16:55:05Z"/>
+	<entry>
+		<fullUrl value="urn:uuid:bf4c0b5e-1789-4c24-9783-f2ab374dc8dc"/>
+		<resource>
+			<Composition>
+				<id value="bf4c0b5e-1789-4c24-9783-f2ab374dc8dc"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Composition|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+						<code value="373942005"/>
+						<display value="Discharge summary (record artifact)"/>
+					</coding>
+				</type>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<encounter>
+					<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				</encounter>
+				<date value="2024-01-09T16:55:05Z"/>
+				<author>
+					<reference value="urn:uuid:ba7c32d3-f271-40ea-8124-fd1a26da16fc"/>
+				</author>
+				<title value="Krankenhausentlassbrief"/>
+				<section>
+					<title value="Entlassende Personen/Einrichtung"/>
+					<code>
+						<coding>
+							<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+							<version value="1.0.0"/>
+							<code value="entlassende_personen_einrichtung"/>
+							<display value="Entlassende Personen/Einrichtung"/>
+						</coding>
+					</code>
+					<section>
+						<title value="Behandelnde Personen"/>
+						<code>
+							<coding>
+								<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+								<version value="1.0.0"/>
+								<code value="behandelnde_person"/>
+								<display value="Behandelnde Person"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:ba7c32d3-f271-40ea-8124-fd1a26da16fc"/>
+						</entry>
+					</section>
+					<section>
+						<title value="Verantwortliche Personen"/>
+						<code>
+							<coding>
+								<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+								<version value="1.0.0"/>
+								<code value="verantworltiche_personen"/>
+								<display value="Verantwortliche Personen"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:645f281b-c77c-4b1c-8cc0-fb0b7224610b"/>
+						</entry>
+					</section>
+					<section>
+						<title value="Kontakt Entlassmanagement"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+								<code value="718675005"/>
+								<display value="Management of inpatient discharge (procedure)"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:10b5134d-02e8-4b77-8f76-f729514f95f7"/>
+						</entry>
+					</section>
+				</section>
+				<section>
+					<title value="Empfangende Personen"/>
+					<code>
+						<coding>
+							<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+							<version value="1.0.0"/>
+							<code value="empfangende_personen"/>
+							<display value="Empfangende Personen"/>
+						</coding>
+					</code>
+					<section>
+						<title value="PatientIn"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+								<code value="116154003"/>
+								<display value="Patient (person)"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+						</entry>
+					</section>
+				</section>
+				<section>
+					<title value="Falldaten"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+							<code value="866144008"/>
+							<display value="Encounter note (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Aufnahme"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+							<code value="371542009"/>
+							<display value="Admission history and physical report (record artifact)"/>
+						</coding>
+					</code>
+					<section>
+						<title value="Klinischer Untersuchungsbefund"/>
+						<code>
+							<coding>
+								<system value="http://loinc.org"/>
+								<version value="2.73"/>
+								<code value="55286-9"/>
+								<display value="Physical exam by body areas"/>
+							</coding>
+						</code>
+						<entry>
+							<reference value="urn:uuid:d0c2bdc7-7be4-4631-95e0-73ad2b6391f3"/>
+						</entry>
+					</section>
+				</section>
+				<section>
+					<title value="Verlauf"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+							<code value="444754002"/>
+							<display value="Hospital inpatient progress report (record artifact)"/>
+						</coding>
+					</code>
+					<entry>
+						<reference value="urn:uuid:c261844a-b8e2-4382-8b45-bb4a582e5a04"/>
+					</entry>
+					<entry>
+						<reference value="urn:uuid:85f03172-266a-4f69-bc97-8845c649d522"/>
+					</entry>
+				</section>
+				<section>
+					<title value="Entlassung"/>
+					<code>
+						<coding>
+							<system value="http://loinc.org"/>
+							<version value="2.73"/>
+							<code value="34105-7"/>
+							<display value="Hospital Discharge summary"/>
+						</coding>
+					</code>
+					<section>
+						<title value="Entlassungsbefund"/>
+						<code>
+							<coding>
+								<system value="http://loinc.org"/>
+								<version value="2.73"/>
+								<code value="10184-0"/>
+								<display value="Hospital discharge physical findings Narrative"/>
+							</coding>
+						</code>
+						<text>
+							<status value="additional"/>
+							<div xmlns="http://www.w3.org/1999/xhtml">
+								<h1>Reizlose und trockene Wunde, resorbierbares Nahtmaterial in situ.</h1>
+							</div>
+						</text>
+					</section>
+				</section>
+			</Composition>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:c2177c1b-8c9c-4835-b5ce-d2eb24291aa5"/>
+		<resource>
+			<Practitioner>
+				<id value="c2177c1b-8c9c-4835-b5ce-d2eb24291aa5"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Hubbeling">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Hubbeling"/>
+						</extension>
+					</family>
+				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="3012345999"/>
+				</telecom>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:648872c4-2a2c-46ae-83da-312834b3a9a3"/>
+		<resource>
+			<Practitioner>
+				<id value="648872c4-2a2c-46ae-83da-312834b3a9a3"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Wagner">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Wagner"/>
+						</extension>
+					</family>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:72c73151-76c0-4a78-a3be-f739ebb109dc"/>
+		<resource>
+			<Practitioner>
+				<id value="72c73151-76c0-4a78-a3be-f739ebb109dc"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<family value="Costa">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Costa"/>
+						</extension>
+					</family>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:ba7c32d3-f271-40ea-8124-fd1a26da16fc"/>
+		<resource>
+			<PractitionerRole>
+				<id value="ba7c32d3-f271-40ea-8124-fd1a26da16fc"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:c2177c1b-8c9c-4835-b5ce-d2eb24291aa5"/>
+				</practitioner>
+				<organization>
+					<reference value="urn:uuid:684e24bd-f30f-461b-83a5-a9edf9d35be4"/>
+				</organization>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:645f281b-c77c-4b1c-8cc0-fb0b7224610b"/>
+		<resource>
+			<PractitionerRole>
+				<id value="645f281b-c77c-4b1c-8cc0-fb0b7224610b"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:648872c4-2a2c-46ae-83da-312834b3a9a3"/>
+				</practitioner>
+				<organization>
+					<reference value="urn:uuid:684e24bd-f30f-461b-83a5-a9edf9d35be4"/>
+				</organization>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:e40e6e6f-1c9d-4739-95ff-6700b8c07348"/>
+		<resource>
+			<PractitionerRole>
+				<id value="e40e6e6f-1c9d-4739-95ff-6700b8c07348"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0"/>
+				</meta>
+				<practitioner>
+					<reference value="urn:uuid:72c73151-76c0-4a78-a3be-f739ebb109dc"/>
+				</practitioner>
+				<organization>
+					<reference value="urn:uuid:f23c469f-83a2-4274-97af-bd1e4c809936"/>
+				</organization>
+			</PractitionerRole>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+		<resource>
+			<Patient>
+				<id value="5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+				</meta>
+				<name>
+					<use value="official"/>
+					<text value="Lisa Becker"/>
+					<family value="Becker">
+						<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+							<valueString value="Becker"/>
+						</extension>
+					</family>
+					<given value="Lisa"/>
+				</name>
+				<telecom>
+					<system value="phone"/>
+					<value value="30123456788"/>
+				</telecom>
+				<gender value="female"/>
+				<birthDate value="1982-12-02"/>
+				<address>
+					<type value="both"/>
+					<line value="Wiesenstraße 1">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Wiesenstraße"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="1"/>
+						</extension>
+					</line>
+					<city value="Berlin"/>
+					<postalCode value="10101"/>
+					<country value="D"/>
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:f23c469f-83a2-4274-97af-bd1e4c809936"/>
+		<resource>
+			<Organization>
+				<id value="f23c469f-83a2-4274-97af-bd1e4c809936"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+				</meta>
+				<name value="Praxis Alessa Costa"/>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:684e24bd-f30f-461b-83a5-a9edf9d35be4"/>
+		<resource>
+			<Organization>
+				<id value="684e24bd-f30f-461b-83a5-a9edf9d35be4"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+				</meta>
+				<type>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+						<version value="1.4.0"/>
+						<code value="1500"/>
+						<display value="Allgemeine Chirurgie"/>
+					</coding>
+				</type>
+				<name value="Krankenhaus Sonnenberg, Klinik für Allgemein- und Viszeralchirurgie"/>
+				<address>
+					<type value="both"/>
+					<line value="Klinikstraße 12">
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+							<valueString value="Klinikstraße"/>
+						</extension>
+						<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+							<valueString value="12"/>
+						</extension>
+					</line>
+					<city value="Berlin"/>
+					<postalCode value="10102"/>
+					<country value="D"/>
+				</address>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:85f03172-266a-4f69-bc97-8845c649d522"/>
+		<resource>
+			<Observation>
+				<id value="85f03172-266a-4f69-bc97-8845c649d522"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Section_Inpatient_Stay|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="KHV"/>
+						<display value="Krankenhausverlauf"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<encounter>
+					<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				</encounter>
+				<valueString value="Die Patientin wurde aufgrund rezidivierender Gallenkoliken über die chirurgische Sprechstunde stationär aufgenommen. Der sonographische Nachweis eines Gallensteinleidens führte zur Indikationsstellung einer laparoskopischen Cholezystektomie.  Nach entsprechender Vorbereitung und ausführlicher Aufklärung über die Notwendigkeit sowie die potenziellen Risiken der Operation unterzog sich die Patientin, Frau Becker, am 05.01.2024 einer laparoskopischen Cholezystektomie in komplikationsfreier Allgemeinanästhesie. Intraoperativ zeigte sich eine Cholezystitis bei Cholezystolithiasis.  Der postoperative Verlauf verlief unkompliziert. Sowohl der Kostaufbau als auch die Mobilisation konnten unter angemessener Analgesie und Thromboembolieprophylaxe mit Enoxaparin 40 mg/Tag reibungslos durchgeführt werden.  Bei der Aufnahme wiesen die Entzündungsparameter leichte Erhöhungen auf, die im Verlauf rückläufig waren. Die gastrointestinale Funktion normalisierte sich ordnungsgemäß, und die Wundverhältnisse zeigten keine Anzeichen einer Infektion. Die Wundheilung erfolgte ohne Komplikationen."/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:c261844a-b8e2-4382-8b45-bb4a582e5a04"/>
+		<resource>
+			<Observation>
+				<id value="c261844a-b8e2-4382-8b45-bb4a582e5a04"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Section_Inpatient_Stay|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+						<version value="1.0.0"/>
+						<code value="KHV"/>
+						<display value="Krankenhausverlauf"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<encounter>
+					<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				</encounter>
+				<valueString value="Beurteilung: Mäßige chronische, follikuläre, mäßig hyperplastische und mäßig fibrosierte Cholezystitis bei Cholezystolithiasis. Kein Anhalt für Malignität."/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:d0c2bdc7-7be4-4631-95e0-73ad2b6391f3"/>
+		<resource>
+			<Observation>
+				<id value="d0c2bdc7-7be4-4631-95e0-73ad2b6391f3"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Clinical_Examination_Report|1.0.0"/>
+				</meta>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20230731"/>
+						<code value="422813005"/>
+						<display value="Document section (record artifact)"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<encounter>
+					<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				</encounter>
+				<valueString value="Körperlicher Untersuchungsbefund: Patientin in reduziertem Allgemein- und adipösem Ernährungszustand, Bewusstseinsklar, zu allen Qualitäten voll orientiert. Kopf/Hals: Keine Halsvenenstauung. Pulmo: Vesikuläres Atemgeräusch. Keine Rasselgeräusche, keine Spastik. Cor: Herzaktion tachykard, rhythmisch, Herztöne rein. Abdomen: Druckschmerz im rechten Oberbauch und epigastrisch, positives Murphy Zeichen, keine Abwehrspannung. Peristaltik regelrecht. Milz und Leber nicht vergrößert palpabel. Extremitäten: Keine Unterschenkelödeme."/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:10b5134d-02e8-4b77-8f76-f729514f95f7"/>
+		<resource>
+			<HealthcareService>
+				<id value="10b5134d-02e8-4b77-8f76-f729514f95f7"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management|1.0.0"/>
+				</meta>
+				<type>
+					<coding>
+						<system value="http://snomed.info/sct"/>
+						<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+						<code value="718675005"/>
+						<display value="Management of inpatient discharge (procedure)"/>
+					</coding>
+				</type>
+				<telecom>
+					<system value="phone"/>
+					<value value="3012345677"/>
+				</telecom>
+				<availableTime>
+					<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Details">
+						<valueString value="Montag bis Freitag in der Zeit von 09:00 bis 19:00, Samstag 10:00 bis 14:00, Sonntag 10:00 bis 14:00 Uhr"/>
+					</extension>
+				</availableTime>
+			</HealthcareService>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+		<resource>
+			<Encounter>
+				<id value="520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+				</meta>
+				<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Discharge_Management_Performed">
+					<valueBoolean value="true"/>
+				</extension>
+				<status value="finished"/>
+				<class>
+					<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+					<version value="3.0.0"/>
+					<code value="IMP"/>
+					<display value="inpatient encounter"/>
+				</class>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<period>
+					<start value="2024-01-05"/>
+					<end value="2024-01-09"/>
+				</period>
+				<diagnosis>
+					<condition>
+						<reference value="urn:uuid:98a3f5c2-c76d-476a-b5bd-726f2ba1cbd1"/>
+					</condition>
+					<use>
+						<coding>
+							<system value="http://fhir.de/CodeSystem/KontaktDiagnoseProzedur"/>
+							<version value="1.4.0"/>
+							<code value="referral-diagnosis"/>
+							<display value="Überweisungsdiagnose"/>
+						</coding>
+					</use>
+				</diagnosis>
+				<hospitalization>
+					<origin>
+						<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole">
+							<valueReference>
+								<reference value="urn:uuid:e40e6e6f-1c9d-4739-95ff-6700b8c07348"/>
+							</valueReference>
+						</extension>
+					</origin>
+				</hospitalization>
+			</Encounter>
+		</resource>
+	</entry>
+	<entry>
+		<fullUrl value="urn:uuid:98a3f5c2-c76d-476a-b5bd-726f2ba1cbd1"/>
+		<resource>
+			<Condition>
+				<id value="98a3f5c2-c76d-476a-b5bd-726f2ba1cbd1"/>
+				<meta>
+					<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0"/>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://fhir.de/CodeSystem/bfarm/icd-10-gm"/>
+						<version value="2020"/>
+						<code value="K80.0"/>
+						<display value="Gallenblasenstein mit akuter Cholezystitis"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="urn:uuid:5f0822c8-a30c-44c3-8639-22fe9fcd6490"/>
+				</subject>
+				<encounter>
+					<reference value="urn:uuid:520ffe3e-fc05-441e-bc33-8a7a436a91d8"/>
+				</encounter>
+			</Condition>
+		</resource>
+	</entry>
+</Bundle>

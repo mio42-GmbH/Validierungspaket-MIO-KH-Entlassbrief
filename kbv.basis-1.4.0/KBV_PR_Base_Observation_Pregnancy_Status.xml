@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-Base-Observation-Pregnancy-Status" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Observation_Pregnancy_Status" />
+  <version value="1.4.0" />
+  <name value="KBV_PR_Base_Observation_Pregnancy_Status" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Hier wird ein Schwangerschaftsstatus abgebldet." />
+  <copyright value="Im folgenden Profil k&amp;#246;nnen Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms&amp;#174; (SNOMED CT&amp;#174;) which is used by permission of SNOMED International. All rights reserved. SNOMED CT&amp;#174;, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from Loinc (http://loinc.org). Loinc is copyright &amp;#169; 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (Loinc) Committee and is available at no cost under the license at http://loinc.org/license. Loinc&amp;#174; is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright &amp;#169; 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &amp;quot;AS IS.&amp;quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <version value="2.73" />
+        <code value="11449-6" />
+        <display value="Pregnancy status - Reported" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:loinc.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.version">
+      <path value="Observation.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Device|1.4.0" />
+      </type>
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <max value="0" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <definition value="Zeitpunkt, an dem die Untersuchung durchgeführt wurde." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+	  <definition value="Hier wird angeben, ob eine Schwangerschaft vorliegt." />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.value[x].coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:loinc">
+      <path value="Observation.value[x].coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Pregnancy_Status_LOINC" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:loinc.system">
+      <path value="Observation.value[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:loinc.version">
+      <path value="Observation.value[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:loinc.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:loinc.display">
+      <path value="Observation.value[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:snomed">
+      <path value="Observation.value[x].coding" />
+      <sliceName value="snomed" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Pregnancy_Status_SNOMED_CT" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:snomed.system">
+      <path value="Observation.value[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:snomed.version">
+      <path value="Observation.value[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:snomed.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding:snomed.display">
+      <path value="Observation.value[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <definition value="Hier wird die Methode der Untersuchung anhand eines entsprechenden Codes oder alternativ mit einem Freitext angegeben." />
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:snomed">
+      <path value="Observation.method.coding" />
+      <sliceName value="snomed" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Pregnancy_Status_Method_SNOMED_CT" />
+      </binding>
+    </element>
+    <element id="Observation.method.coding:snomed.system">
+      <path value="Observation.method.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:snomed.version">
+      <path value="Observation.method.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:snomed.code">
+      <path value="Observation.method.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:snomed.display">
+      <path value="Observation.method.coding.display" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

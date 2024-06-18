@@ -18,23 +18,15 @@
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
-        <code value="EUDDKP"/>
-        <display value="Einwilligung Unterstützung durch die Kranken-/Pflegekasse"/>
-    </concept>
-    <concept>
-        <code value="EUDDKPZ"/>
-        <display value="Einwilligung in die Unterstützung des Entlassmanagements durch die Kranken-/Pflegekasse zugestimmt"/>
-    </concept>
-    <concept>
-        <code value="EUDDKPA"/>
-        <display value="Einwilligung in die Unterstützung des Entlassmanagements durch die Kranken-/Pflegekasse abgelehnt"/>
-    </concept>
-	 <concept>
         <code value="KHV"/>
         <display value="Krankenhausverlauf"/>
     </concept>
     <concept>
-        <code value="AUA"/>
-        <display value="Arbeitsunfähigkeit ausgestellt bis"/>
+        <code value="AU"/>
+        <display value="Arbeitsunfähigkeitsbescheinigung"/>
+    </concept>
+    <concept>
+        <code value="WVL"/>
+        <display value="Weiteres Vorgehen/Leistung"/>
     </concept>
 </CodeSystem>

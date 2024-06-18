@@ -1,9 +1,0 @@
-<DeviceDefinition xmlns="http://hl7.org/fhir">
-	<id value="6028689e-8def-4fe0-a12e-a5d591dd9064"/>
-	<meta>
-		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceDefinition|1.0.0"/>
-	</meta>
-	<manufacturerReference>
-		<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
-	</manufacturerReference>
-</DeviceDefinition>

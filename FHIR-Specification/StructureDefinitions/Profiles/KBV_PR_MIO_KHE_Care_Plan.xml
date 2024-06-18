@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-Care-Plan"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Care_Plan"/>
+	<id value="KBV-PR-MIO-KHE-CarePlan"/>
+	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_CarePlan"/>
 	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_Care_Plan"/>
-	<title value="KBV_PR_MIO_KHE_Care_Plan"/>
+	<name value="KBV_PR_MIO_KHE_CarePlan"/>
+	<title value="KBV_PR_MIO_KHE_CarePlan"/>
 	<status value="draft"/>
 	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet folgende Informationen ab: Weiteres Prozedere und Empfehlungen, Veranlasste Leistungen und die nachfolgende Versorgungseinrichtung."/>
+	<description value="Dieses Profil bildet eine zur Entlassung verordnete oder zu veranlassende Leistung oder ein Behandlungsplan ab."/>
 	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
 	<fhirVersion value="4.0.1"/>
 	<kind value="resource"/>
@@ -18,7 +18,7 @@
 	<differential>
 		<element id="CarePlan">
 			<path value="CarePlan"/>
-			<definition value="Dieses Profil bildet folgende Informationen ab: Weiteres Prozedere und Empfehlungen, Veranlasste Leistungen und die nachfolgende Versorgungseinrichtung."/>
+			<definition value="Dieses Profil bildet eine zur Entlassung verordnete oder zu veranlassende Leistung oder ein Behandlungsplan ab.&#xD;&#xA;Detaillierte Informationen zu einem verordneten Hilfsmittel können optional über das referenzierte Profil &quot;Gerät/Implantat&quot; abgebildet werden."/>
 		</element>
 		<element id="CarePlan.meta">
 			<path value="CarePlan.meta"/>
@@ -38,9 +38,21 @@
 		</element>
 		<element id="CarePlan.meta.profile">
 			<path value="CarePlan.meta.profile"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+			<min value="1"/>
+		</element>
+		<element id="CarePlan.meta.profile:mioProfile">
+			<path value="CarePlan.meta.profile"/>
+			<sliceName value="mioProfile"/>
 			<min value="1"/>
 			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Care_Plan|1.0.0"/>
+			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_CarePlan|1.0.0"/>
 		</element>
 		<element id="CarePlan.meta.security">
 			<path value="CarePlan.meta.security"/>
@@ -60,6 +72,7 @@
 		</element>
 		<element id="CarePlan.text">
 			<path value="CarePlan.text"/>
+			<definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."/>
 		</element>
 		<element id="CarePlan.text.status">
 			<path value="CarePlan.text.status"/>
@@ -91,15 +104,40 @@
 		</element>
 		<element id="CarePlan.partOf">
 			<path value="CarePlan.partOf"/>
+			<definition value="Hier können Leistungen abgebildet werden, welche Bestandteile der Gesamt-Leistung sind."/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_CarePlan|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.partOf.reference">
+			<path value="CarePlan.partOf.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.partOf.type">
+			<path value="CarePlan.partOf.type"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.partOf.identifier">
+			<path value="CarePlan.partOf.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.partOf.display">
+			<path value="CarePlan.partOf.display"/>
 			<max value="0"/>
 		</element>
 		<element id="CarePlan.status">
 			<path value="CarePlan.status"/>
+			<definition value="Hier wird der Status der Leistung bzw. des Behandlungsplans abgebildet."/>
 			<patternCode value="active"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.intent">
 			<path value="CarePlan.intent"/>
-			<patternCode value="plan"/>
+			<definition value="Hier kann die angegeben werden, ob die Leistung oder der Behandlungsplan im Rahmen der Entlassung empfohlen wird, bereit veranlasst wurde oder im Rahmen der Anschlussbehandlung zu veranlassen ist."/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.category">
 			<path value="CarePlan.category"/>
@@ -115,6 +153,7 @@
 		</element>
 		<element id="CarePlan.subject">
 			<path value="CarePlan.subject"/>
+			<definition value="Hier erfolgt die Referenzierung der zu behandelnden Person."/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
@@ -140,6 +179,28 @@
 		</element>
 		<element id="CarePlan.encounter">
 			<path value="CarePlan.encounter"/>
+			<definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden."/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.encounter.reference">
+			<path value="CarePlan.encounter.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.encounter.type">
+			<path value="CarePlan.encounter.type"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.encounter.identifier">
+			<path value="CarePlan.encounter.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.encounter.display">
+			<path value="CarePlan.encounter.display"/>
 			<max value="0"/>
 		</element>
 		<element id="CarePlan.period">
@@ -156,6 +217,30 @@
 		</element>
 		<element id="CarePlan.contributor">
 			<path value="CarePlan.contributor"/>
+			<definition value="Hier kann eine Person oder Einrichtung abgebildet werden, welche die Leistung veranlasst hat."/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.contributor.reference">
+			<path value="CarePlan.contributor.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.contributor.type">
+			<path value="CarePlan.contributor.type"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.contributor.identifier">
+			<path value="CarePlan.contributor.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="CarePlan.contributor.display">
+			<path value="CarePlan.contributor.display"/>
 			<max value="0"/>
 		</element>
 		<element id="CarePlan.careTeam">
@@ -176,7 +261,8 @@
 		</element>
 		<element id="CarePlan.activity">
 			<path value="CarePlan.activity"/>
-			<min value="1"/>
+			<definition value="Hier kann eine Leistung, ein Prozedere oder eine Empfehlung anhand eines entsprechenden Codes oder alternativ mit einem Freitext abgebildet werden. Informationen zu einem Gerät bzw. Medizinprodukt können über die Referenz auf das Profil &quot;Gerät/Implantat&quot; strukturiert oder über das Element &quot;Bezeichnung&quot; als Freitext abgebildet werden."/>
+			<max value="1"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.outcomeCodeableConcept">
@@ -200,6 +286,41 @@
 			<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
+		<element id="CarePlan.activity.detail.extension">
+			<path value="CarePlan.activity.detail.extension"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.activity.detail.extension:geraetImplantat">
+			<path value="CarePlan.activity.detail.extension"/>
+			<sliceName value="geraetImplantat"/>
+			<definition value="Hier können Informationen zu einem Gerät bzw. Medizinprodukt abgebildet werden, welches beispielsweise mitgegeben wurde."/>
+			<type>
+				<code value="Extension"/>
+				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Device_Implant"/>
+			</type>
+			<mustSupport value="true"/>
+			<isModifier value="false"/>
+		</element>
+		<element id="CarePlan.activity.detail.extension:geraetImplantat.value[x]">
+			<path value="CarePlan.activity.detail.extension.value[x]"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.activity.detail.extension:geraetImplantat.value[x]:valueReference">
+			<path value="CarePlan.activity.detail.extension.value[x]"/>
+			<sliceName value="valueReference"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="CarePlan.activity.detail.extension:geraetImplantat.value[x]:valueReference.reference">
+			<path value="CarePlan.activity.detail.extension.value[x].reference"/>
+			<mustSupport value="true"/>
+		</element>
 		<element id="CarePlan.activity.detail.kind">
 			<path value="CarePlan.activity.detail.kind"/>
 			<max value="0"/>
@@ -214,31 +335,39 @@
 		</element>
 		<element id="CarePlan.activity.detail.code">
 			<path value="CarePlan.activity.detail.code"/>
+			<definition value="Hier kann eine Leistung anhand eines entsprechenden Codes oder Freitextes angegeben werden."/>
+			<min value="1"/>
 			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Initiated_Services_SNOMED_CT|1.0.0"/>
-			</binding>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding">
 			<path value="CarePlan.activity.detail.code.coding"/>
+			<definition value="Hier kann eine Leistung anhand eines entsprechenden Codes angegeben werden."/>
+			<max value="1"/>
 			<mustSupport value="true"/>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Initiated_Services_SNOMED_CT"/>
+			</binding>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding.system">
 			<path value="CarePlan.activity.detail.code.coding.system"/>
 			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding.version">
 			<path value="CarePlan.activity.detail.code.coding.version"/>
 			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding.code">
 			<path value="CarePlan.activity.detail.code.coding.code"/>
 			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding.display">
 			<path value="CarePlan.activity.detail.code.coding.display"/>
 			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.detail.code.coding.userSelected">
 			<path value="CarePlan.activity.detail.code.coding.userSelected"/>
@@ -246,6 +375,8 @@
 		</element>
 		<element id="CarePlan.activity.detail.code.text">
 			<path value="CarePlan.activity.detail.code.text"/>
+			<definition value="Hier werden freitextliche Angaben zum weiteren Prozedere sowie entsprechende Empfehlungen medizinischer und/oder organisatorischer Natur dokumentiert."/>
+			<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="CarePlan.activity.detail.reasonCode">
@@ -259,6 +390,15 @@
 		<element id="CarePlan.activity.detail.goal">
 			<path value="CarePlan.activity.detail.goal"/>
 			<max value="0"/>
+		</element>
+		<element id="CarePlan.activity.detail.status">
+			<path value="CarePlan.activity.detail.status"/>
+			<definition value="Hier kann der Status der Leistung abgebildet werden."/>
+			<mustSupport value="true"/>
+			<binding>
+				<strength value="required"/>
+				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Care_Plan_Activity_Status"/>
+			</binding>
 		</element>
 		<element id="CarePlan.activity.detail.statusReason">
 			<path value="CarePlan.activity.detail.statusReason"/>
@@ -278,28 +418,6 @@
 		</element>
 		<element id="CarePlan.activity.detail.performer">
 			<path value="CarePlan.activity.detail.performer"/>
-			<max value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole_Treating_Person_Organization|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="CarePlan.activity.detail.performer.reference">
-			<path value="CarePlan.activity.detail.performer.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="CarePlan.activity.detail.performer.type">
-			<path value="CarePlan.activity.detail.performer.type"/>
-			<max value="0"/>
-		</element>
-		<element id="CarePlan.activity.detail.performer.identifier">
-			<path value="CarePlan.activity.detail.performer.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="CarePlan.activity.detail.performer.display">
-			<path value="CarePlan.activity.detail.performer.display"/>
 			<max value="0"/>
 		</element>
 		<element id="CarePlan.activity.detail.product[x]">
@@ -316,25 +434,11 @@
 		</element>
 		<element id="CarePlan.activity.detail.description">
 			<path value="CarePlan.activity.detail.description"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
+			<max value="0"/>
 		</element>
 		<element id="CarePlan.note">
 			<path value="CarePlan.note"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="CarePlan.note.author[x]">
-			<path value="CarePlan.note.author[x]"/>
 			<max value="0"/>
-		</element>
-		<element id="CarePlan.note.time">
-			<path value="CarePlan.note.time"/>
-			<max value="0"/>
-		</element>
-		<element id="CarePlan.note.text">
-			<path value="CarePlan.note.text"/>
-			<mustSupport value="true"/>
 		</element>
 	</differential>
 </StructureDefinition>

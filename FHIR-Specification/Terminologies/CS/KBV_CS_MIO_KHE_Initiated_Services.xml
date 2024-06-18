@@ -21,4 +21,28 @@
         <code value="VBUZIFS"/>
         <display value="Verordnung bei Überweisung zur Indikationsstellung für Soziotherapie gemäß § 37a SGB V"/>
     </concept>
+    <concept>
+        <code value="DIGA"/>
+        <display value="Digitale Gesundheitsanwendung"/>
+    </concept>
+    <concept>
+        <code value="UEPF"/>
+        <display value="Übergangspflege gemäß § 39e SGB"/>
+    </concept>
+    <concept>
+        <code value="KZB"/>
+        <display value="Krankenhausbehandlung zur Beatmungsentwöhnung"/>
+    </concept>
+    <concept>
+        <code value="PFB"/>
+        <display value="Pflegeberatung gemäß § 7a SGB XI"/>
+    </concept>
+    <concept>
+        <code value="AB"/>
+        <display value="Außerklinische Beatmung"/>
+    </concept>
+    <concept>
+        <code value="AD"/>
+        <display value="Ambulante Dialyse"/>
+    </concept>
 </CodeSystem>

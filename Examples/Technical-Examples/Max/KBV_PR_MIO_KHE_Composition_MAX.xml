@@ -1,0 +1,749 @@
+<Composition xmlns="http://hl7.org/fhir">
+	<id value="88b1060b-c472-4d85-9f86-e449719d736b"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Composition|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Composition Maximalbeispiel</h1>
+		</div>
+	</text>
+	<status value="final"/>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="373942005"/>
+			<display value="Discharge summary (record artifact)"/>
+		</coding>
+	</type>
+	<subject>
+		<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+	</subject>
+	<encounter>
+		<reference value="urn:uuid:5ab926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</encounter>
+	<date value="2022-04-06"/>
+	<author>
+		<reference value="urn:uuid:67857968-c27b-41d1-9242-94485081b7e2"/>
+	</author>
+	<author>
+		<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	</author>
+	<title value="Krankenhausentlassbrief"/>
+	
+	<!-- Kontaktperson -->
+	<section>
+		<title value="Kontaktperson"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="70862002"/>
+				<display value="Contact person (person)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Kontaktperson</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:10aa0c18-b1f7-446a-a16c-d937a42e6700"/>
+		</entry>
+	</section>
+	
+	
+	<!-- Entlassende Personen / Einrichtung -->
+	<section>
+		<title value="Entlassende Personen/Einrichtung"/>
+		<code>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+				<version value="1.0.0"/>
+				<code value="entlassende_personen_einrichtung"/>
+				<display value="Entlassende Personen/Einrichtung"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Entlassende Personen / Einrichtung</h1>
+			</div>
+		</text>
+		<section>
+			<title value="Behandelnde Personen"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="behandelnde_person"/>
+					<display value="Behandelnde Person"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Behandelnde Personen</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Leitende Personen"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="leitende_personen"/>
+					<display value="Leitende Personen"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Leitende Personen</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Verantwortliche Personen"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="verantworltiche_personen"/>
+					<display value="Verantwortliche Personen"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Verantwortliche Personen</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Kontakt Entlassmanagement"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="718675005"/>
+					<display value="Management of inpatient discharge (procedure)"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Kontakt Entlassmanagement</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+			</entry>
+		</section>
+	</section>
+	
+	<!-- Empfangende Personen -->
+	<section>
+		<title value="Empfangende Personen"/>
+		<code>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+				<version value="1.0.0"/>
+				<code value="empfangende_personen"/>
+				<display value="Empfangende Personen"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Empfangende Personen</h1>
+			</div>
+		</text>
+		<section>
+			<title value="PatientIn"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="116154003"/>
+					<display value="Patient (person)"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Patient</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Versorgungsteam"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="versorgungsteam"/>
+					<display value="Versorgungsteam"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Versorgungsteam</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:a2064012-1f01-47c6-be22-7c300b3276e6"/>
+			</entry>
+		</section>
+	</section>
+
+	<!-- Falldaten -->
+	<section>
+		<title value="Falldaten"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="866144008"/>
+				<display value="Encounter note (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Falldaten</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:05257314-0fb3-405a-8c6e-672e4715dbf9"/>
+		</entry>
+	</section>
+	
+	<!-- Einweisung -->
+	<section>
+		<title value="Einweisung"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230731"/>
+				<code value="1269557005"/>
+				<display value="Reason for hospital admission (observable entity)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="additional"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Einweisung Text</h1>
+			</div>
+		</text>
+	</section>
+	
+	<!-- Aufnahme -->
+	<section>
+		<title value="Aufnahme"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="371542009"/>
+				<display value="Admission history and physical report (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Aufnahme</h1>
+			</div>
+		</text>
+		<section>
+			<title value="Klinischer Untersuchungsbefund"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="55286-9"/>
+					<display value="Physical exam by body areas"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Klinischer Untersuchungsbefund</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:14aa344f-2a06-4925-a92d-264b389a5b25"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Medikation Aufnahme"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="42346-7"/>
+					<display value="Medications on admission (narrative)"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Medikation Aufnahme</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Vitalzeichen und Körpermaße"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="1184593002"/>
+					<display value="Vital sign document section (record artifact)"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Vitalzeichen und Körpermaße</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:0c3da2a3-e15e-42ce-bdfc-bfd3fa6db0b3"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:eb611e4b-6d5f-423e-8554-4d97eb627c2d"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:87151a86-7da4-40d3-a8c4-d5e17a491891"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:0c3da2a3-e15e-42ce-bdfc-bfd3fa6db0b3"/>
+			</entry>
+		</section>
+	</section>
+		
+	<!-- Anamnese -->
+	<section>
+		<title value="Anamnese"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="1003642006"/>
+				<display value="Past medical history section (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Anamnese</h1>
+			</div>
+		</text>
+		<section>
+			<title value="Abschnitt der Anamnese"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="35090-0"/>
+					<display value="Patient history"/>
+				</coding>
+			</code>
+			<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Abschnitt der Anamnese</h1>
+			</div>
+		</text>
+			<entry>
+				<reference value="urn:uuid:98ea2d19-bbbd-4777-adfa-e801734d2498"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:11ea2d19-bbbd-4777-adfa-e801734d2498"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Anamnestische Allergien und Unverträglichkeiten"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="48765-2"/>
+					<display value="Allergies and adverse reactions Document"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Anamnestische Allergien und Unverträglichkeiten</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:135dcb0b-b922-44d1-8f8c-09ad69880001"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:115dcb0b-b922-44d1-8f8c-09ad69880001"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Anamnestische Diagnosen"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="10164-2"/>
+					<display value="History of Present illness Narrative"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Anamnestische Diagnosen</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:11b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Vorherige Prozeduren"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="1003640003"/>
+					<display value="History of past procedure section (record artifact)"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Vorherige Prozeduren</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:11193d88-9205-4e01-b84b-e121033c4f9c"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Vorhandene Implantate"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="46264-8"/>
+					<display value="History of medical device use"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Vorhandene Implantate</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:18b69e52-9a21-4137-9ff9-6c4d43bba322"/>
+			</entry>
+			<entry>
+				<reference value="urn:uuid:11b69e52-9a21-4137-9ff9-6c4d43bba322"/>
+			</entry>
+		</section>	
+	</section>
+	
+	<!-- Allergien und Unverträglichkeiten -->
+	<section>
+		<title value="Allergien und Unverträglichkeiten"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="722446000"/>
+				<display value="Allergy record (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Allergien und Unverträglichkeiten</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:135dcb0b-b922-44d1-8f8c-09ad69880001"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:123dcb0b-b922-44d1-8f8c-09ad69880001"/>
+		</entry>
+	</section>
+	
+	<!-- Infektion & Besiedelung durch multiresitente Erreger -->
+	<section>
+		<title value="Infektion oder Besiedelung durch multiresistente Erreger"/>
+		<code>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Section_Codes"/>
+				<version value="1.0.0"/>
+				<code value="SectionIBDME"/>
+				<display value="Infektion oder Besiedelung durch multiresistente Erreger"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Infektion oder Besiedelung durch multiresistente Erreger</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:1594409a-782a-4de8-9778-753a17cd23c9"/>
+		</entry>
+	</section>
+	
+	<!-- Pflegegrad -->
+	<section>
+		<title value="Pflegegrad"/>
+		<code>
+			<coding>
+				<system value="http://loinc.org"/>
+				<version value="2.73"/>
+				<code value="80391-6"/>
+				<display value="Level of care [Type]"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Pflegegrad</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:9462ea7e-a22a-4eb5-9011-7f866c66b190"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:1262ea7e-a22a-4eb5-9011-7f866c66b190"/>
+		</entry>
+	</section>
+	
+	
+	<!-- Prozeduren -->
+	<section>
+		<title value="Prozeduren"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230731"/>
+				<code value="1269501001"/>
+				<display value="Procedure section (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Prozeduren</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:11193d88-9205-4e01-b84b-e121033c4f9c"/>
+		</entry>
+	</section>
+	
+	<!-- Implantate -->
+	<section>
+		<title value="Implantate"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="1184586001"/>
+				<display value="Medical device document section (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Implantate</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:18b69e52-9a21-4137-9ff9-6c4d43bba322"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:11b69e52-9a21-4137-9ff9-6c4d43bba322"/>
+		</entry>
+	</section>
+	
+	
+	<!-- Verlauf -->
+	<section>
+		<title value="Verlauf"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="444754002"/>
+				<display value="Hospital inpatient progress report (record artifact)"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Verlauf</h1>
+			</div>
+		</text>
+		<entry>
+			<reference value="urn:uuid:23e6e2e7-9c54-4d32-9522-7f97492b6530"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:11e6e2e7-9c54-4d32-9522-7f97492b6530"/>
+		</entry>
+	</section>
+	
+	<!-- Entlassung -->
+	<section>
+		<title value="Entlassung"/>
+		<code>
+			<coding>
+				<system value="http://loinc.org"/>
+				<version value="2.73"/>
+				<code value="34105-7"/>
+				<display value="Hospital Discharge summary"/>
+			</coding>
+		</code>
+		<text>
+			<status value="extensions"/>
+			<div xmlns="http://www.w3.org/1999/xhtml">
+				<h1>Entlassung</h1>
+			</div>
+		</text>
+		<section>
+			<title value="Arbeitsunfähigkeitsbescheinigung"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+					<version value="1.0.0"/>
+					<code value="AU"/>
+					<display value="Arbeitsunfähigkeitsbescheinigung"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Arbeitsunfähigkeitsbescheinigung</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:e9aeebde-270c-432e-9a53-bdfb9b749a0f"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Entlassungsbefund"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="10184-0"/>
+					<display value="Hospital discharge physical findings Narrative"/>
+				</coding>
+			</code>
+			<text>
+				<status value="additional"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Entlassungsbefund Text</h1>
+				</div>
+			</text>
+		</section>
+		<section>
+			<title value="Medikation Entlassung"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="8654-6"/>
+					<display value="Hospital discharge medications"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Medikation Entlassung</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Weiteres Vorgehen/Leistung"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+					<version value="1.0.0"/>
+					<code value="WVL"/>
+					<display value="Weiteres Vorgehen/Leistung"/>
+				</coding>
+			</code>
+			<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Weiteres Vorgehen/Leistung</h1>
+				</div>
+			</text>
+			<entry>
+				<reference value="urn:uuid:0b313eb2-4b80-4cd3-bafc-6708791513e7"/>
+			</entry>
+		</section>
+	</section>
+	
+	<!-- Dokuemntenverweis/Anhang -->
+	<section>
+		<title value="Dokumentenverweis/Anhang"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="371524004"/>
+				<display value="Clinical report (record artifact)"/>
+			</coding>
+		</code>
+					<text>
+				<status value="extensions"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Dokumentenverweis/Anhang</h1>
+				</div>
+			</text>
+		<entry>
+			<reference value="urn:uuid:3a83656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+		</entry>
+		<entry>
+			<reference value="urn:uuid:1183656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+		</entry>
+	</section>
+</Composition>

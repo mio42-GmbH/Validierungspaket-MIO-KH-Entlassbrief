@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-MIO-KHE-CareTeam" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_CareTeam" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_CareTeam" />
+  <title value="KBV_PR_MIO_KHE_CareTeam" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet ein Versorgungsteam ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="CareTeam" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_CareTeam|1.4.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="CareTeam.meta">
+      <path value="CareTeam.meta" />
+      <min value="1" />
+    </element>
+    <element id="CareTeam.meta.versionId">
+      <path value="CareTeam.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.meta.lastUpdated">
+      <path value="CareTeam.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.meta.source">
+      <path value="CareTeam.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.meta.profile">
+      <path value="CareTeam.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="CareTeam.meta.profile:mioProfile">
+      <path value="CareTeam.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_CareTeam|1.0.0" />
+    </element>
+    <element id="CareTeam.meta.security">
+      <path value="CareTeam.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.meta.tag">
+      <path value="CareTeam.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.implicitRules">
+      <path value="CareTeam.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.language">
+      <path value="CareTeam.language" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.text">
+      <path value="CareTeam.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="CareTeam.text.status">
+      <path value="CareTeam.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="CareTeam.contained">
+      <path value="CareTeam.contained" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.identifier">
+      <path value="CareTeam.identifier" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.status">
+      <path value="CareTeam.status" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.category">
+      <path value="CareTeam.category" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.name">
+      <path value="CareTeam.name" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.subject">
+      <path value="CareTeam.subject" />
+      <definition value="Hier erfolgt die Referenzierung der zu behandelnden Person." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.subject.reference">
+      <path value="CareTeam.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.subject.type">
+      <path value="CareTeam.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.subject.identifier">
+      <path value="CareTeam.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.subject.display">
+      <path value="CareTeam.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.encounter">
+      <path value="CareTeam.encounter" />
+      <definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.encounter.reference">
+      <path value="CareTeam.encounter.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.encounter.type">
+      <path value="CareTeam.encounter.type" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.encounter.identifier">
+      <path value="CareTeam.encounter.identifier" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.encounter.display">
+      <path value="CareTeam.encounter.display" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.period">
+      <path value="CareTeam.period" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant">
+      <path value="CareTeam.participant" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role">
+      <path value="CareTeam.participant.role" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding">
+      <path value="CareTeam.participant.role.coding" />
+      <definition value="Hier wird die Rolle in Bezug auf den/die Patienten/Patientin anhand von Codes angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug">
+      <path value="CareTeam.participant.role.coding" />
+      <sliceName value="rollePatientenbezug" />
+      <definition value="Hier wird die Rolle in Bezug auf den/die Patientin anhand einer vorgegebenen Werteliste angegeben." />
+      <patternCoding>
+        <system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_Role_Care_Team" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Role_Care_Team" />
+      </binding>
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug.system">
+      <path value="CareTeam.participant.role.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug.version">
+      <path value="CareTeam.participant.role.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug.code">
+      <path value="CareTeam.participant.role.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug.display">
+      <path value="CareTeam.participant.role.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.role.coding:rollePatientenbezug.userSelected">
+      <path value="CareTeam.participant.role.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant.role.text">
+      <path value="CareTeam.participant.role.text" />
+      <definition value="Hier wird die Rolle in Bezug auf den/die PatientIn als Freitext angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.member">
+      <path value="CareTeam.participant.member" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.member.reference">
+      <path value="CareTeam.participant.member.reference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="CareTeam.participant.member.type">
+      <path value="CareTeam.participant.member.type" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant.member.identifier">
+      <path value="CareTeam.participant.member.identifier" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant.member.display">
+      <path value="CareTeam.participant.member.display" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant.onBehalfOf">
+      <path value="CareTeam.participant.onBehalfOf" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.participant.period">
+      <path value="CareTeam.participant.period" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.reasonCode">
+      <path value="CareTeam.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.reasonReference">
+      <path value="CareTeam.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.managingOrganization">
+      <path value="CareTeam.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.telecom">
+      <path value="CareTeam.telecom" />
+      <max value="0" />
+    </element>
+    <element id="CareTeam.note">
+      <path value="CareTeam.note" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

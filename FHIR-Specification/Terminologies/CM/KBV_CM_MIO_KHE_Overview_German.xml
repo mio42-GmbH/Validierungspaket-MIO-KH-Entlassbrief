@@ -16,6 +16,90 @@
 	<description value="Diese Conceptmap verknüpft die Codes für KBV_CM_MIO_KHE_Overview mit deutschen Bezeichnungen."/>
 	<copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
 	<group>
+		<source value="http://hl7.org/fhir/request-intent"/>
+		<sourceVersion value="4.0.1"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_CarePlanIntent_German"/>
+		<targetVersion value="1.0.0"/>
+		<element>
+			<code value="order"/>
+			<display value="Order"/>
+			<target>
+				<code value="Anordnung"/>
+				<display value="Anordnung"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="proposal"/>
+			<display value="Proposal"/>
+			<target>
+				<code value="Vorschlag"/>
+				<display value="Vorschlag"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="option"/>
+			<display value="Option"/>
+			<target>
+				<code value="Option"/>
+				<display value="Option"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="plan"/>
+			<display value="Plan"/>
+			<target>
+				<code value="Plan"/>
+				<display value="Plan"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+	<group>
+		<source value="http://hl7.org/fhir/care-plan-activity-status"/>
+		<sourceVersion value="4.0.1"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Care_Plan_Activity_Status_German"/>
+		<targetVersion value="1.0.0"/>
+		<element>
+			<code value="completed"/>
+			<display value="Completed"/>
+			<target>
+				<code value="Abgeschlossen"/>
+				<display value="Abgeschlossen"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="in-progress"/>
+			<display value="In Progress"/>
+			<target>
+				<code value="ImGang"/>
+				<display value="Im Gang"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="not-started"/>
+			<display value="Not Started"/>
+			<target>
+				<code value="Nichtbegonnen"/>
+				<display value="Nicht begonnen"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="scheduled"/>
+			<display value="Scheduled"/>
+			<target>
+				<code value="Geplant"/>
+				<display value="Geplant"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+	<group>
 		<source value="http://hl7.org/fhir/composition-status"/>
 		<sourceVersion value="4.0.1"/>
 		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_CompositionStatus_German"/>
@@ -40,215 +124,114 @@
 		</element>
 	</group>
 	<group>
-		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220531"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Consent_Discharge_Management_German"/>
+		<source value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+		<sourceVersion value="2.1.0"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Contact_Person_Relationship_Type_German"/>
 		<targetVersion value="1.0.0"/>
 		<element>
-			<code value="243796009:{363589002=718675005}{408730004=441889009}"/>
-			<display value="Situation with explicit context (situation) : { Associated procedure (attribute) = Management of inpatient discharge (procedure) } { Procedure context (attribute) = Denied (qualifier value) }"/>
+			<code value="C"/>
+			<display value="Emergency Contact"/>
 			<target>
-				<code value="EinwilligungzumEntlassmanagementabgelehnt"/>
-				<display value="Einwilligung zum Entlassmanagement abgelehnt"/>
+				<code value="AnsprechpartnerIninNotfaellen"/>
+				<display value="AnsprechpartnerIn in Notfällen"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 		<element>
-			<code value="243796009:{363589002=718675005}{408730004=441898007}"/>
-			<display value="Situation with explicit context (situation) : { Associated procedure (attribute) = Management of inpatient discharge (procedure) } { Procedure context (attribute) = Consented (qualifier value) }"/>
+			<code value="N"/>
+			<display value="Next-of-Kin"/>
 			<target>
-				<code value="EinwilligungzumEntlassmanagementzugestimmt"/>
-				<display value="Einwilligung zum Entlassmanagement zugestimmt"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-	</group>
-	<group>
-		<source value="http://terminology.hl7.org/CodeSystem/discharge-disposition"/>
-		<sourceVersion value="4.0.1"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Discharge_Disposition_German"/>
-		<targetVersion value="1.0.0"/>
-		<element>
-			<code value="aadvice"/>
-			<display value="Left against advice"/>
-			<target>
-				<code value="BehandlunggegenaerztlichenRatbeendet"/>
-				<display value="Behandlung gegen ärztlichen Rat beendet"/>
-				<equivalence value="equivalent"/>
+				<code value="Kontaktperson"/>
+				<display value="Kontaktperson"/>
+				<equivalence value="narrower"/>
+				<comment value="TBD"/>
 			</target>
 		</element>
 		<element>
-			<code value="home"/>
-			<display value="Home"/>
-			<target>
-				<code value="Behandlungregulaerbeendet"/>
-				<display value="Behandlung regulär beendet"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="hosp"/>
-			<display value="Hospice"/>
-			<target>
-				<code value="EntlassungineinHospiz"/>
-				<display value="Entlassung in ein Hospiz"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="oth"/>
+			<code value="O"/>
 			<display value="Other"/>
 			<target>
-				<code value="Sonstiges"/>
-				<display value="Sonstiges"/>
+				<code value="Andere"/>
+				<display value="Andere"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 		<element>
-			<code value="other-hcf"/>
-			<display value="Other healthcare facility"/>
+			<code value="U"/>
+			<display value="Unknown"/>
 			<target>
-				<code value="VerlegungineinKrankenhaus"/>
-				<display value="Verlegung in ein Krankenhaus"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="rehab"/>
-			<display value="Rehabilitation"/>
-			<target>
-				<code value="EntlassungineineRehabilitationseinrichtung"/>
-				<display value="Entlassung in eine Rehabilitationseinrichtung"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="snf"/>
-			<display value="Skilled nursing facility"/>
-			<target>
-				<code value="EntlassungineinestationaerePflegeeinrichtung"/>
-				<display value="Entlassung in eine stationäre Pflegeeinrichtung"/>
+				<code value="Unbekannt"/>
+				<display value="Unbekannt"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 	</group>
 	<group>
-		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220531"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Drug_Status_German"/>
+		<source value="http://terminology.hl7.org/CodeSystem/diagnosis-role"/>
+		<sourceVersion value="1.4.0"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Diagnosesubty_German"/>
 		<targetVersion value="1.0.0"/>
 		<element>
-			<code value="274512008"/>
-			<display value="Drug therapy discontinued (situation)"/>
+			<code value="AD"/>
+			<display value="Admission diagnosis"/>
 			<target>
-				<code value="abgesetzt"/>
-				<display value="abgesetzt"/>
+				<code value="Aufnahmediagnose"/>
+				<display value="Aufnahmediagnose"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 		<element>
-			<code value="410684002:246090004=266712008"/>
-			<display value="Drug therapy status (situation) : Associated finding (attribute) = New medication commenced (finding)"/>
+			<code value="DD"/>
+			<display value="Discharge diagnosis"/>
 			<target>
-				<code value="neu"/>
-				<display value="neu"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="410684002:363589002=182838006"/>
-			<display value="Drug therapy status (situation) : Associated procedure (attribute) = Change of medication (procedure)"/>
-			<target>
-				<code value="geaendert"/>
-				<display value="geändert"/>
+				<code value="Entlassdiagnose"/>
+				<display value="Entlassdiagnose"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 	</group>
 	<group>
-		<source value="http://hl7.org/fhir/event-timing"/>
+		<source value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<sourceVersion value="2018-08-12"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Encounter_Setting_German"/>
+		<targetVersion value="1.0.0"/>
+		<element>
+			<code value="IMP"/>
+			<display value="inpatient encounter"/>
+			<target>
+				<code value="StationaereAufnahme"/>
+				<display value="Stationäre Aufnahme"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="SS"/>
+			<display value="short stay"/>
+			<target>
+				<code value="StationaereKurzaufnahme"/>
+				<display value="Stationäre Kurzaufnahme"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+	</group>
+	<group>
+		<source value="http://hl7.org/fhir/encounter-status"/>
 		<sourceVersion value="4.0.1"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Event_Timing_German"/>
+		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Encounter_Status_German"/>
 		<targetVersion value="1.0.0"/>
 		<element>
-			<code value="EVE"/>
-			<display value="Evening"/>
+			<code value="finished"/>
+			<display value="Finished"/>
 			<target>
-				<code value="abends"/>
-				<display value="abends"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="MORN"/>
-			<display value="Morning"/>
-			<target>
-				<code value="morgens"/>
-				<display value="morgens"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="NIGHT"/>
-			<display value="Night"/>
-			<target>
-				<code value="zurNacht"/>
-				<display value="zur Nacht"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="NOON"/>
-			<display value="Noon"/>
-			<target>
-				<code value="mittags"/>
-				<display value="mittags"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-	</group>
-	<group>
-		<source value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Application_Status_Care_Level"/>
-		<sourceVersion value="1.0.0"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Grade_Of_Care_Status_German"/>
-		<targetVersion value="1.0.0"/>
-		<element>
-			<code value="Pflegegrad_bewilligt"/>
-			<display value="Pflegegrad bewilligt"/>
-			<target>
-				<code value="bewilligt"/>
-				<display value="bewilligt"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="Pflegegrad_vorlaeufig"/>
-			<display value="Pflegegrad vorläufig"/>
-			<target>
-				<code value="vorlaeufig"/>
-				<display value="vorläufig"/>
+				<code value="Abgeschlossen"/>
+				<display value="Abgeschlossen"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
 	</group>
 	<group>
 		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220531"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Head_Circumference_Body_Site_SNOMED_CT_German"/>
-		<targetVersion value="1.0.0"/>
-		<element>
-			<code value="302548004"/>
-			<display value="Entire head (body structure)"/>
-			<target>
-				<code value="GanzerKopf"/>
-				<display value="Ganzer Kopf"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-	</group>
-	<group>
-		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220531"/>
+		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20230131"/>
 		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Initiated_Services_SNOMED_CT_German"/>
 		<targetVersion value="1.0.0"/>
 		<element>
@@ -266,6 +249,15 @@
 			<target>
 				<code value="Hilfsmittel"/>
 				<display value="Hilfsmittel"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
+			<code value="182998008"/>
+			<display value="Intensive nursing care (regime/therapy)"/>
+			<target>
+				<code value="AmbulanteIntensivpflege"/>
+				<display value="Ambulante Intensivpflege"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
@@ -315,6 +307,15 @@
 			</target>
 		</element>
 		<element>
+			<code value="385763009"/>
+			<display value="Hospice care (regime/therapy)"/>
+			<target>
+				<code value="StationaeresHospiz"/>
+				<display value="Stationäres Hospiz"/>
+				<equivalence value="equivalent"/>
+			</target>
+		</element>
+		<element>
 			<code value="395695001"/>
 			<display value="Specialist palliative care treatment - outpatient (regime/therapy)"/>
 			<target>
@@ -344,12 +345,12 @@
 	</group>
 	<group>
 		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20210131"/>
+		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20230131"/>
 		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Results_Type_German"/>
 		<targetVersion value="1.0.0"/>
 		<element>
-			<code value="271906008:704321009=103693007"/>
-			<display value="Examination finding (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
+			<code value="271906008:704321009=386053000"/>
+			<display value="Examination finding (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
 			<target>
 				<code value="Funktionsdiagnostik"/>
 				<display value="Funktionsdiagnostik"/>
@@ -366,20 +367,11 @@
 			</target>
 		</element>
 		<element>
-			<code value="277034006:704321009=103693007"/>
-			<display value="Test interpretation (observable entity) : Characterizes (attribute) = Diagnostic procedure (procedure)"/>
-			<target>
-				<code value="InterventionelleDiagnostik"/>
-				<display value="Interventionelle Diagnostik"/>
-				<equivalence value="wider"/>
-			</target>
-		</element>
-		<element>
 			<code value="277034006:704321009=386053000"/>
 			<display value="Test interpretation (observable entity) : Characterizes (attribute) = Evaluation procedure (procedure)"/>
 			<target>
-				<code value="Andere"/>
-				<display value="Andere"/>
+				<code value="InterventionelleDiagnostik"/>
+				<display value="Interventionelle Diagnostik"/>
 				<equivalence value="wider"/>
 			</target>
 		</element>
@@ -419,54 +411,12 @@
 				<equivalence value="equivalent"/>
 			</target>
 		</element>
-	</group>
-	<group>
-		<source value="http://snomed.info/sct"/>
-		<sourceVersion value="http://snomed.info/sct/900000000000207008/version/20220531"/>
-		<target value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Role_SNOMED_CT_German"/>
-		<targetVersion value="1.0.0"/>
-		<element>
-			<code value="309395003"/>
-			<display value="Hospital specialist (occupation)"/>
-			<target>
-				<code value="Facharztaerztin"/>
-				<display value="Facharzt/-ärztin"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="421841007"/>
-			<display value="Admitting physician (occupation)"/>
-			<target>
-				<code value="EinweisenderArztEinweisendeAerztin"/>
-				<display value="Einweisender Arzt/Einweisende Ärztin"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="446050000"/>
-			<display value="Primary care physician (occupation)"/>
-			<target>
-				<code value="WeiterbehandelnderArztWeiterbehandelndeAerztin"/>
-				<display value="Weiterbehandelnder Arzt/Weiterbehandelnde Ärztin"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
-		<element>
-			<code value="62247001"/>
-			<display value="Family medicine specialist (occupation)"/>
-			<target>
-				<code value="Hausarztaerztin"/>
-				<display value="Hausarzt/-ärztin"/>
-				<equivalence value="equivalent"/>
-			</target>
-		</element>
 		<element>
 			<code value="74964007"/>
 			<display value="Other (qualifier value)"/>
 			<target>
-				<code value="Sonstiges"/>
-				<display value="Sonstiges"/>
+				<code value="Andere"/>
+				<display value="Andere"/>
 				<equivalence value="equivalent"/>
 			</target>
 		</element>

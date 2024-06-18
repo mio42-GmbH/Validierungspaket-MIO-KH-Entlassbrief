@@ -1,289 +1,342 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-HealthcareService-Contact-Discharge-Management"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management"/>
-	<title value="KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet die Kontaktdaten des Entlassmanagements ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="HealthcareService"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="HealthcareService">
-			<path value="HealthcareService"/>
-			<definition value="Dieses Profil bildet die Kontaktdaten des Entlassmanagements ab."/>
-		</element>
-		<element id="HealthcareService.meta">
-			<path value="HealthcareService.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.meta.versionId">
-			<path value="HealthcareService.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.meta.lastUpdated">
-			<path value="HealthcareService.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.meta.source">
-			<path value="HealthcareService.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.meta.profile">
-			<path value="HealthcareService.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management|1.0.0"/>
-		</element>
-		<element id="HealthcareService.meta.security">
-			<path value="HealthcareService.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.meta.tag">
-			<path value="HealthcareService.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.implicitRules">
-			<path value="HealthcareService.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.language">
-			<path value="HealthcareService.language"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.text">
-			<path value="HealthcareService.text"/>
-		</element>
-		<element id="HealthcareService.text.status">
-			<path value="HealthcareService.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="HealthcareService.contained">
-			<path value="HealthcareService.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.extension">
-			<path value="HealthcareService.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="HealthcareService.extension:ansprechperson">
-			<path value="HealthcareService.extension"/>
-			<sliceName value="ansprechperson"/>
-			<min value="0"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Person"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.identifier">
-			<path value="HealthcareService.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.active">
-			<path value="HealthcareService.active"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.providedBy">
-			<path value="HealthcareService.providedBy"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.category">
-			<path value="HealthcareService.category"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.type">
-			<path value="HealthcareService.type"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.type.coding">
-			<path value="HealthcareService.type.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCoding>
-				<system value="http://snomed.info/sct"/>
-				<version value="http://snomed.info/sct/900000000000207008/version/20220531"/>
-				<code value="718675005"/>
-				<display value="Management of inpatient discharge (procedure)"/>
-			</patternCoding>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.type.coding.system">
-			<path value="HealthcareService.type.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.type.coding.version">
-			<path value="HealthcareService.type.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.type.coding.code">
-			<path value="HealthcareService.type.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.type.coding.display">
-			<path value="HealthcareService.type.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.type.coding.userSelected">
-			<path value="HealthcareService.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.type.text">
-			<path value="HealthcareService.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.specialty">
-			<path value="HealthcareService.specialty"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.location">
-			<path value="HealthcareService.location"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.name">
-			<path value="HealthcareService.name"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.comment">
-			<path value="HealthcareService.comment"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.extraDetails">
-			<path value="HealthcareService.extraDetails"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.photo">
-			<path value="HealthcareService.photo"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.telecom">
-			<path value="HealthcareService.telecom"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.telecom.system">
-			<path value="HealthcareService.telecom.system"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.telecom.value">
-			<path value="HealthcareService.telecom.value"/>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.telecom.use">
-			<path value="HealthcareService.telecom.use"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.telecom.rank">
-			<path value="HealthcareService.telecom.rank"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.telecom.period">
-			<path value="HealthcareService.telecom.period"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.coverageArea">
-			<path value="HealthcareService.coverageArea"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.serviceProvisionCode">
-			<path value="HealthcareService.serviceProvisionCode"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.eligibility">
-			<path value="HealthcareService.eligibility"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.program">
-			<path value="HealthcareService.program"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.characteristic">
-			<path value="HealthcareService.characteristic"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.communication">
-			<path value="HealthcareService.communication"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.referralMethod">
-			<path value="HealthcareService.referralMethod"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.appointmentRequired">
-			<path value="HealthcareService.appointmentRequired"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.availableTime">
-			<path value="HealthcareService.availableTime"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.availableTime.extension">
-			<path value="HealthcareService.availableTime.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="HealthcareService.availableTime.extension:kontakzeiten">
-			<path value="HealthcareService.availableTime.extension"/>
-			<sliceName value="kontakzeiten"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Details"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="HealthcareService.availableTime.daysOfWeek">
-			<path value="HealthcareService.availableTime.daysOfWeek"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.availableTime.allDay">
-			<path value="HealthcareService.availableTime.allDay"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.availableTime.availableStartTime">
-			<path value="HealthcareService.availableTime.availableStartTime"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.availableTime.availableEndTime">
-			<path value="HealthcareService.availableTime.availableEndTime"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.notAvailable">
-			<path value="HealthcareService.notAvailable"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.availabilityExceptions">
-			<path value="HealthcareService.availabilityExceptions"/>
-			<max value="0"/>
-		</element>
-		<element id="HealthcareService.endpoint">
-			<path value="HealthcareService.endpoint"/>
-			<max value="0"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-HealthcareService-Contact-Discharge-Management" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management" />
+  <title value="KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet die Kontaktdaten des Entlassmanagements ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="HealthcareService" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/HealthcareService" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="HealthcareService">
+      <path value="HealthcareService" />
+      <definition value="Dieses Profil bildet die Kontaktdaten des Entlassmanagements ab." />
+    </element>
+    <element id="HealthcareService.meta">
+      <path value="HealthcareService.meta" />
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.meta.versionId">
+      <path value="HealthcareService.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.meta.lastUpdated">
+      <path value="HealthcareService.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.meta.source">
+      <path value="HealthcareService.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.meta.profile">
+      <path value="HealthcareService.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="HealthcareService.meta.profile:mioProfile">
+      <path value="HealthcareService.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_HealthcareService_Contact_Discharge_Management|1.0.0" />
+    </element>
+    <element id="HealthcareService.meta.security">
+      <path value="HealthcareService.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.meta.tag">
+      <path value="HealthcareService.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.implicitRules">
+      <path value="HealthcareService.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.language">
+      <path value="HealthcareService.language" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.text">
+      <path value="HealthcareService.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="HealthcareService.text.status">
+      <path value="HealthcareService.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="HealthcareService.contained">
+      <path value="HealthcareService.contained" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.identifier">
+      <path value="HealthcareService.identifier" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.active">
+      <path value="HealthcareService.active" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.providedBy">
+      <path value="HealthcareService.providedBy" />
+      <definition value="In diesem Element wird die entlassende Einrichtung und eine Ansprechperson für das Entlassmanagement dieser Einrichtung abgebildet." />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.providedBy.extension:ansprechpersonEinrichtung">
+      <path value="HealthcareService.providedBy.extension" />
+      <sliceName value="ansprechpersonEinrichtung" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.providedBy.extension:ansprechpersonEinrichtung.value[x]:valueReference">
+      <path value="HealthcareService.providedBy.extension.value[x]" />
+      <sliceName value="valueReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.providedBy.extension:ansprechpersonEinrichtung.value[x]:valueReference.reference">
+      <path value="HealthcareService.providedBy.extension.value[x].reference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.providedBy.reference">
+      <path value="HealthcareService.providedBy.reference" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.providedBy.type">
+      <path value="HealthcareService.providedBy.type" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.providedBy.identifier">
+      <path value="HealthcareService.providedBy.identifier" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.providedBy.display">
+      <path value="HealthcareService.providedBy.display" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.category">
+      <path value="HealthcareService.category" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.type">
+      <path value="HealthcareService.type" />
+      <definition value="Vorgegebener Code zur eindeutigen Identifizierung der Observation." />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <version value="http://snomed.info/sct/900000000000207008/version/20230131" />
+          <code value="718675005" />
+          <display value="Management of inpatient discharge (procedure)" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding">
+      <path value="HealthcareService.type.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding.system">
+      <path value="HealthcareService.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding.version">
+      <path value="HealthcareService.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding.code">
+      <path value="HealthcareService.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding.display">
+      <path value="HealthcareService.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.type.coding.userSelected">
+      <path value="HealthcareService.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.type.text">
+      <path value="HealthcareService.type.text" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.specialty">
+      <path value="HealthcareService.specialty" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.location">
+      <path value="HealthcareService.location" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.name">
+      <path value="HealthcareService.name" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.comment">
+      <path value="HealthcareService.comment" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.extraDetails">
+      <path value="HealthcareService.extraDetails" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.photo">
+      <path value="HealthcareService.photo" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.telecom">
+      <path value="HealthcareService.telecom" />
+      <definition value="Dieses Element bildet die vorhandenen Kontaktmöglichkeiten ab." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.telecom.system">
+      <path value="HealthcareService.telecom.system" />
+      <definition value="Definition der Art des Kontaktes, z. B. Telefon (phone), E-Mail, Fax." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.telecom.value">
+      <path value="HealthcareService.telecom.value" />
+      <definition value="In diesem Element können Kontaktinformationen passend zum Kontaktkanal angegeben werden." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.telecom.use">
+      <path value="HealthcareService.telecom.use" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.telecom.rank">
+      <path value="HealthcareService.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.telecom.period">
+      <path value="HealthcareService.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.coverageArea">
+      <path value="HealthcareService.coverageArea" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.serviceProvisionCode">
+      <path value="HealthcareService.serviceProvisionCode" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.eligibility">
+      <path value="HealthcareService.eligibility" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.program">
+      <path value="HealthcareService.program" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.characteristic">
+      <path value="HealthcareService.characteristic" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.communication">
+      <path value="HealthcareService.communication" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.referralMethod">
+      <path value="HealthcareService.referralMethod" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.appointmentRequired">
+      <path value="HealthcareService.appointmentRequired" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.availableTime">
+      <path value="HealthcareService.availableTime" />
+      <definition value="Hier werden die Kontaktzeiten sowie weitere Hinweise zur Erreichbarkeit angegeben." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.availableTime.extension">
+      <path value="HealthcareService.availableTime.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:kontaktzeiten">
+      <path value="HealthcareService.availableTime.extension" />
+      <sliceName value="kontaktzeiten" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Contact_Details" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:kontaktzeiten.value[x]">
+      <path value="HealthcareService.availableTime.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.availableTime.extension:kontaktzeiten.value[x]:valueString">
+      <path value="HealthcareService.availableTime.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="HealthcareService.availableTime.daysOfWeek">
+      <path value="HealthcareService.availableTime.daysOfWeek" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.availableTime.allDay">
+      <path value="HealthcareService.availableTime.allDay" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.availableTime.availableStartTime">
+      <path value="HealthcareService.availableTime.availableStartTime" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.availableTime.availableEndTime">
+      <path value="HealthcareService.availableTime.availableEndTime" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.notAvailable">
+      <path value="HealthcareService.notAvailable" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.availabilityExceptions">
+      <path value="HealthcareService.availabilityExceptions" />
+      <max value="0" />
+    </element>
+    <element id="HealthcareService.endpoint">
+      <path value="HealthcareService.endpoint" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

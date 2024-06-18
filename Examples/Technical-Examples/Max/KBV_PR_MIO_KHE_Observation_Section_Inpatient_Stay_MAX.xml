@@ -1,0 +1,29 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="23e6e2e7-9c54-4d32-9522-7f97492b6530"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Section_Inpatient_Stay|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Abschnitt zur Anamnse</h1>
+		</div>
+	</text>
+	<status value="final"/>
+	<code>
+		<coding>
+			<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_Administrative"/>
+			<version value="1.0.0"/>
+			<code value="KHV"/>
+			<display value="Krankenhausverlauf"/>
+		</coding>
+		<text value="Überschrift"/>
+	</code>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<encounter>
+		<reference value="urn:uuid:5ab926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</encounter>
+	<valueString value="Inhalt"/>
+</Observation>

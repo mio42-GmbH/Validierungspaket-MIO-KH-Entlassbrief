@@ -30,10 +30,6 @@
         <display value="Interventionelle Diagnostik"/>
     </concept>
     <concept>
-        <code value="Andere"/>
-        <display value="Andere"/>
-    </concept>
-    <concept>
         <code value="Laborbefund"/>
         <display value="Laborbefund"/>
     </concept>
@@ -48,5 +44,9 @@
     <concept>
         <code value="Bildgebungsbefund"/>
         <display value="Bildgebungsbefund"/>
+    </concept>
+    <concept>
+        <code value="Andere"/>
+        <display value="Andere"/>
     </concept>
 </CodeSystem>

@@ -1,0 +1,33 @@
+<DocumentReference xmlns="http://hl7.org/fhir">
+	<id value="3a83656f-f4cb-4ea2-aff4-3de7e7b2a60c"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference|1.0.0"/>
+	</meta>
+	<status value="current"/>
+	<category>
+		<coding>
+			<system value="http://ihe-d.de/CodeSystems/IHEXDSclassCode"/>
+			<code value="ADM"/>
+			<display value="Administratives Dokument"/>
+		</coding>
+	</category>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<content>
+		<attachment>
+			<url value="mio.kbv.de"/>
+			<title value="Befund XY"/>
+			<creation value="2022-09-06"/>
+		</attachment>
+	</content>
+	<!--<content>
+		<attachment>
+			<contentType value="application/pdf"/>
+			<data value="010101010101111000111"/>
+			<title value="Befund XY"/>
+			<creation value="2022-09-06"/>
+		</attachment>
+	</content> -->
+</DocumentReference>
+    

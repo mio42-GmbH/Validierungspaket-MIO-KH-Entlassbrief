@@ -18,11 +18,7 @@
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>
-        <code value="SectionProzeduren"/>
-        <display value="Bereich Prozeduren"/>
-    </concept>
-    <concept>
-        <code value="SectionDiagnosen"/>
-        <display value="Bereich Diagnosen"/>
+        <code value="SectionIBDME"/>
+        <display value="Infektion oder Besiedelung durch multiresistente Erreger"/>
     </concept>
 </CodeSystem>

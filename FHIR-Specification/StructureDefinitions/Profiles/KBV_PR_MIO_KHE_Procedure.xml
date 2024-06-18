@@ -8,25 +8,42 @@
 	<status value="draft"/>
 	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
 	<description value="Dieses Profil bildet eine Prozedur ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation"/>
+	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
 	<fhirVersion value="4.0.1"/>
 	<kind value="resource"/>
 	<abstract value="false"/>
 	<type value="Procedure"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Procedure"/>
+	<baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Procedure|1.4.0"/>
 	<derivation value="constraint"/>
 	<differential>
 		<element id="Procedure">
 			<path value="Procedure"/>
-			<definition value="Dieses Profil bildet eine Prozedur ab."/>
+			<definition value="Dieses Profil bildet eine Prozedur ab." />
+			<constraint>
+				<key value="pro-khe-1"/>
+				<severity value="error"/>
+				<human value="If extension.valueDateTime exits at least year, month and day are needed"/>
+				<expression value="extension.valueDateTime.exists() implies extension.valueDateTime.toString().length() &gt;=10"/>
+				<source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure"/>
+			</constraint>
+			<constraint>
+				<key value="pro-khe-2"/>
+				<severity value="error"/>
+				<human value="If note.time exits at least year, month and day are needed"/>
+				<expression value="note.time.start.exists() implies note.time.toString().length() &gt;= 10"/>
+				<source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure"/>
+			</constraint>
+			<constraint>
+				<key value="pro-khe-3"/>
+				<severity value="error"/>
+				<human value="If performedDateTime exits at least year, month and day are needed"/>
+				<expression value="performedDateTime.start.exists() implies performedDateTime.toString().length() &gt;= 10"/>
+				<source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure"/>
+			</constraint>
 		</element>
 		<element id="Procedure.meta">
 			<path value="Procedure.meta"/>
 			<min value="1"/>
-		</element>
-		<element id="Procedure.meta.id">
-			<path value="Procedure.meta.id"/>
-			<max value="0"/>
 		</element>
 		<element id="Procedure.meta.versionId">
 			<path value="Procedure.meta.versionId"/>
@@ -42,6 +59,18 @@
 		</element>
 		<element id="Procedure.meta.profile">
 			<path value="Procedure.meta.profile"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="open"/>
+			</slicing>
+			<min value="1"/>
+		</element>
+		<element id="Procedure.meta.profile:mioProfile">
+			<path value="Procedure.meta.profile"/>
+			<sliceName value="mioProfile"/>
 			<min value="1"/>
 			<max value="1"/>
 			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Procedure|1.0.0"/>
@@ -64,6 +93,7 @@
 		</element>
 		<element id="Procedure.text">
 			<path value="Procedure.text"/>
+			<definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind."/>
 		</element>
 		<element id="Procedure.text.status">
 			<path value="Procedure.text.status"/>
@@ -82,17 +112,29 @@
 				</discriminator>
 				<rules value="closed"/>
 			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Procedure.extension:seitenlokalisation">
-			<path value="Procedure.extension"/>
-			<sliceName value="seitenlokalisation"/>
-			<min value="0"/>
 			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Site_Localization"/>
-			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.extension:Dokumentationsdatum">
+			<path value="Procedure.extension"/>
+			<sliceName value="Dokumentationsdatum"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.extension:Dokumentationsdatum.value[x]">
+			<path value="Procedure.extension.value[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.extension:Dokumentationsdatum.value[x]:valueDateTime">
+			<path value="Procedure.extension.value[x]"/>
+			<sliceName value="valueDateTime"/>
+			<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.identifier">
@@ -118,84 +160,188 @@
 		<element id="Procedure.status">
 			<path value="Procedure.status"/>
 			<patternCode value="completed"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.statusReason">
 			<path value="Procedure.statusReason"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding">
+			<path value="Procedure.statusReason.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding.system">
+			<path value="Procedure.statusReason.coding.system"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding.version">
+			<path value="Procedure.statusReason.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding.code">
+			<path value="Procedure.statusReason.coding.code"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding.display">
+			<path value="Procedure.statusReason.coding.display"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.statusReason.coding.userSelected">
+			<path value="Procedure.statusReason.coding.userSelected"/>
 			<max value="0"/>
+		</element>
+		<element id="Procedure.statusReason.text">
+			<path value="Procedure.statusReason.text"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.category">
 			<path value="Procedure.category"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding">
+			<path value="Procedure.category.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed">
+			<path value="Procedure.category.coding"/>
+			<sliceName value="snomed"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed.system">
+			<path value="Procedure.category.coding.system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed.version">
+			<path value="Procedure.category.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed.code">
+			<path value="Procedure.category.coding.code"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed.display">
+			<path value="Procedure.category.coding.display"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.category.coding:snomed.userSelected">
+			<path value="Procedure.category.coding.userSelected"/>
 			<max value="0"/>
+		</element>
+		<element id="Procedure.category.text">
+			<path value="Procedure.category.text"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.code">
 			<path value="Procedure.code"/>
-			<min value="1"/>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.code.coding">
 			<path value="Procedure.code.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops">
+			<path value="Procedure.code.coding"/>
+			<sliceName value="ops"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension">
+			<path value="Procedure.code.coding.extension"/>
 			<slicing>
 				<discriminator>
-					<type value="pattern"/>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation">
+			<path value="Procedure.code.coding.extension"/>
+			<sliceName value="Seitenlokalisation"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]">
+			<path value="Procedure.code.coding.extension.value[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
 					<path value="$this"/>
 				</discriminator>
-				<rules value="open"/>
+				<rules value="closed"/>
 			</slicing>
 			<mustSupport value="true"/>
 		</element>
-		<element id="Procedure.code.coding:codeSnomed">
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding">
+			<path value="Procedure.code.coding.extension.value[x]"/>
+			<sliceName value="valueCoding"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding.system">
+			<path value="Procedure.code.coding.extension.value[x].system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding.version">
+			<path value="Procedure.code.coding.extension.value[x].version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding.code">
+			<path value="Procedure.code.coding.extension.value[x].code"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding.display">
+			<path value="Procedure.code.coding.extension.value[x].display"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.extension:Seitenlokalisation.value[x]:valueCoding.userSelected">
+			<path value="Procedure.code.coding.extension.value[x].userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.code.coding:ops.system">
+			<path value="Procedure.code.coding.system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.version">
+			<path value="Procedure.code.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.code">
+			<path value="Procedure.code.coding.code"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.display">
+			<path value="Procedure.code.coding.display"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.code.coding:ops.userSelected">
+			<path value="Procedure.code.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.code.coding:snomed">
 			<path value="Procedure.code.coding"/>
-			<sliceName value="codeSnomed"/>
+			<sliceName value="snomed"/>
 			<patternCoding>
 				<system value="http://snomed.info/sct"/>
 			</patternCoding>
 			<mustSupport value="true"/>
 		</element>
-		<element id="Procedure.code.coding:codeSnomed.system">
+		<element id="Procedure.code.coding:snomed.system">
 			<path value="Procedure.code.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeSnomed.version">
-			<path value="Procedure.code.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeSnomed.code">
-			<path value="Procedure.code.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeSnomed.display">
-			<path value="Procedure.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeSnomed.userSelected">
-			<path value="Procedure.code.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Procedure.code.coding:codeOPS">
-			<path value="Procedure.code.coding"/>
-			<sliceName value="codeOPS"/>
-			<patternCoding>
-				<system value="http://fhir.de/CodeSystem/dimdi/ops"/>
-			</patternCoding>
 			<mustSupport value="true"/>
 		</element>
-		<element id="Procedure.code.coding:codeOPS.system">
-			<path value="Procedure.code.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeOPS.version">
+		<element id="Procedure.code.coding:snomed.version">
 			<path value="Procedure.code.coding.version"/>
-			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
-		<element id="Procedure.code.coding:codeOPS.code">
+		<element id="Procedure.code.coding:snomed.code">
 			<path value="Procedure.code.coding.code"/>
-			<min value="1"/>
+			<mustSupport value="true"/>
 		</element>
-		<element id="Procedure.code.coding:codeOPS.display">
-			<path value="Procedure.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Procedure.code.coding:codeOPS.userSelected">
+		<element id="Procedure.code.coding:snomed.userSelected">
 			<path value="Procedure.code.coding.userSelected"/>
 			<max value="0"/>
 		</element>
@@ -205,15 +351,12 @@
 		</element>
 		<element id="Procedure.subject">
 			<path value="Procedure.subject"/>
+			<definition value="Hier erfolgt die Referenzierung auf die zu behandelnde Person."/>
 			<type>
 				<code value="Reference"/>
 				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
 			</type>
 			<mustSupport value="true"/>
-		</element>
-		<element id="Procedure.subject.id">
-			<path value="Procedure.subject.id"/>
-			<max value="0"/>
 		</element>
 		<element id="Procedure.subject.reference">
 			<path value="Procedure.subject.reference"/>
@@ -234,6 +377,28 @@
 		</element>
 		<element id="Procedure.encounter">
 			<path value="Procedure.encounter"/>
+			<definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden."/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.encounter.reference">
+			<path value="Procedure.encounter.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.encounter.type">
+			<path value="Procedure.encounter.type"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.encounter.identifier">
+			<path value="Procedure.encounter.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.encounter.display">
+			<path value="Procedure.encounter.display"/>
 			<max value="0"/>
 		</element>
 		<element id="Procedure.performed[x]">
@@ -249,24 +414,113 @@
 				<code value="dateTime"/>
 			</type>
 			<type>
+				<code value="Period"/>
+			</type>
+			<type>
 				<code value="string"/>
+			</type>
+			<type>
+				<code value="Age"/>
 			</type>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.performed[x]:performedDateTime">
 			<path value="Procedure.performed[x]"/>
 			<sliceName value="performedDateTime"/>
-			<type>
-				<code value="dateTime"/>
-			</type>
 			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedPeriod">
+			<path value="Procedure.performed[x]"/>
+			<sliceName value="performedPeriod"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedPeriod.start">
+			<path value="Procedure.performed[x].start"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedPeriod.end">
+			<path value="Procedure.performed[x].end"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge">
+			<path value="Procedure.performedAge"/>
+			<sliceName value="performedAge"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension">
+			<path value="Procedure.performedAge.extension"/>
+			<slicing>
+				<discriminator>
+					<type value="value"/>
+					<path value="url"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<max value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase">
+			<path value="Procedure.performedAge.extension"/>
+			<sliceName value="Lebensphase"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]">
+			<path value="Procedure.performedAge.extension.value[x]"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept">
+			<path value="Procedure.performedAge.extension.value[x]"/>
+			<sliceName value="valueCodeableConcept"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding">
+			<path value="Procedure.performedAge.extension.value[x].coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding.system">
+			<path value="Procedure.performedAge.extension.value[x].coding.system"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding.version">
+			<path value="Procedure.performedAge.extension.value[x].coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding.code">
+			<path value="Procedure.performedAge.extension.value[x].coding.code"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding.display">
+			<path value="Procedure.performedAge.extension.value[x].coding.display"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.extension:Lebensphase.value[x]:valueCodeableConcept.coding.userSelected">
+			<path value="Procedure.performedAge.extension.value[x].coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.value">
+			<path value="Procedure.performedAge.value"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.comparator">
+			<path value="Procedure.performedAge.comparator"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.unit">
+			<path value="Procedure.performedAge.unit"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.system">
+			<path value="Procedure.performedAge.system"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.performed[x]:performedAge.code">
+			<path value="Procedure.performedAge.code"/>
+			<max value="0"/>
 		</element>
 		<element id="Procedure.performed[x]:performedString">
 			<path value="Procedure.performed[x]"/>
 			<sliceName value="performedString"/>
-			<type>
-				<code value="string"/>
-			</type>
 			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.recorder">
@@ -295,7 +549,38 @@
 		</element>
 		<element id="Procedure.bodySite">
 			<path value="Procedure.bodySite"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding">
+			<path value="Procedure.bodySite.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding.system">
+			<path value="Procedure.bodySite.coding.system"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding.version">
+			<path value="Procedure.bodySite.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding.code">
+			<path value="Procedure.bodySite.coding.code"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding.display">
+			<path value="Procedure.bodySite.coding.display"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.bodySite.coding.userSelected">
+			<path value="Procedure.bodySite.coding.userSelected"/>
 			<max value="0"/>
+		</element>
+		<element id="Procedure.bodySite.text">
+			<path value="Procedure.bodySite.text"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.outcome">
 			<path value="Procedure.outcome"/>
@@ -315,24 +600,91 @@
 		</element>
 		<element id="Procedure.followUp">
 			<path value="Procedure.followUp"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding">
+			<path value="Procedure.followUp.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding.system">
+			<path value="Procedure.followUp.coding.system"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding.version">
+			<path value="Procedure.followUp.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding.code">
+			<path value="Procedure.followUp.coding.code"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding.display">
+			<path value="Procedure.followUp.coding.display"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.followUp.coding.userSelected">
+			<path value="Procedure.followUp.coding.userSelected"/>
 			<max value="0"/>
+		</element>
+		<element id="Procedure.followUp.text">
+			<path value="Procedure.followUp.text"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.note">
 			<path value="Procedure.note"/>
-			<max value="1"/>
 			<mustSupport value="true"/>
-		</element>
-		<element id="Procedure.note.id">
-			<path value="Procedure.note.id"/>
-			<max value="0"/>
 		</element>
 		<element id="Procedure.note.author[x]">
 			<path value="Procedure.note.author[x]"/>
+			<slicing>
+				<discriminator>
+					<type value="type"/>
+					<path value="$this"/>
+				</discriminator>
+				<rules value="closed"/>
+			</slicing>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorReference">
+			<path value="Procedure.note.author[x]"/>
+			<sliceName value="authorReference"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorReference.reference">
+			<path value="Procedure.note.author[x].reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorReference.type">
+			<path value="Procedure.note.author[x].type"/>
 			<max value="0"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorReference.identifier">
+			<path value="Procedure.note.author[x].identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorReference.display">
+			<path value="Procedure.note.author[x].display"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.note.author[x]:authorString">
+			<path value="Procedure.note.author[x]"/>
+			<sliceName value="authorString"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.note.time">
 			<path value="Procedure.note.time"/>
-			<max value="0"/>
+			<mustSupport value="true"/>
 		</element>
 		<element id="Procedure.note.text">
 			<path value="Procedure.note.text"/>
@@ -340,6 +692,66 @@
 		</element>
 		<element id="Procedure.focalDevice">
 			<path value="Procedure.focalDevice"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action">
+			<path value="Procedure.focalDevice.action"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding">
+			<path value="Procedure.focalDevice.action.coding"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding.system">
+			<path value="Procedure.focalDevice.action.coding.system"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding.version">
+			<path value="Procedure.focalDevice.action.coding.version"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding.code">
+			<path value="Procedure.focalDevice.action.coding.code"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding.display">
+			<path value="Procedure.focalDevice.action.coding.display"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.action.coding.userSelected">
+			<path value="Procedure.focalDevice.action.coding.userSelected"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.focalDevice.action.text">
+			<path value="Procedure.focalDevice.action.text"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.manipulated">
+			<path value="Procedure.focalDevice.manipulated"/>
+			<type>
+				<code value="Reference"/>
+				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant|1.0.0"/>
+			</type>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.manipulated.reference">
+			<path value="Procedure.focalDevice.manipulated.reference"/>
+			<min value="1"/>
+			<mustSupport value="true"/>
+		</element>
+		<element id="Procedure.focalDevice.manipulated.type">
+			<path value="Procedure.focalDevice.manipulated.type"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.focalDevice.manipulated.identifier">
+			<path value="Procedure.focalDevice.manipulated.identifier"/>
+			<max value="0"/>
+		</element>
+		<element id="Procedure.focalDevice.manipulated.display">
+			<path value="Procedure.focalDevice.manipulated.display"/>
 			<max value="0"/>
 		</element>
 		<element id="Procedure.usedReference">

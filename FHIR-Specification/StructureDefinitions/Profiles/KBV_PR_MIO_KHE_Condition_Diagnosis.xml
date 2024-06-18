@@ -1,776 +1,874 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-Condition-Diagnosis"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_Condition_Diagnosis"/>
-	<title value="KBV_PR_MIO_KHE_Condition_Diagnosis"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet eine Diagnose ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="Condition"/>
-	<baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Diagnosis|1.2.1"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="Condition">
-			<path value="Condition"/>
-			<definition value="Dieses Profil bildet eine Diagnose ab."/>
-		</element>
-		<element id="Condition.meta">
-			<path value="Condition.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.meta.versionId">
-			<path value="Condition.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.meta.lastUpdated">
-			<path value="Condition.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.meta.source">
-			<path value="Condition.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.meta.profile">
-			<path value="Condition.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0"/>
-		</element>
-		<element id="Condition.meta.security">
-			<path value="Condition.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.meta.tag">
-			<path value="Condition.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.implicitRules">
-			<path value="Condition.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.language">
-			<path value="Condition.language"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.text">
-			<path value="Condition.text"/>
-		</element>
-		<element id="Condition.text.status">
-			<path value="Condition.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="Condition.contained">
-			<path value="Condition.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.extension">
-			<path value="Condition.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.extension:Feststellungsdatum">
-			<path value="Condition.extension"/>
-			<sliceName value="Feststellungsdatum"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.extension:Feststellungsdatum.value[x]">
-			<path value="Condition.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.extension:Feststellungsdatum.value[x]:valueDateTime">
-			<path value="Condition.extension.valueDateTime"/>
-			<sliceName value="valueDateTime"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.identifier">
-			<path value="Condition.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.clinicalStatus">
-			<path value="Condition.clinicalStatus"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding">
-			<path value="Condition.clinicalStatus.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.system">
-			<path value="Condition.clinicalStatus.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.version">
-			<path value="Condition.clinicalStatus.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.code">
-			<path value="Condition.clinicalStatus.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display">
-			<path value="Condition.clinicalStatus.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension">
-			<path value="Condition.clinicalStatus.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension:anzeigenameCode">
-			<path value="Condition.clinicalStatus.coding.display.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension:anzeigenameCode.extension">
-			<path value="Condition.clinicalStatus.coding.display.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension:anzeigenameCode.extension:content">
-			<path value="Condition.clinicalStatus.coding.display.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension:anzeigenameCode.extension:content.value[x]">
-			<path value="Condition.clinicalStatus.coding.display.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.display.extension:anzeigenameCode.extension:content.value[x]:valueString">
-			<path value="Condition.clinicalStatus.coding.display.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Codes aus der Conceptmap eingetragen werden. https://fhir.kbv.de/ConceptMap/KBV_CM_Base_Diagnosis_Clinical_Status_German|1.2.1"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.clinicalStatus.coding.userSelected">
-			<path value="Condition.clinicalStatus.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.clinicalStatus.text">
-			<path value="Condition.clinicalStatus.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.verificationStatus">
-			<path value="Condition.verificationStatus"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.category">
-			<path value="Condition.category"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.severity">
-			<path value="Condition.severity"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding">
-			<path value="Condition.severity.coding"/>
-			<slicing>
-				<discriminator>
-					<type value="pattern"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct">
-			<path value="Condition.severity.coding"/>
-			<sliceName value="snomed-ct"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.version">
-			<path value="Condition.severity.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display">
-			<path value="Condition.severity.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension">
-			<path value="Condition.severity.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension:anzeigenameCode">
-			<path value="Condition.severity.coding.display.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension:anzeigenameCode.extension">
-			<path value="Condition.severity.coding.display.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension:anzeigenameCode.extension:content">
-			<path value="Condition.severity.coding.display.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension:anzeigenameCode.extension:content.value[x]">
-			<path value="Condition.severity.coding.display.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.display.extension:anzeigenameCode.extension:content.value[x]:valueString">
-			<path value="Condition.severity.coding.display.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Snomed-Codes aus der Conceptmap KBV_CM_Base_Diagnosis_Severity_German|1.2.1 eingetragen werden."/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.severity.coding:snomed-ct.userSelected">
-			<path value="Condition.severity.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.severity.text">
-			<path value="Condition.severity.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code">
-			<path value="Condition.code"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding">
-			<path value="Condition.code.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM">
-			<path value="Condition.code.coding"/>
-			<sliceName value="ICD-10-GM"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension">
-			<path value="Condition.code.coding.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension:Primaercode">
-			<path value="Condition.code.coding.extension"/>
-			<sliceName value="Primaercode"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension:Manifestationscode">
-			<path value="Condition.code.coding.extension"/>
-			<sliceName value="Manifestationscode"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension:AusrufezeichenCode">
-			<path value="Condition.code.coding.extension"/>
-			<sliceName value="AusrufezeichenCode"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit">
-			<path value="Condition.code.coding.extension"/>
-			<sliceName value="Diagnosesicherheit"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation">
-			<path value="Condition.code.coding.extension"/>
-			<sliceName value="Seitenlokalisation"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.display">
-			<path value="Condition.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:ICD-10-GM.userSelected">
-			<path value="Condition.code.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code.coding:alpha-id">
-			<path value="Condition.code.coding"/>
-			<sliceName value="alpha-id"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:alpha-id.version">
-			<path value="Condition.code.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:alpha-id.display">
-			<path value="Condition.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:alpha-id.userSelected">
-			<path value="Condition.code.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct">
-			<path value="Condition.code.coding"/>
-			<sliceName value="snomed-ct"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct.version">
-			<path value="Condition.code.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct.display">
-			<path value="Condition.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct.display.extension">
-			<path value="Condition.code.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct.display.extension:anzeigenameCode">
-			<path value="Condition.code.coding.display.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code.coding:snomed-ct.userSelected">
-			<path value="Condition.code.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code.coding:orphanet">
-			<path value="Condition.code.coding"/>
-			<sliceName value="orphanet"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.code.coding:orphanet.version">
-			<path value="Condition.code.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:orphanet.display">
-			<path value="Condition.code.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.code.coding:orphanet.userSelected">
-			<path value="Condition.code.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.code.text">
-			<path value="Condition.code.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.bodySite">
-			<path value="Condition.bodySite"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct">
-			<path value="Condition.bodySite.coding"/>
-			<sliceName value="snomed-ct"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct.version">
-			<path value="Condition.bodySite.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct.display">
-			<path value="Condition.bodySite.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct.display.extension">
-			<path value="Condition.bodySite.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct.display.extension:anzeigenameCode">
-			<path value="Condition.bodySite.coding.display.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.bodySite.coding:snomed-ct.userSelected">
-			<path value="Condition.bodySite.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.bodySite.text">
-			<path value="Condition.bodySite.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.subject">
-			<path value="Condition.subject"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.subject.reference">
-			<path value="Condition.subject.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.subject.type">
-			<path value="Condition.subject.type"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.subject.identifier">
-			<path value="Condition.subject.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.subject.display">
-			<path value="Condition.subject.display"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.encounter">
-			<path value="Condition.encounter"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.onset[x]">
-			<path value="Condition.onset[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<type>
-				<code value="dateTime"/>
-			</type>
-			<type>
-				<code value="Age"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetDateTime">
-			<path value="Condition.onsetDateTime"/>
-			<sliceName value="onsetDateTime"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge">
-			<path value="Condition.onsetAge"/>
-			<sliceName value="onsetAge"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension">
-			<path value="Condition.onsetAge.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von">
-			<path value="Condition.onsetAge.extension"/>
-			<sliceName value="lebensphase-von"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]">
-			<path value="Condition.onsetAge.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept"/>
-			<sliceName value="valueCodeableConcept"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension"/>
-			<sliceName value="anzeigeNameDisplay"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content.value[x]">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content.value[x]:valueString">
-			<path value="Condition.onsetAge.extension.valueCodeableConcept.coding.display.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Snomed-Codes aus der Conceptmap https://fhir.kbv.de/ConceptMap/KBV_CM_Base_Stage_Life_German|1.2.1 eingetragen werden."/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]">
-			<path value="Condition.abatement[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<type>
-				<code value="dateTime"/>
-			</type>
-			<type>
-				<code value="Age"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementDateTime">
-			<path value="Condition.abatementDateTime"/>
-			<sliceName value="abatementDateTime"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge">
-			<path value="Condition.abatementAge"/>
-			<sliceName value="abatementAge"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension">
-			<path value="Condition.abatementAge.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis">
-			<path value="Condition.abatementAge.extension"/>
-			<sliceName value="lebensphase-bis"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]">
-			<path value="Condition.abatementAge.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept"/>
-			<sliceName value="valueCodeableConcept"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension"/>
-			<sliceName value="anzeigeNameDisplay"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content.value[x]">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display.extension:anzeigeNameDisplay.extension:content.value[x]:valueString">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.display.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<definition value="In diesem Attribut sollen die entsprechende deutsche Bezeichnung des Snomed-Codes aus der Conceptmap https://fhir.kbv.de/ConceptMap/KBV_CM_Base_Stage_Life_German|1.2.1 eingetragen werden."/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.userSelected">
-			<path value="Condition.abatementAge.extension.valueCodeableConcept.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.recordedDate">
-			<path value="Condition.recordedDate"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.recorder">
-			<path value="Condition.recorder"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.asserter">
-			<path value="Condition.asserter"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.stage">
-			<path value="Condition.stage"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.evidence">
-			<path value="Condition.evidence"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.note">
-			<path value="Condition.note"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Condition.note.author[x]">
-			<path value="Condition.note.author[x]"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.note.time">
-			<path value="Condition.note.time"/>
-			<max value="0"/>
-		</element>
-		<element id="Condition.note.text">
-			<path value="Condition.note.text"/>
-			<mustSupport value="true"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-Condition-Diagnosis" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_Condition_Diagnosis" />
+  <title value="KBV_PR_MIO_KHE_Condition_Diagnosis" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet eine Diagnose ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Condition" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Condition_Diagnosis|1.4.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Condition">
+      <path value="Condition" />
+      <definition value="Hier können alle Informationen angegeben werden, die im Zusammenhang mit einer Diagnosestellung stehen." />
+	  <constraint>
+        <key value="con-khe-1" />
+        <severity value="error" />
+        <human value="If note.time exits at least year, month and day are needed" />
+        <expression value="note.time.exists() implies note.time.toString().length() &gt;= 10" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis" />
+      </constraint>
+	  <constraint>
+        <key value="con-khe-2" />
+        <severity value="error" />
+        <human value="If extension.valueDateTime exists at least year, month and day are needed" />
+        <expression value="extension.valueDateTime.exists() implies extension.valueDateTime.toString().length() &gt;=10" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis" />
+      </constraint>
+	  <constraint>
+        <key value="con-khe-3" />
+        <severity value="error" />
+        <human value="If recordedDate exists at least year and month are needed" />
+        <expression value="recordedDate.exists() implies recordedDate.toString().length() &gt;= 7" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis" />
+      </constraint>
+    </element>
+    <element id="Condition.meta">
+      <path value="Condition.meta" />
+      <min value="1" />
+    </element>
+    <element id="Condition.meta.versionId">
+      <path value="Condition.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.lastUpdated">
+      <path value="Condition.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.source">
+      <path value="Condition.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.profile">
+      <path value="Condition.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Condition.meta.profile:mioProfile">
+      <path value="Condition.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0" />
+    </element>
+    <element id="Condition.meta.security">
+      <path value="Condition.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Condition.meta.tag">
+      <path value="Condition.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Condition.implicitRules">
+      <path value="Condition.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Condition.language">
+      <path value="Condition.language" />
+      <max value="0" />
+    </element>
+    <element id="Condition.text">
+      <path value="Condition.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Condition.text.status">
+      <path value="Condition.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="Condition.contained">
+      <path value="Condition.contained" />
+      <max value="0" />
+    </element>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.extension:Feststellungsdatum">
+      <path value="Condition.extension" />
+      <sliceName value="Feststellungsdatum" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.extension:Feststellungsdatum.value[x]">
+      <path value="Condition.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.extension:Feststellungsdatum.value[x]:valueDateTime">
+      <path value="Condition.extension.value[x]" />
+      <sliceName value="valueDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.identifier">
+      <path value="Condition.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus">
+      <path value="Condition.clinicalStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding">
+      <path value="Condition.clinicalStatus.coding" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.system">
+      <path value="Condition.clinicalStatus.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.version">
+      <path value="Condition.clinicalStatus.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.code">
+      <path value="Condition.clinicalStatus.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.display">
+      <path value="Condition.clinicalStatus.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.clinicalStatus.coding.userSelected">
+      <path value="Condition.clinicalStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.clinicalStatus.text">
+      <path value="Condition.clinicalStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.verificationStatus">
+      <path value="Condition.verificationStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding">
+      <path value="Condition.verificationStatus.coding" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.system">
+      <path value="Condition.verificationStatus.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.version">
+      <path value="Condition.verificationStatus.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.code">
+      <path value="Condition.verificationStatus.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.display">
+      <path value="Condition.verificationStatus.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.verificationStatus.coding.userSelected">
+      <path value="Condition.verificationStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.verificationStatus.text">
+      <path value="Condition.verificationStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.category">
+      <path value="Condition.category" />
+      <max value="0" />
+    </element>
+    <element id="Condition.severity">
+      <path value="Condition.severity" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding">
+      <path value="Condition.severity.coding" />
+      <slicing>
+		<discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed">
+      <path value="Condition.severity.coding" />
+      <sliceName value="snomed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed.system">
+      <path value="Condition.severity.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed.version">
+      <path value="Condition.severity.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed.code">
+      <path value="Condition.severity.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed.display">
+      <path value="Condition.severity.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.severity.coding:snomed.userSelected">
+      <path value="Condition.severity.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.severity.text">
+      <path value="Condition.severity.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code">
+      <path value="Condition.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding">
+      <path value="Condition.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM">
+      <path value="Condition.code.coding" />
+      <sliceName value="ICD-10-GM" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension">
+      <path value="Condition.code.coding.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Mehrfachcodierungs-Kennzeichen">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Mehrfachcodierungs-Kennzeichen" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Seitenlokalisation">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Seitenlokalisation" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.extension:Diagnosesicherheit">
+      <path value="Condition.code.coding.extension" />
+      <sliceName value="Diagnosesicherheit" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.system">
+      <path value="Condition.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.version">
+      <path value="Condition.code.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.code">
+      <path value="Condition.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:ICD-10-GM.userSelected">
+      <path value="Condition.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code.coding:alphaId">
+      <path value="Condition.code.coding" />
+      <sliceName value="alphaId" />
+      <definition value="In diesem Element wird der ALPHA-ID-Code für die Diagnose angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alphaId.system">
+      <path value="Condition.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alphaId.version">
+      <path value="Condition.code.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alphaId.code">
+      <path value="Condition.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alphaId.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:alphaId.userSelected">
+      <path value="Condition.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code.coding:snomed">
+      <path value="Condition.code.coding" />
+      <sliceName value="snomed" />
+      <definition value="In diesem Element wird der SNOMED CT®-Code für die Diagnose angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:snomed.system">
+      <path value="Condition.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:snomed.version">
+      <path value="Condition.code.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:snomed.code">
+      <path value="Condition.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:snomed.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:snomed.userSelected">
+      <path value="Condition.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code.coding:orphanet">
+      <path value="Condition.code.coding" />
+      <sliceName value="orphanet" />
+      <definition value="In diesem Element wird der ORPHANET-Code für die Diagnose angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.system">
+      <path value="Condition.code.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.version">
+      <path value="Condition.code.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.code">
+      <path value="Condition.code.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.display">
+      <path value="Condition.code.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.code.coding:orphanet.userSelected">
+      <path value="Condition.code.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.code.text">
+      <path value="Condition.code.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite">
+      <path value="Condition.bodySite" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding">
+      <path value="Condition.bodySite.coding" />
+      <slicing>
+		<discriminator>
+          <type value="pattern" />
+          <path value="system" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed">
+      <path value="Condition.bodySite.coding" />
+      <sliceName value="snomed" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed.system">
+      <path value="Condition.bodySite.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed.version">
+      <path value="Condition.bodySite.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed.code">
+      <path value="Condition.bodySite.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed.display">
+      <path value="Condition.bodySite.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.bodySite.coding:snomed.userSelected">
+      <path value="Condition.bodySite.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.bodySite.text">
+      <path value="Condition.bodySite.text" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject">
+      <path value="Condition.subject" />
+      <definition value="Hier wird der Patient referenziert." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject.reference">
+      <path value="Condition.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.subject.type">
+      <path value="Condition.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject.identifier">
+      <path value="Condition.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.subject.display">
+      <path value="Condition.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.encounter">
+      <path value="Condition.encounter" />
+      <definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.encounter.reference">
+      <path value="Condition.encounter.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.encounter.type">
+      <path value="Condition.encounter.type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.encounter.identifier">
+      <path value="Condition.encounter.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.encounter.display">
+      <path value="Condition.encounter.display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]">
+      <path value="Condition.onset[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetDateTime">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge">
+      <path value="Condition.onsetAge" />
+      <sliceName value="onsetAge" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension">
+      <path value="Condition.onsetAge.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von">
+      <path value="Condition.onsetAge.extension" />
+      <sliceName value="lebensphase-von" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]">
+      <path value="Condition.onsetAge.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept">
+      <path value="Condition.onsetAge.extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding">
+      <path value="Condition.onsetAge.extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.system">
+      <path value="Condition.onsetAge.extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.version">
+      <path value="Condition.onsetAge.extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.code">
+      <path value="Condition.onsetAge.extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.display">
+      <path value="Condition.onsetAge.extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.extension:lebensphase-von.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Condition.onsetAge.extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.value">
+      <path value="Condition.onsetAge.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.comparator">
+      <path value="Condition.onsetAge.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.unit">
+      <path value="Condition.onsetAge.unit" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.system">
+      <path value="Condition.onsetAge.system" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetAge.code">
+      <path value="Condition.onsetAge.code" />
+      <max value="0" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod.start">
+      <path value="Condition.onset[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetPeriod.end">
+      <path value="Condition.onset[x].end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange">
+      <path value="Condition.onset[x]" />
+      <sliceName value="onsetRange" />
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.low">
+      <path value="Condition.onset[x].low" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.low.value">
+      <path value="Condition.onset[x].low.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.high">
+      <path value="Condition.onset[x].high" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.onset[x]:onsetRange.high.value">
+      <path value="Condition.onset[x].high.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]">
+      <path value="Condition.abatement[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+      <type>
+        <code value="Age" />
+      </type>
+      <type>
+        <code value="Period" />
+      </type>
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementDateTime">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementDateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge">
+      <path value="Condition.abatementAge" />
+      <sliceName value="abatementAge" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension">
+      <path value="Condition.abatementAge.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis">
+      <path value="Condition.abatementAge.extension" />
+      <sliceName value="lebensphase-bis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]">
+      <path value="Condition.abatementAge.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept">
+      <path value="Condition.abatementAge.extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding">
+      <path value="Condition.abatementAge.extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.system">
+      <path value="Condition.abatementAge.extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.version">
+      <path value="Condition.abatementAge.extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.code">
+      <path value="Condition.abatementAge.extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.display">
+      <path value="Condition.abatementAge.extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.extension:lebensphase-bis.value[x]:valueCodeableConcept.coding.userSelected">
+      <path value="Condition.abatementAge.extension.value[x].coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.value">
+      <path value="Condition.abatementAge.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.comparator">
+      <path value="Condition.abatementAge.comparator" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.unit">
+      <path value="Condition.abatementAge.unit" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.system">
+      <path value="Condition.abatementAge.system" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementAge.code">
+      <path value="Condition.abatementAge.code" />
+      <max value="0" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod.start">
+      <path value="Condition.abatement[x].start" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementPeriod.end">
+      <path value="Condition.abatement[x].end" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange">
+      <path value="Condition.abatement[x]" />
+      <sliceName value="abatementRange" />
+      <type>
+        <code value="Range" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.low">
+      <path value="Condition.abatement[x].low" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.low.value">
+      <path value="Condition.abatement[x].low.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.high">
+      <path value="Condition.abatement[x].high" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.abatement[x]:abatementRange.high.value">
+      <path value="Condition.abatement[x].high.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recordedDate">
+      <path value="Condition.recordedDate" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.recorder">
+      <path value="Condition.recorder" />
+      <max value="0" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <max value="0" />
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <max value="0" />
+    </element>
+    <element id="Condition.evidence">
+      <path value="Condition.evidence" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note">
+      <path value="Condition.note" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.author[x]">
+      <path value="Condition.note.author[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.author[x]:authorReference">
+      <path value="Condition.note.author[x]" />
+      <sliceName value="authorReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.author[x]:authorReference.reference">
+      <path value="Condition.note.author[x].reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.author[x]:authorReference.type">
+      <path value="Condition.note.author[x].type" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note.author[x]:authorReference.identifier">
+      <path value="Condition.note.author[x].identifier" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note.author[x]:authorReference.display">
+      <path value="Condition.note.author[x].display" />
+      <max value="0" />
+    </element>
+    <element id="Condition.note.author[x]:authorString">
+      <path value="Condition.note.author[x]" />
+      <sliceName value="authorString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.time">
+      <path value="Condition.note.time" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Condition.note.text">
+      <path value="Condition.note.text" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
 </StructureDefinition>

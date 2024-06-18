@@ -1,0 +1,58 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="5cef120b-7741-46ce-a6b6-1f9e9afb083e"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Observation_Peripheral_Oxygen_Saturation|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>peripher arterielle Sauerstoffsättigung</h1>
+		</div>
+	</text>
+	<status value="final"/>
+	<category>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+			<code value="vital-signs"/>
+		</coding>
+	</category>
+	<code>
+		<coding>
+			<system value="http://loinc.org"/>
+			<version value="2.73"/>
+			<code value="2708-6"/>
+			<display value="Oxygen saturation in Arterial blood"/>
+		</coding>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="431314004"/>
+			<display value="Peripheral oxygen saturation (observable entity)"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<encounter>
+		<reference value="urn:uuid:5ab926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</encounter>
+	<effectiveDateTime value="2022-08-16"/>
+	<valueQuantity>
+		<value value="94"/>
+		<unit value="%"/>
+		<system value="http://unitsofmeasure.org"/>
+		<code value="%"/>
+	</valueQuantity>
+	<bodySite>
+		<text value="test"/>
+	</bodySite>
+	<method>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="448703006"/>
+			<display value="Pulse oximeter (physical object)"/>
+		</coding>
+	</method>
+</Observation>
+    

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-Base-AllergyIntolerance" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_AllergyIntolerance" />
+  <version value="1.4.0" />
+  <name value="KBV_PR_Base_AllergyIntolerance" />
+  <status value="active" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Hier kann eine einzelne Allergie oder Unverträglichkeit abgebildet werden." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="AllergyIntolerance" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/AllergyIntolerance" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="AllergyIntolerance">
+      <path value="AllergyIntolerance" />
+      <definition value="Hier kann eine einzelne Allergie oder Unverträglichkeit abgebildet werden." />
+    </element>
+    <element id="AllergyIntolerance.extension">
+      <path value="AllergyIntolerance.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="AllergyIntolerance.extension:abatement">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement" />
+      <short value="Klinisch relevantes Enddatum" />
+      <definition value="Klinisch relevantes Datum, bis wann der/die PatientIn die Allergie/Unverträglichkeit hatte." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_AllergyIntolerance_Abatement|1.4.0" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.extension:abatement-lebensphase-bis">
+      <path value="AllergyIntolerance.extension" />
+      <sliceName value="abatement-lebensphase-bis" />
+      <short value="Lebensphase" />
+      <definition value="Angabe des ungefähren Alters, bis zu dem der/die PatientIn die Allergie hatte." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life|1.4.0" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus">
+      <path value="AllergyIntolerance.clinicalStatus" />
+      <definition value="Beschreibt den Status einer Allergie bzw. Unverträglichkeit aus klinischer Sicht" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding">
+      <path value="AllergyIntolerance.clinicalStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding.system">
+      <path value="AllergyIntolerance.clinicalStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding.version">
+      <path value="AllergyIntolerance.clinicalStatus.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding.code">
+      <path value="AllergyIntolerance.clinicalStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.clinicalStatus.coding.display">
+      <path value="AllergyIntolerance.clinicalStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus">
+      <path value="AllergyIntolerance.verificationStatus" />
+      <definition value="Beschreibt die Gewissheit. Gibt den Grad der Sicherheit oder Gewissheit an, mit der das tatsächliche Vorliegen der Allergie/Unverträglichkeit angegeben werden kann." />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding">
+      <path value="AllergyIntolerance.verificationStatus.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.system">
+      <path value="AllergyIntolerance.verificationStatus.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.version">
+      <path value="AllergyIntolerance.verificationStatus.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.code">
+      <path value="AllergyIntolerance.verificationStatus.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.verificationStatus.coding.display">
+      <path value="AllergyIntolerance.verificationStatus.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.type">
+      <path value="AllergyIntolerance.type" />
+      <definition value="In diesem Element kann angegeben werden, ob es sich um eine Allergie oder eine Unverträglichkeit handelt." />
+    </element>
+    <element id="AllergyIntolerance.category">
+      <path value="AllergyIntolerance.category" />
+      <definition value="Enthält die Kategorie der die Allergie oder Unverträglichkeit auslösenden Substanz gemäß den angegebenen Auswahlmöglichkeiten." />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.criticality">
+      <path value="AllergyIntolerance.criticality" />
+      <definition value="Beschreibt die Kritikalität. Die Kritikalität gibt an, wie hoch Risiko dafür ist, dass die Exposition zu der Substanz eine schwerwiegende oder lebensbedrohliche Situation hervorruft." />
+    </element>
+    <element id="AllergyIntolerance.code">
+      <path value="AllergyIntolerance.code" />
+      <definition value="Dieses Element bildet die Substanz ab, gegen die eine Allergie oder Unverträglichkeit besteht." />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding">
+      <path value="AllergyIntolerance.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Dieses Element bildet die Substanz als codierte Information ab." />
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomed">
+      <path value="AllergyIntolerance.code.coding" />
+      <sliceName value="snomed" />
+      <definition value="Hier soll der Code für die Substanz als SNOMED CT®-Code eingetragen werden." />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Allergy_Substance_SNOMED_CT" />
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomed.system">
+      <path value="AllergyIntolerance.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomed.version">
+      <path value="AllergyIntolerance.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomed.code">
+      <path value="AllergyIntolerance.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:snomed.display">
+      <path value="AllergyIntolerance.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:ask">
+      <path value="AllergyIntolerance.code.coding" />
+      <sliceName value="ask" />
+      <definition value="Hier soll der Code für die Substanz als ASK-Code eingetragen werden." />
+      <type>
+        <code value="Coding" />
+        <profile value="http://fhir.de/StructureDefinition/CodingASK|1.4.0" />
+      </type>
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/ask" />
+      </patternCoding>
+    </element>
+    <element id="AllergyIntolerance.code.coding:ask.version">
+      <path value="AllergyIntolerance.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.coding:ask.display">
+      <path value="AllergyIntolerance.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.code.text">
+      <path value="AllergyIntolerance.code.text" />
+      <definition value="Hier kann die Bezeichnung der Substanz als Freitext eingetragen werden." />
+    </element>
+    <element id="AllergyIntolerance.patient">
+      <path value="AllergyIntolerance.patient" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.onset[x]">
+      <path value="AllergyIntolerance.onset[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="In diesem Element kann angegeben werden, in welchem Zeitraum bzw. ab wann der/die PatientIn die Allergie/Unverträglichkeit hatte bzw. hat." />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetDateTime">
+      <path value="AllergyIntolerance.onset[x]" />
+      <sliceName value="onsetDateTime" />
+      <short value="Klinischer Zeitraum datiert &quot;von&quot;" />
+      <definition value="KDatum, ab wann die Allergie/Unverträglichkeit identifiziert wurde." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge">
+      <path value="AllergyIntolerance.onset[x]" />
+      <sliceName value="onsetAge" />
+      <short value="Klinischer Zeitraum" />
+      <definition value="Angabe der Lebensphasen, in denen die Allergie/Unverträglichkeit begonnen/geendet hat." />
+      <type>
+        <code value="Age" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension">
+      <path value="AllergyIntolerance.onset[x].extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="AllergyIntolerance.onset[x]:onsetAge.extension:lebensphase-von">
+      <path value="AllergyIntolerance.onset[x].extension" />
+      <sliceName value="lebensphase-von" />
+      <definition value="Angabe des ungefähren Alters, ab dem der/die PatientIn die Allergie/Unverträglichkeit hat." />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Stage_Life|1.4.0" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.note">
+      <path value="AllergyIntolerance.note" />
+      <definition value="Hier können ergänzende Informationen zur Allergie bzw. Unverträglichkeit angegeben werden." />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.note.author[x]">
+      <path value="AllergyIntolerance.note.author[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier wird die Person angegeben, die die Notiz erstellt hat." />
+    </element>
+    <element id="AllergyIntolerance.note.author[x]:authorReference">
+      <path value="AllergyIntolerance.note.author[x]" />
+      <sliceName value="authorReference" />
+      <definition value="Hier wird die Person, die die Notiz erstellt hat, referenziert." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Practitioner|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_RelatedPerson|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization|1.4.0" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.note.author[x]:authorString">
+      <path value="AllergyIntolerance.note.author[x]" />
+      <sliceName value="authorString" />
+      <definition value="Hier wird die Person, die die Notiz erstellt hat, als Freitext angegeben." />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="AllergyIntolerance.note.time">
+      <path value="AllergyIntolerance.note.time" />
+      <definition value="Hier wird der Zeitpunkt angegeben, zu dem die Notiz erstellt wurde." />
+    </element>
+    <element id="AllergyIntolerance.note.text">
+      <path value="AllergyIntolerance.note.text" />
+      <definition value="Hier wird der eigentliche Text der Notiz eingetragen." />
+    </element>
+    <element id="AllergyIntolerance.reaction">
+      <path value="AllergyIntolerance.reaction" />
+      <definition value="Dieses Element enthält Informationen über die Reaktion, die bei diesem/dieser PatientIn nach Exposition hervorgerufen wird." />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation">
+      <path value="AllergyIntolerance.reaction.manifestation" />
+      <definition value="In diesem Element können Angaben zur Manifestation der Reaktion gemacht werden." />
+      <max value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding">
+      <path value="AllergyIntolerance.reaction.manifestation.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier kann die Manifestation als codierte Information angegeben werden." />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:snomed">
+      <path value="AllergyIntolerance.reaction.manifestation.coding" />
+      <sliceName value="snomed" />
+      <definition value="Manifestation als SNOMED CT®-Code. Es wird ein optionales Beispiel-ValueSet zur Verfügung gestellt." />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Reaction_Allergy" />
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:snomed.system">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.coding:snomed.code">
+      <path value="AllergyIntolerance.reaction.manifestation.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.manifestation.text">
+      <path value="AllergyIntolerance.reaction.manifestation.text" />
+      <definition value="Bezeichnung bzw. Beschreibung der Manifestation als Freitext." />
+    </element>
+    <element id="AllergyIntolerance.reaction.severity">
+      <path value="AllergyIntolerance.reaction.severity" />
+      <definition value="Dieses Element enthält Informationen zum Schweregrad der Reaktion." />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute">
+      <path value="AllergyIntolerance.reaction.exposureRoute" />
+      <definition value="Hier kann der Expositionsweg des Allergens angegeben werden." />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier kann der Expositionsweg als codierte Information angegeben werden." />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomed">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding" />
+      <sliceName value="snomed" />
+      <definition value="SNOMED CT®-Code für die Bezeichnung des Expositionswegs." />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+      <binding>
+        <strength value="example" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Route_of_Administration_SNOMED_CT" />
+      </binding>
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomed.system">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="AllergyIntolerance.reaction.exposureRoute.coding:snomed.code">
+      <path value="AllergyIntolerance.reaction.exposureRoute.coding.code" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

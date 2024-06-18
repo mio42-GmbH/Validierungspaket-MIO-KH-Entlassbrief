@@ -1,0 +1,98 @@
+<RelatedPerson xmlns="http://hl7.org/fhir">
+	<id value="10aa0c18-b1f7-446a-a16c-d937a42e6700"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Contact_person</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_Base_Additional_Comment">
+		<valueString value="12345"/>
+	</extension>
+	<patient>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</patient>
+	<relationship>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v2-0131"/>
+			<version value="2.1.0"/>
+			<code value="C"/>
+			<display value="Emergency Contact"/>
+		</coding>
+		<text value="Notfallkontakt"/>
+	</relationship>
+	<name>
+		<use value="official"/>
+		<text value="Max Strubel"/>
+		<family value="Fürst von Max Strubel">
+			<extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+				<valueString value="Fürst"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+				<valueString value="Strubel"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+				<valueString value="von"/>
+			</extension>
+		</family>
+		<given value="Max"/>
+		<prefix value="AC">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+				<valueCode value="AC"/>
+			</extension>
+		</prefix>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="012345689"/>
+	</telecom>
+	<gender value="other">
+		<extension url="http://fhir.de/StructureDefinition/gender-amtlich-de">
+			<valueCoding>
+				<system value="http://fhir.de/CodeSystem/gender-amtlich-de"/>
+				<version value="1.4.0"/>
+				<code value="D"/>
+				<display value="divers"/>
+			</valueCoding>
+		</extension>
+	</gender>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Kreuzberg"/>
+		</extension>
+		<type value="both"/>
+		<line value="Kreuzberg"/>
+		<line value="26 Kaiser-Friedrich-Straße Kreuberg">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Kaiser-Friedrich-Straße"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="26"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+				<valueString value="Etage"/>
+			</extension>
+		</line>
+		<city value="Berlin"/>
+		<postalCode value="134567"/>
+		<country value="D"/>
+	</address>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Kreuzberg"/>
+		</extension>
+		<type value="postal"/>
+		<line value="01234 Kreuzberg"/>
+		<line value="01234 Kreuzberg">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+				<valueString value="01234 Kreuzberg"/>
+			</extension>
+		</line>
+		<city value="Berlin"/>
+		<postalCode value="134567"/>
+		<country value="D"/>
+	</address>
+</RelatedPerson>

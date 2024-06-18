@@ -1,0 +1,229 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Patient</h1>
+		</div>
+	</text>
+	<identifier>
+		<use value="usual"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<version value="2.9.0"/>
+				<code value="MR"/>
+				<display value="Medical record number"/>
+			</coding>
+		</type>
+		<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		<value value="123456"/>
+	</identifier>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+				<version value="0.9.13"/>
+				<code value="GKV"/>
+				<display value="Gesetzliche Krankenversicherung"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/sid/gkv/kvid-10"/>
+		<value value="G123456789"/>
+	</identifier>
+	<identifier>
+		<use value="secondary"/>
+		<type>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_identifier_type"/>
+				<code value="pkv-nr"/>
+				<display value="Private Krankenversicherung"/>
+			</coding>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+				<code value="PKV"/>
+				<display value="Private Krankenversicherung"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+		<value value="123456"/>
+		<assigner>
+			<reference value="urn:uuid:8ae14607-7f1a-4799-bb11-2ba1169dec84"/>
+			<type value="Organization"/>
+			<identifier>
+				<use value="official"/>
+				<type>
+					<coding>
+						<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+						<version value="2.9.0"/>
+						<code value="XX"/>
+						<display value="Organisations-ID"/>
+					</coding>
+				</type>
+				<system value="http://fhir.de/sid/arge-ik/iknr"/>
+				<value value="123456789"/>
+				<period>
+					<start value="2022-01-01"/>
+					<end value="2025-01-01"/>
+				</period>
+			</identifier>
+			<display value="Organisation"/>
+		</assigner>
+	</identifier>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+				<version value="2.9.0"/>
+				<code value="PPN"/>
+				<display value="Passport number"/>
+			</coding>
+		</type>
+		<system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+		<value value="123456"/>
+	</identifier>
+	<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_identifier_type"/>
+				<version value="1.2.1"/>
+				<code value="kvk"/>
+				<display value="Krankenversichertenkarte"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/sid/gkv/kvk-versichertennummer"/>
+		<value value="123456"/>
+	</identifier>
+	<!--<identifier>
+		<use value="official"/>
+		<type>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/identifier-type-de-basis"/>
+				<code value="PKV"/>
+				<display value="Private Krankenversicherung"/>
+			</coding>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_identifier_type"/>
+				<version value="1.4.0"/>
+				<code value="pkv-id"/>
+				<display value="Privatversicherten-ID"/>
+			</coding>
+		</type>
+		<system value="http://fhir.de/sid/pkv/kvid-10"/>
+		<value value="123456"/>
+	</identifier> -->
+	<name>
+		<use value="official"/>
+		<text value="Fürst von Max Moritz"/>
+		<family value="Fürst von Max Moritz">
+			<extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+				<valueString value="Fürst"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+				<valueString value="Moritz"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+				<valueString value="von"/>
+			</extension>
+		</family>
+		<given value="Max"/>
+		<prefix value="Dr. med">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+				<valueCode value="AC"/>
+			</extension>
+		</prefix>
+	</name>
+	<name>
+		<use value="maiden"/>
+		<text value="Max Strubel"/>
+		<family value="Fürst von Max Strubel">
+			<extension url="http://fhir.de/StructureDefinition/humanname-namenszusatz">
+				<valueString value="Fürst"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+				<valueString value="Strubel"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-prefix">
+				<valueString value="von"/>
+			</extension>
+		</family>
+	</name>
+	<telecom>
+		<system value="phone"/>
+		<value value="123456"/>
+	</telecom>
+	<gender value="other">
+		<extension url="http://fhir.de/StructureDefinition/gender-amtlich-de">
+			<valueCoding>
+				<system value="http://fhir.de/CodeSystem/gender-amtlich-de"/>
+				<version value="0.9.13"/>
+				<code value="X"/>
+				<display value="unbestimmt"/>
+			</valueCoding>
+		</extension>
+	</gender>
+	<birthDate>
+		<extension url="http://hl7.org/fhir/StructureDefinition/data-absent-reason">
+			<valueCode value="unknown"/>
+		</extension>
+	</birthDate>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Kreuzberg"/>
+		</extension>
+		<type value="both"/>
+		<line value="26 Kaiser-Friedrich-Straße Kreuberg">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName">
+				<valueString value="Kaiser-Friedrich-Straße"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber">
+				<valueString value="26"/>
+			</extension>
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator">
+				<valueString value="Etage"/>
+			</extension>
+		</line>
+		<city value="Berlin"/>
+		<postalCode value="10661"/>
+		<country value="D"/>
+	</address>
+	<address>
+		<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-precinct">
+			<valueString value="Kreuzberg"/>
+		</extension>
+		<type value="postal"/>
+		<line value="4 Prükelstraße">
+			<extension url="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox">
+				<valueString value="Prükel"/>
+			</extension>
+		</line>
+		<city value="Berlin"/>
+		<postalCode value="10661"/>
+		<country value="D"/>
+	</address>
+	<maritalStatus>
+		<coding>
+			<system value="http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"/>
+			<version value="2018-08-12"/>
+			<code value="D" />
+			<display value="Divorced" />
+		</coding>
+	
+	</maritalStatus>
+	<communication>
+		<language>
+			<coding>
+				<system value="urn:ietf:bcp:47"/>
+				<version value="4.0.1"/>
+				<code value="de"/>
+				<display value="German"/>
+			</coding>
+		</language>
+	</communication>
+</Patient>

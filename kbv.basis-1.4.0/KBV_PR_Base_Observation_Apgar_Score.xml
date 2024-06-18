@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-Base-Observation-Apgar-Score" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Observation_Apgar_Score" />
+  <version value="1.4.0" />
+  <name value="KBV_PR_Base_Observation_Apgar_Score" />
+  <status value="active" />
+  <description value="Dieses Profil bildet einen Apgar-Score ab." />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Pattern" />
+  </mapping>
+  <mapping>
+    <identity value="sct-concept" />
+    <uri value="http://snomed.info/conceptdomain" />
+    <name value="SNOMED CT Concept Domain Binding" />
+  </mapping>
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="sct-attr" />
+    <uri value="http://snomed.org/attributebinding" />
+    <name value="SNOMED CT Attribute Binding" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <short value="Apgar-Score" />
+      <definition value="Dieses Element beschreibt die Dokumentation eines einzelnen Apgar-Score zu einem definierten Zeitpunkt nach Geburt. Hierbei wird in diesem Basisprofil nur der Gesamt-Apgar-Score modelliert und nicht die einzelnen Teilkomponenten Aussehen, Puls, Gesichtsbewegungen, Aktivität und Respiration." />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="2" />
+    </element>
+    <element id="Observation.code.coding:snomed">
+      <path value="Observation.code.coding" />
+      <sliceName value="snomed" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Apgar_Score_Identifier_SNOMED_CT" />
+      </binding>
+    </element>
+    <element id="Observation.code.coding:snomed.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:snomed.version">
+      <path value="Observation.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:snomed.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:snomed.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Apgar_Score_Identifier_LOINC" />
+      </binding>
+    </element>
+    <element id="Observation.code.coding:loinc.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.version">
+      <path value="Observation.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+		<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Device|1.4.0" />
+      </type>
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <max value="0" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effective[x]" />
+      <sliceName value="effectiveDateTime" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding">
+      <path value="Observation.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Apgar_Score_Value" />
+      </binding>
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.system">
+      <path value="Observation.value[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.version">
+      <path value="Observation.value[x].coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.code">
+      <path value="Observation.value[x].coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept.coding.display">
+      <path value="Observation.value[x].coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.note">
+      <path value="Observation.note" />
+      <definition value="Hier können ergänzende freitextliche Kommentare und Notizen vorgenommen werden, die nicht durch die strukturierten Datenelemente erfassbar sind." />
+    </element>
+    <element id="Observation.note.author[x]">
+      <path value="Observation.note.author[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier wird die Person angegeben, die die Notiz erstellt hat." />
+    </element>
+    <element id="Observation.note.author[x]:authorReference">
+      <path value="Observation.note.author[x]" />
+      <sliceName value="authorReference" />
+      <definition value="Hier wird die Person, die die Notiz erstellt hat, referenziert." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Organization|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_RelatedPerson|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Practitioner|1.4.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+      </type>
+    </element>
+    <element id="Observation.note.author[x]:authorString">
+      <path value="Observation.note.author[x]" />
+      <sliceName value="authorString" />
+      <definition value="Hier wird die Person, die die Notiz erstellt hat, referenziert." />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Observation.note.time">
+      <path value="Observation.note.time" />
+      <definition value="Hier wird der Zeitpunkt angegeben, zu dem die Notiz erstellt wurde." />
+    </element>
+    <element id="Observation.note.text">
+      <path value="Observation.note.text" />
+      <definition value="Hier wird der eigentliche Text der Notiz eingetragen." />
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

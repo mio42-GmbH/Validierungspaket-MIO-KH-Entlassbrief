@@ -1,1015 +1,1133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-Patient"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_Patient"/>
-	<title value="KBV_PR_MIO_KHE_Patient"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet eine Person ab, die eine oder mehrere medizinische Leistungen in Anspruch nimmt."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="Patient"/>
-	<baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.2.1"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="Patient">
-			<path value="Patient"/>
-			<definition value="Dieses Profil bildet eine Person ab, die eine oder mehrere medizinische Leistungen in Anspruch nimmt."/>
-		</element>
-		<element id="Patient.meta">
-			<path value="Patient.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="Patient.meta.versionId">
-			<path value="Patient.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.meta.lastUpdated">
-			<path value="Patient.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.meta.source">
-			<path value="Patient.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.meta.profile">
-			<path value="Patient.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-		</element>
-		<element id="Patient.meta.security">
-			<path value="Patient.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.meta.tag">
-			<path value="Patient.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.implicitRules">
-			<path value="Patient.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.language">
-			<path value="Patient.language"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.text">
-			<path value="Patient.text"/>
-		</element>
-		<element id="Patient.text.status">
-			<path value="Patient.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="Patient.contained">
-			<path value="Patient.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier">
-			<path value="Patient.identifier"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="type.coding.code"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid">
-			<path value="Patient.identifier"/>
-			<sliceName value="pid"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid.type">
-			<path value="Patient.identifier.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid.type.coding.userSelected">
-			<path value="Patient.identifier.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:pid.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:pid.system">
-			<path value="Patient.identifier.system"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid.value">
-			<path value="Patient.identifier.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:pid.period">
-			<path value="Patient.identifier.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:pid.assigner">
-			<path value="Patient.identifier.assigner"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV">
-			<path value="Patient.identifier"/>
-			<sliceName value="versichertenId_GKV"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.type">
-			<path value="Patient.identifier.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.type.coding.userSelected">
-			<path value="Patient.identifier.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.system">
-			<path value="Patient.identifier.system"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.value">
-			<path value="Patient.identifier.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.period">
-			<path value="Patient.identifier.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertenId_GKV.assigner">
-			<path value="Patient.identifier.assigner"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv">
-			<path value="Patient.identifier"/>
-			<sliceName value="versichertennummer_pkv"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.type">
-			<path value="Patient.identifier.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.type.coding.userSelected">
-			<path value="Patient.identifier.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.value">
-			<path value="Patient.identifier.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_pkv.period">
-			<path value="Patient.identifier.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer">
-			<path value="Patient.identifier"/>
-			<sliceName value="reisepassnummer"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.type">
-			<path value="Patient.identifier.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.type.coding.userSelected">
-			<path value="Patient.identifier.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.value">
-			<path value="Patient.identifier.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.period">
-			<path value="Patient.identifier.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:reisepassnummer.assigner">
-			<path value="Patient.identifier.assigner"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk">
-			<path value="Patient.identifier"/>
-			<sliceName value="versichertennummer_kvk"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.type">
-			<path value="Patient.identifier.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.type.coding">
-			<path value="Patient.identifier.type.coding"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.type.coding.userSelected">
-			<path value="Patient.identifier.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.type.text">
-			<path value="Patient.identifier.type.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.system">
-			<path value="Patient.identifier.system"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.value">
-			<path value="Patient.identifier.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.period">
-			<path value="Patient.identifier.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.identifier:versichertennummer_kvk.assigner">
-			<path value="Patient.identifier.assigner"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.active">
-			<path value="Patient.active"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.name">
-			<path value="Patient.name"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="use"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name">
-			<path value="Patient.name"/>
-			<sliceName value="name"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.text">
-			<path value="Patient.name.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family">
-			<path value="Patient.name.family"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension">
-			<path value="Patient.name.family.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.name:name.family.extension:namenszusatz">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="namenszusatz"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:namenszusatz.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:namenszusatz.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:nachname">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="nachname"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:nachname.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:nachname.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:vorsatzwort">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="vorsatzwort"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:vorsatzwort.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.family.extension:vorsatzwort.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.given">
-			<path value="Patient.name.given"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.prefix">
-			<path value="Patient.name.prefix"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.prefix.extension">
-			<path value="Patient.name.prefix.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Patient.name:name.prefix.extension:prefix-qualifier">
-			<path value="Patient.name.prefix.extension"/>
-			<sliceName value="prefix-qualifier"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.prefix.extension:prefix-qualifier.value[x]">
-			<path value="Patient.name.prefix.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.prefix.extension:prefix-qualifier.value[x]:valueCode">
-			<path value="Patient.name.prefix.extension.value[x]"/>
-			<sliceName value="valueCode"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:name.suffix">
-			<path value="Patient.name.suffix"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.name:name.period">
-			<path value="Patient.name.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.name:geburtsname">
-			<path value="Patient.name"/>
-			<sliceName value="geburtsname"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.text">
-			<path value="Patient.name.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family">
-			<path value="Patient.name.family"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension">
-			<path value="Patient.name.family.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:namenszusatz">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="namenszusatz"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:namenszusatz.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:namenszusatz.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:nachname">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="nachname"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:nachname.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:nachname.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:vorsatzwort">
-			<path value="Patient.name.family.extension"/>
-			<sliceName value="vorsatzwort"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:vorsatzwort.value[x]">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.family.extension:vorsatzwort.value[x]:valueString">
-			<path value="Patient.name.family.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.name:geburtsname.suffix">
-			<path value="Patient.name.suffix"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.name:geburtsname.period">
-			<path value="Patient.name.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.telecom">
-			<path value="Patient.telecom"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.system">
-			<path value="Patient.telecom.system"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.system.extension">
-			<path value="Patient.telecom.system.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.telecom.system.extension:anzeigenameCode">
-			<path value="Patient.telecom.system.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.system.extension:anzeigenameCode.extension">
-			<path value="Patient.telecom.system.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Patient.telecom.system.extension:anzeigenameCode.extension:content">
-			<path value="Patient.telecom.system.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.system.extension:anzeigenameCode.extension:content.value[x]">
-			<path value="Patient.telecom.system.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.system.extension:anzeigenameCode.extension:content.value[x]:valueString">
-			<path value="Patient.telecom.system.extension.extension.value[x]"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.value">
-			<path value="Patient.telecom.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.telecom.use">
-			<path value="Patient.telecom.use"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.telecom.rank">
-			<path value="Patient.telecom.rank"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.telecom.period">
-			<path value="Patient.telecom.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.gender">
-			<path value="Patient.gender"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.gender.extension">
-			<path value="Patient.gender.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.gender.extension:other-amtlich">
-			<path value="Patient.gender.extension"/>
-			<sliceName value="other-amtlich"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.gender.extension:anzeigenameCode">
-			<path value="Patient.gender.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.gender.extension:anzeigenameCode.extension">
-			<path value="Patient.gender.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="Patient.gender.extension:anzeigenameCode.extension:content">
-			<path value="Patient.gender.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.gender.extension:anzeigenameCode.extension:content.value[x]">
-			<path value="Patient.gender.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.gender.extension:anzeigenameCode.extension:content.value[x]:valueString">
-			<path value="Patient.gender.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.birthDate">
-			<path value="Patient.birthDate"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.birthDate.extension">
-			<path value="Patient.birthDate.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.birthDate.extension:data-absent-reason">
-			<path value="Patient.birthDate.extension"/>
-			<sliceName value="data-absent-reason"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.birthDate.extension:data-absent-reason.value[x]">
-			<path value="Patient.birthDate.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.birthDate.extension:data-absent-reason.value[x]:valueCode">
-			<path value="Patient.birthDate.extension.valueCode"/>
-			<sliceName value="valueCode"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.deceased[x]">
-			<path value="Patient.deceased[x]"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.address">
-			<path value="Patient.address"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="type"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift">
-			<path value="Patient.address"/>
-			<sliceName value="Strassenanschrift"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.extension">
-			<path value="Patient.address.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.extension:Stadtteil">
-			<path value="Patient.address.extension"/>
-			<sliceName value="Stadtteil"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]">
-			<path value="Patient.address.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString">
-			<path value="Patient.address.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line">
-			<path value="Patient.address.line"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension">
-			<path value="Patient.address.line.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Strasse">
-			<path value="Patient.address.line.extension"/>
-			<sliceName value="Strasse"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Strasse.value[x]">
-			<path value="Patient.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString">
-			<path value="Patient.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Hausnummer">
-			<path value="Patient.address.line.extension"/>
-			<sliceName value="Hausnummer"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
-			<path value="Patient.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString">
-			<path value="Patient.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz">
-			<path value="Patient.address.line.extension"/>
-			<sliceName value="Adresszusatz"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
-			<path value="Patient.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString">
-			<path value="Patient.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.city">
-			<path value="Patient.address.city"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.state">
-			<path value="Patient.address.state"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.postalCode">
-			<path value="Patient.address.postalCode"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.country">
-			<path value="Patient.address.country"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Strassenanschrift.period">
-			<path value="Patient.address.period"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach">
-			<path value="Patient.address"/>
-			<sliceName value="Postfach"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.extension">
-			<path value="Patient.address.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.address:Postfach.extension:Stadtteil">
-			<path value="Patient.address.extension"/>
-			<sliceName value="Stadtteil"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.extension:Stadtteil.value[x]">
-			<path value="Patient.address.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.extension:Stadtteil.value[x]:valueString">
-			<path value="Patient.address.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.line">
-			<path value="Patient.address.line"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.line.extension">
-			<path value="Patient.address.line.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="Patient.address:Postfach.line.extension:Postfach">
-			<path value="Patient.address.line.extension"/>
-			<sliceName value="Postfach"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.line.extension:Postfach.value[x]">
-			<path value="Patient.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.line.extension:Postfach.value[x]:valueString">
-			<path value="Patient.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.city">
-			<path value="Patient.address.city"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.state">
-			<path value="Patient.address.state"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.address:Postfach.postalCode">
-			<path value="Patient.address.postalCode"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.country">
-			<path value="Patient.address.country"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.address:Postfach.period">
-			<path value="Patient.address.period"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.maritalStatus">
-			<path value="Patient.maritalStatus"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.multipleBirth[x]">
-			<path value="Patient.multipleBirth[x]"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.photo">
-			<path value="Patient.photo"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.contact">
-			<path value="Patient.contact"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.communication">
-			<path value="Patient.communication"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.communication.language">
-			<path value="Patient.communication.language"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.communication.language.coding">
-			<path value="Patient.communication.language.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Patient.communication.language.coding.system">
-			<path value="Patient.communication.language.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Patient.communication.language.coding.version">
-			<path value="Patient.communication.language.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Patient.communication.language.coding.code">
-			<path value="Patient.communication.language.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Patient.communication.language.coding.display">
-			<path value="Patient.communication.language.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Patient.communication.language.coding.userSelected">
-			<path value="Patient.communication.language.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.communication.language.text">
-			<path value="Patient.communication.language.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.communication.preferred">
-			<path value="Patient.communication.preferred"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.generalPractitioner">
-			<path value="Patient.generalPractitioner"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.managingOrganization">
-			<path value="Patient.managingOrganization"/>
-			<max value="0"/>
-		</element>
-		<element id="Patient.link">
-			<path value="Patient.link"/>
-			<max value="0"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-Patient" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_Patient" />
+  <title value="KBV_PR_MIO_KHE_Patient" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet eine Person ab, die eine oder mehrere medizinische Leistungen in Anspruch nimmt." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.meta">
+      <path value="Patient.meta" />
+      <min value="1" />
+    </element>
+    <element id="Patient.meta.versionId">
+      <path value="Patient.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="Patient.meta.lastUpdated">
+      <path value="Patient.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="Patient.meta.source">
+      <path value="Patient.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Patient.meta.profile">
+      <path value="Patient.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Patient.meta.profile:mioProfile">
+      <path value="Patient.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+    </element>
+    <element id="Patient.meta.security">
+      <path value="Patient.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Patient.meta.tag">
+      <path value="Patient.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Patient.implicitRules">
+      <path value="Patient.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Patient.language">
+      <path value="Patient.language" />
+      <max value="0" />
+    </element>
+    <element id="Patient.text">
+      <path value="Patient.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Patient.text.status">
+      <path value="Patient.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="Patient.contained">
+      <path value="Patient.contained" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+		<discriminator>
+          <type value="pattern" />
+          <path value="type" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <definition value="Dieses Element bildet den Identifikator für die zu behandelnde Person ab." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid">
+      <path value="Patient.identifier" />
+      <sliceName value="pid" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:pid.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:pid.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:pid.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:pid.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV">
+      <path value="Patient.identifier" />
+      <sliceName value="versichertenId_GKV" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_GKV.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv">
+      <path value="Patient.identifier" />
+      <sliceName value="versichertennummer_pkv" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_pkv.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer">
+      <path value="Patient.identifier" />
+      <sliceName value="reisepassnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:reisepassnummer.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk">
+      <path value="Patient.identifier" />
+      <sliceName value="versichertennummer_kvk" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertennummer_kvk.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV">
+      <path value="Patient.identifier" />
+      <sliceName value="versichertenId_PKV" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type">
+      <path value="Patient.identifier.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding">
+      <path value="Patient.identifier.type.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.system">
+      <path value="Patient.identifier.type.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.version">
+      <path value="Patient.identifier.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.code">
+      <path value="Patient.identifier.type.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.display">
+      <path value="Patient.identifier.type.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.coding.userSelected">
+      <path value="Patient.identifier.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.type.text">
+      <path value="Patient.identifier.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.system">
+      <path value="Patient.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.value">
+      <path value="Patient.identifier.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.period">
+      <path value="Patient.identifier.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.identifier:versichertenId_PKV.assigner">
+      <path value="Patient.identifier.assigner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.active">
+      <path value="Patient.active" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="use" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <definition value="Hier wird der Name der zu behandelnden Person abgebildet." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name">
+      <path value="Patient.name" />
+      <sliceName value="name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.text">
+      <path value="Patient.name.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family">
+      <path value="Patient.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:namenszusatz">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:namenszusatz.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:namenszusatz.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:nachname">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="nachname" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:nachname.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:nachname.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:vorsatzwort">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:vorsatzwort.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.family.extension:vorsatzwort.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.given">
+      <path value="Patient.name.given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix">
+      <path value="Patient.name.prefix" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix.extension">
+      <path value="Patient.name.prefix.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix.extension:prefix-qualifier">
+      <path value="Patient.name.prefix.extension" />
+      <sliceName value="prefix-qualifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="Patient.name.prefix.extension.value[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.prefix.extension:prefix-qualifier.value[x]:valueCode">
+      <path value="Patient.name.prefix.extension.value[x]" />
+      <sliceName value="valueCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:name.suffix">
+      <path value="Patient.name.suffix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:name.period">
+      <path value="Patient.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:geburtsname">
+      <path value="Patient.name" />
+      <sliceName value="geburtsname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.text">
+      <path value="Patient.name.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family">
+      <path value="Patient.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:namenszusatz">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:namenszusatz.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:namenszusatz.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:nachname">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="nachname" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:nachname.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:nachname.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:vorsatzwort">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:vorsatzwort.value[x]">
+      <path value="Patient.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.family.extension:vorsatzwort.value[x]:valueString">
+      <path value="Patient.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name:geburtsname.suffix">
+      <path value="Patient.name.suffix" />
+      <max value="0" />
+    </element>
+    <element id="Patient.name:geburtsname.period">
+      <path value="Patient.name.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom">
+      <path value="Patient.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.telecom.system">
+      <path value="Patient.telecom.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.telecom.value">
+      <path value="Patient.telecom.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.telecom.use">
+      <path value="Patient.telecom.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom.rank">
+      <path value="Patient.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="Patient.telecom.period">
+      <path value="Patient.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <definition value="Dieses Element bildet das Geschlecht ab." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension">
+      <path value="Patient.gender.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension:other-amtlich">
+      <path value="Patient.gender.extension" />
+      <sliceName value="other-amtlich" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <definition value="Dieses Element bildet das Geburtsdatum ab." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate.extension">
+      <path value="Patient.birthDate.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate.extension:data-absent-reason">
+      <path value="Patient.birthDate.extension" />
+      <sliceName value="data-absent-reason" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate.extension:data-absent-reason.value[x]">
+      <path value="Patient.birthDate.extension.value[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.birthDate.extension:data-absent-reason.value[x]:valueCode">
+      <path value="Patient.birthDate.extension.value[x]" />
+      <sliceName value="valueCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <definition value="Hier wird die Adresse abgebildet." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift">
+      <path value="Patient.address" />
+      <sliceName value="Strassenanschrift" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension">
+      <path value="Patient.address.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension:Stadtteil">
+      <path value="Patient.address.extension" />
+      <sliceName value="Stadtteil" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="Patient.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString">
+      <path value="Patient.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.use">
+      <path value="Patient.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.text">
+      <path value="Patient.address.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line">
+      <path value="Patient.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension">
+      <path value="Patient.address.line.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Strasse">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Strasse" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Strasse.value[x]">
+      <path value="Patient.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString">
+      <path value="Patient.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
+      <path value="Patient.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString">
+      <path value="Patient.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Patient.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString">
+      <path value="Patient.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.city">
+      <path value="Patient.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.state">
+      <path value="Patient.address.state" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.country">
+      <path value="Patient.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Strassenanschrift.period">
+      <path value="Patient.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach">
+      <path value="Patient.address" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.extension">
+      <path value="Patient.address.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.extension:Stadtteil">
+      <path value="Patient.address.extension" />
+      <sliceName value="Stadtteil" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.extension:Stadtteil.value[x]">
+      <path value="Patient.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.extension:Stadtteil.value[x]:valueString">
+      <path value="Patient.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.use">
+      <path value="Patient.address.use" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach.text">
+      <path value="Patient.address.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach.line">
+      <path value="Patient.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension">
+      <path value="Patient.address.line.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension:Postfach">
+      <path value="Patient.address.line.extension" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="Patient.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.line.extension:Postfach.value[x]:valueString">
+      <path value="Patient.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.city">
+      <path value="Patient.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.state">
+      <path value="Patient.address.state" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address:Postfach.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.country">
+      <path value="Patient.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address:Postfach.period">
+      <path value="Patient.address.period" />
+      <max value="0" />
+    </element>
+    <element id="Patient.maritalStatus">
+      <path value="Patient.maritalStatus" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding">
+      <path value="Patient.maritalStatus.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding.system">
+      <path value="Patient.maritalStatus.coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding.version">
+      <path value="Patient.maritalStatus.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding.code">
+      <path value="Patient.maritalStatus.coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding.display">
+      <path value="Patient.maritalStatus.coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.maritalStatus.coding.userSelected">
+      <path value="Patient.maritalStatus.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.maritalStatus.text">
+      <path value="Patient.maritalStatus.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.multipleBirth[x]">
+      <path value="Patient.multipleBirth[x]" />
+      <max value="0" />
+    </element>
+    <element id="Patient.photo">
+      <path value="Patient.photo" />
+      <max value="0" />
+    </element>
+    <element id="Patient.contact">
+      <path value="Patient.contact" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication">
+      <path value="Patient.communication" />
+      <definition value="Dieses Element bildet die, ab.Sprachen, die zur Kommunikation mit der behandelten Person über medizinische Themen verwendet werden können, ab." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language">
+      <path value="Patient.communication.language" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding">
+      <path value="Patient.communication.language.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding.system">
+      <path value="Patient.communication.language.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding.version">
+      <path value="Patient.communication.language.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding.code">
+      <path value="Patient.communication.language.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding.display">
+      <path value="Patient.communication.language.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.communication.language.coding.userSelected">
+      <path value="Patient.communication.language.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication.language.text">
+      <path value="Patient.communication.language.text" />
+      <max value="0" />
+    </element>
+    <element id="Patient.communication.preferred">
+      <path value="Patient.communication.preferred" />
+      <max value="0" />
+    </element>
+    <element id="Patient.generalPractitioner">
+      <path value="Patient.generalPractitioner" />
+      <max value="0" />
+    </element>
+    <element id="Patient.managingOrganization">
+      <path value="Patient.managingOrganization" />
+      <max value="0" />
+    </element>
+    <element id="Patient.link">
+      <path value="Patient.link" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

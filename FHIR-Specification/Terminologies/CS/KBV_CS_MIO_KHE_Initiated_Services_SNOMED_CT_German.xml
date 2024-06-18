@@ -26,6 +26,10 @@
         <display value="Hilfsmittel"/>
     </concept>
     <concept>
+        <code value="AmbulanteIntensivpflege"/>
+        <display value="Ambulante Intensivpflege"/>
+    </concept>
+    <concept>
         <code value="Soziotherapie"/>
         <display value="Soziotherapie"/>
     </concept>
@@ -44,6 +48,10 @@
     <concept>
         <code value="Arzneimittel"/>
         <display value="Arzneimittel"/>
+    </concept>
+    <concept>
+        <code value="StationaeresHospiz"/>
+        <display value="Stationäres Hospiz"/>
     </concept>
     <concept>
         <code value="SpezialisierteambulantePalliativversorgungSAPV"/>

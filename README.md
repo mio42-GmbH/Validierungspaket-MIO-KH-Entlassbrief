@@ -1,4 +1,4 @@
-# Validationpackage MIO KH-Entlassbrief Version 1.0.0 Commenting Phase
+# Validationpackage MIO KH-Entlassbrief Version 1.0.0 update
 
 Disclaimer: This service is intended to help with the validation process. However, please note there is no claim to completeness, correctness or reliability.
 
@@ -6,37 +6,38 @@ Introduction: This archive is supposed to be a guidance for developers in the im
 
 Alternatively, the dependencies can also be found here:
 
-- de.basisprofil.r4 0.9.13: https://simplifier.net/packages/de.basisprofil.r4/0.9.13
-- kbv.basis 1.2.1: https://simplifier.net/packages/kbv.basis/1.2.1
-- kbv.mio.khe 1.0.0-kommentierung: https://simplifier.net/packages/kbv.mio.kh-entlassbrief/1.0.0-kommentierung
+- de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
+- kbv.basis 1.4.0: https://simplifier.net/packages/kbv.basis/1.4.0
+- dvmd.kdl.r4.2022 2022 1.2: https://simplifier.net/packages/dvmd.kdl.r4.2022/2022.1.2
 
-The version of the validator, which was used by the mio42 GmbH, is included. If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
-
+The version of the validator, which was used by the mio42 GmbH is 6.3.10 and can be found here: 
+- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.3.10 
+If the version provided should cause any problems, you may also use the most recent one. All releases can be found here:
 - https://github.com/hapifhir/org.hl7.fhir.core/releases
+  
 For a thorough documentation on the use of the validator, please follow this link:
-
 - https://confluence.hl7.org/display/FHIR/Using+the+FHIR+Validator
 
 You can use the following command to validate the examples:
 
-REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification\ -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
-REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel_Maximal:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Maximal.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
 
-REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel_Minimal:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Minimal.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
 
 Please note that a current version of Java is required (we would recommend the most recent one).
 
 
-# Validierungspaket MIO KH-Entlassbrief Version 1.0.0 Kommentierungsphase
+# Validierungspaket MIO KH-Entlassbrief Version 1.0.0 Update
 
 Disclaimer: 
 Der Service zur Validierung erhebt keinen Anspruch auf Vollständigkeit, Korrektheit sowie Verbindlichkeit.
@@ -48,11 +49,14 @@ Es enthält die verwendeten Basis-Profile, die Ressourcen des MIO, den Validator
 
 Die Dependencies finden Sie alternativ unter folgenden links:
 
-- de.basisprofil.r4 0.9.13: https://simplifier.net/packages/de.basisprofil.r4/0.9.13
-- kbv.basis 1.2.1: https://simplifier.net/packages/kbv.basis/1.2.1
-- kbv.mio.khe 1.0.0-kommentierung: 
+- de.basisprofil.r4 1.4.0: https://simplifier.net/packages/de.basisprofil.r4/1.4.0
+- kbv.basis 1.4.0: https://simplifier.net/packages/kbv.basis/1.4.0
+- dvmd.kdl.r4.2022 2022 1.2: https://simplifier.net/packages/dvmd.kdl.r4.2022/2022.1.2
 
-Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde, ist enthalten. Sollte diese zu Prolemen führen, können Sie auch die aktuelle  Version des Validators nutzen. Alle Releases finden Sie unter: 
+Die Version des Validators, welche von der mio42 GmbH für die Validierung verwendet wurde ist 6.3.10 und kann hier abgerufen werden:
+- https://github.com/hapifhir/org.hl7.fhir.core/releases/tag/6.3.10
+
+Sollte diese zu Prolemen führen, können Sie auch die aktuelle  Version des Validators nutzen. Alle Releases finden Sie unter: 
 - https://github.com/hapifhir/org.hl7.fhir.core/releases
 
 Eine Ausführliche Dokumentation zur Verwendung des Validators finden Sie hier:
@@ -60,18 +64,18 @@ Eine Ausführliche Dokumentation zur Verwendung des Validators finden Sie hier:
 
 Zur Validierung der Beispiele können Sie folgenden Aufruf verwenden:
 
-REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_1_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification\ -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
-REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel_Maximal:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_2_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Maximal.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
 
-REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle:
+Fallbeispiel_Minimal:
 ```
-java -jar validator_cli.jar .\Example\REAL_EXAMPLE_3_KBV_PR_MIO_KHE_Bundle.xml -ig "hl7.fhir.core#4.0.1" -ig .\KBV-Base -ig .\HL7-Base-de -ig .\FHIR-Specification -recurse
+java -jar validator_cli.jar .\Examples\Fallbeispiel_Minimal.xml -ig "hl7.fhir.core#4.0.1" -ig .\kbv.basis-1.4.0 -ig .\de.basisprofil.r4-1.4.0 -ig .\dvmd.kdl.r4.2022 -ig .\FHIR-Specification\ -recurse
 ```
 
 Weitere Voraussetzung ist eine aktuelle Java Version.

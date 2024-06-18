@@ -1,0 +1,201 @@
+<Composition xmlns="http://hl7.org/fhir">
+	<id value="88b1060b-c472-4d85-9f86-e449719d736b"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Composition|1.0.0"/>
+	</meta>
+	<status value="final"/>
+	<type>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="373942005"/>
+			<display value="Discharge summary (record artifact)"/>
+		</coding>
+	</type>
+	<subject>
+		<reference value="urn:uuid:55a6e1df-8019-4121-8b70-d38ed704605d"/>
+	</subject>
+	
+	<date value="2022-04-06"/>
+	<author>
+		<reference value="urn:uuid:67857968-c27b-41d1-9242-94485081b7e2"/>
+	</author>
+	<author>
+		<reference value="urn:uuid:a587aa03-4989-41d7-a167-927dfd3b2780"/>
+	</author>
+	<title value="Krankenhausentlassbrief"/>
+	
+	
+	<!-- Entlassende Personen / Einrichtung -->
+	<section>
+		<title value="Entlassende Personen/Einrichtung"/>
+		<code>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+				<version value="1.0.0"/>
+				<code value="entlassende_personen_einrichtung"/>
+				<display value="Entlassende Personen/Einrichtung"/>
+			</coding>
+		</code>
+		<section>
+			<title value="Behandelnde Personen"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="behandelnde_person"/>
+					<display value="Behandelnde Person"/>
+				</coding>
+			</code>
+			<entry>
+				<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Verantwortliche Personen"/>
+			<code>
+				<coding>
+					<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+					<version value="1.0.0"/>
+					<code value="verantworltiche_personen"/>
+					<display value="Verantwortliche Personen"/>
+				</coding>
+			</code>
+			<entry>
+				<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+			</entry>
+		</section>
+		<section>
+			<title value="Kontakt Entlassmanagement"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="718675005"/>
+					<display value="Management of inpatient discharge (procedure)"/>
+				</coding>
+			</code>
+			<entry>
+				<reference value="urn:uuid:3e26df13-785f-4e5f-a5e1-49a72bbf4da4"/>
+			</entry>
+		</section>
+	</section>
+	
+	<!-- Empfangende Personen -->
+	<section>
+		<title value="Empfangende Personen"/>
+		<code>
+			<coding>
+				<system value="https://fhir.kbv.de/CodeSystem/KBV_CS_MIO_KHE_mio42"/>
+				<version value="1.0.0"/>
+				<code value="empfangende_personen"/>
+				<display value="Empfangende Personen"/>
+			</coding>
+		</code>
+		<section>
+			<title value="PatientIn"/>
+			<code>
+				<coding>
+					<system value="http://snomed.info/sct"/>
+					<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+					<code value="116154003"/>
+					<display value="Patient (person)"/>
+				</coding>
+			</code>
+			<entry>
+				<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+			</entry>
+		</section>
+	</section>
+
+	<!-- Falldaten -->
+	<section>
+		<title value="Falldaten"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="866144008"/>
+				<display value="Encounter note (record artifact)"/>
+			</coding>
+		</code>
+		<entry>
+			<reference value="urn:uuid:05257314-0fb3-405a-8c6e-672e4715dbf9"/>
+		</entry>
+	</section>
+
+	<!-- Aufnahme -->
+	<section>
+		<title value="Aufnahme"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="371542009"/>
+				<display value="Admission history and physical report (record artifact)"/>
+			</coding>
+		</code>
+		<section>
+			<title value="Klinischer Untersuchungsbefund"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="55286-9"/>
+					<display value="Physical exam by body areas"/>
+				</coding>
+			</code>
+			<entry>
+				<reference value="urn:uuid:14aa344f-2a06-4925-a92d-264b389a5b25"/>
+			</entry>
+		</section>
+	</section>
+		
+	<!-- Verlauf -->
+	<section>
+		<title value="Verlauf"/>
+		<code>
+			<coding>
+				<system value="http://snomed.info/sct"/>
+				<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+				<code value="444754002"/>
+				<display value="Hospital inpatient progress report (record artifact)"/>
+			</coding>
+		</code>
+		<entry>
+			<reference value="urn:uuid:23e6e2e7-9c54-4d32-9522-7f97492b6530"/>
+		</entry>
+	</section>
+	
+	<!-- Entlassung -->
+	<section>
+		<title value="Entlassung"/>
+		<code>
+			<coding>
+				<system value="http://loinc.org"/>
+				<version value="2.73"/>
+				<code value="34105-7"/>
+				<display value="Hospital Discharge summary"/>
+			</coding>
+		</code>
+		<section>
+			<title value="Entlassungsbefund"/>
+			<code>
+				<coding>
+					<system value="http://loinc.org"/>
+					<version value="2.73"/>
+					<code value="10184-0"/>
+					<display value="Hospital discharge physical findings Narrative"/>
+				</coding>
+			</code>
+			<text>
+				<status value="additional"/>
+				<div xmlns="http://www.w3.org/1999/xhtml">
+					<h1>Entlassungsbefund Text</h1>
+				</div>
+			</text>
+		</section>
+		
+		
+	</section>
+</Composition>

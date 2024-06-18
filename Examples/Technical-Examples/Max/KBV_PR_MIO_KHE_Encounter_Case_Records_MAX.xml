@@ -1,0 +1,139 @@
+<Encounter xmlns="http://hl7.org/fhir">
+	<id value="05257314-0fb3-405a-8c6e-672e4715dbf9"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+	</meta>
+	<text>
+		<status value="extensions"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<h1>Falldaten</h1>
+		</div>
+	</text>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Discharge_Management_Performed">
+		<valueBoolean value="true"/>
+	</extension>
+	<status value="finished"/>
+	<class>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<version value="3.0.0"/>
+		<code value="IMP"/>
+		<display value="inpatient encounter"/>
+	</class>
+	<type>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/kontaktart-de"/>
+            <version value="1.4.0"/>
+            <code value="normalstationaer"/>
+            <display value="Normalstationär"/>
+		</coding>
+	</type>
+	<type>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/Kontaktebene"/>
+            <version value="1.4.0"/>
+            <code value="abteilungskontakt"/>
+            <display value="Abteilungskontakt"/>
+		</coding>
+	</type>
+	<serviceType>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel"/>
+			<version value="1.4.0"/>
+			<code value="0100"/>
+			<display value="Innere Medizin"/>
+		</coding>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert"/>
+			<version value="1.4.0"/>
+			<code value="0200"/>
+			<display value="Geriatrie"/>
+		</coding>
+		<text value="Encounter"/>
+	</serviceType>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<period>
+		<start value="2022-09-06"/>
+		<end value="2022-11-06"/>
+	</period>
+	<reasonCode>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<version value="http://snomed.info/sct/900000000000207008/version/20230131"/>
+			<code value="183375002"/>
+			<display value="Convalescence after fracture treatment (finding)"/>
+		</coding>
+		<text value="Aufnahmegrund"/>
+	</reasonCode>
+	<diagnosis>
+		<condition>
+			<reference value="urn:uuid:20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+		</condition>
+		<use>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/KontaktDiagnoseProzedur"/>
+				<version value="1.4.0"/>
+				<code value="referral-diagnosis"/>
+				<display value="Überweisungsdiagnose"/>
+			</coding>
+			<coding>
+				<system value="http://fhir.de/ValueSet/Diagnosesubtyp"/>
+				<version value="1.4.0"/>
+				<code value="AD"/>
+				<display value="Admission diagnosis"/>
+			</coding>
+		</use>
+		<rank value="1"/>
+	</diagnosis>
+	<hospitalization>
+		<origin>
+			<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole">
+				<valueReference>
+					<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+				</valueReference>
+			</extension>
+		</origin>
+		<admitSource>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/dgkev/Aufnahmeanlass"/>
+				<version value="1.4.0"/>
+				<code value="E" />
+				<display value="Einweisung durch einen Arzt" />
+			</coding>
+		</admitSource>
+		<destination>
+			<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole">
+				<valueReference>
+					<reference value="urn:uuid:db47483a-ae09-42b5-bf61-85598a01cc24"/>
+				</valueReference>
+			</extension>
+			<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+		</destination>
+		<dischargeDisposition>
+			<extension url="http://fhir.de/StructureDefinition/Entlassungsgrund">
+				<extension url="ErsteUndZweiteStelle">
+					<valueCoding>
+						<system value="http://fhir.de/CodeSystem/dkgev/EntlassungsgrundErsteUndZweiteStelle"/>
+						<version value="1.4.0"/>
+						<code value="01"/>
+						<display value="Behandlung regulär beendet"/>
+					</valueCoding>
+				</extension>
+				<extension url="DritteStelle">
+					<valueCoding>
+						<system value="http://fhir.de/CodeSystem/dkgev/EntlassungsgrundDritteStelle"/>
+						<version value="1.4.0"/>
+						<code value="1"/>
+						<display value="arbeitsfähig entlassen"/>
+					</valueCoding>
+				</extension>	
+			</extension>
+		</dischargeDisposition>
+	</hospitalization> 
+	<!-- <location>
+	</location> -->
+	<serviceProvider>
+		<reference value="urn:uuid:a8193d88-9205-4e01-b84b-e121033c4f9c"/>
+	</serviceProvider>
+</Encounter>

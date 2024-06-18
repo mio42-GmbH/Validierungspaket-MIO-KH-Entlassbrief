@@ -1,363 +1,554 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-DocumentReference"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_DocumentReference"/>
-	<title value="KBV_PR_MIO_KHE_DocumentReference"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet einen Dokumentationseintrag ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="DocumentReference"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="DocumentReference">
-			<path value="DocumentReference"/>
-			<definition value="Dieses Profil bildet einen Dokumentationseintrag ab."/>
-		</element>
-		<element id="DocumentReference.meta">
-			<path value="DocumentReference.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.meta.versionId">
-			<path value="DocumentReference.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.meta.lastUpdated">
-			<path value="DocumentReference.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.meta.source">
-			<path value="DocumentReference.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.meta.profile">
-			<path value="DocumentReference.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference|1.0.0"/>
-		</element>
-		<element id="DocumentReference.meta.security">
-			<path value="DocumentReference.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.meta.tag">
-			<path value="DocumentReference.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.implicitRules">
-			<path value="DocumentReference.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.language">
-			<path value="DocumentReference.language"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.text">
-			<path value="DocumentReference.text"/>
-		</element>
-		<element id="DocumentReference.text.status">
-			<path value="DocumentReference.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="DocumentReference.contained">
-			<path value="DocumentReference.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.extension">
-			<path value="DocumentReference.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.extension:Hinweis">
-			<path value="DocumentReference.extension"/>
-			<sliceName value="Hinweis"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Submit_Document_Later"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.masterIdentifier">
-			<path value="DocumentReference.masterIdentifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.identifier">
-			<path value="DocumentReference.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.status">
-			<path value="DocumentReference.status"/>
-			<patternCode value="current"/>
-		</element>
-		<element id="DocumentReference.docStatus">
-			<path value="DocumentReference.docStatus"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.type">
-			<path value="DocumentReference.type"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.type.coding">
-			<path value="DocumentReference.type.coding"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="open"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.type.coding:KDL">
-			<path value="DocumentReference.type.coding"/>
-			<sliceName value="KDL"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCoding>
-				<system value="http://dvmd.de/fhir/CodeSystem/kdl"/>
-			</patternCoding>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="http://dvmd.de/fhir/ValueSet/kdl"/>
-			</binding>
-		</element>
-		<element id="DocumentReference.type.coding:KDL.system">
-			<path value="DocumentReference.type.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:KDL.code">
-			<path value="DocumentReference.type.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:KDL.display">
-			<path value="DocumentReference.type.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:KDL.userSelected">
-			<path value="DocumentReference.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.type.coding:XDS">
-			<path value="DocumentReference.type.coding"/>
-			<sliceName value="XDS"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="http://ihe-d.de/ValueSets/IHEXDStypeCode"/>
-			</binding>
-		</element>
-		<element id="DocumentReference.type.coding:XDS.system">
-			<path value="DocumentReference.type.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:XDS.code">
-			<path value="DocumentReference.type.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:XDS.display">
-			<path value="DocumentReference.type.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:XDS.userSelected">
-			<path value="DocumentReference.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed">
-			<path value="DocumentReference.type.coding"/>
-			<sliceName value="codeSnomed"/>
-			<max value="1"/>
-			<patternCoding>
-				<system value="http://snomed.info/sct"/>
-			</patternCoding>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Results_Type|1.0.0"/>
-			</binding>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed.system">
-			<path value="DocumentReference.type.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed.version">
-			<path value="DocumentReference.type.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed.code">
-			<path value="DocumentReference.type.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed.display">
-			<path value="DocumentReference.type.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="DocumentReference.type.coding:codeSnomed.userSelected">
-			<path value="DocumentReference.type.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.type.text">
-			<path value="DocumentReference.type.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.category">
-			<path value="DocumentReference.category"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.subject">
-			<path value="DocumentReference.subject"/>
-			<min value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.subject.reference">
-			<path value="DocumentReference.subject.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.subject.type">
-			<path value="DocumentReference.subject.type"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.subject.identifier">
-			<path value="DocumentReference.subject.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.subject.display">
-			<path value="DocumentReference.subject.display"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.date">
-			<path value="DocumentReference.date"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.author">
-			<path value="DocumentReference.author"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.authenticator">
-			<path value="DocumentReference.authenticator"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.custodian">
-			<path value="DocumentReference.custodian"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.relatesTo">
-			<path value="DocumentReference.relatesTo"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.description">
-			<path value="DocumentReference.description"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.securityLabel">
-			<path value="DocumentReference.securityLabel"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.content">
-			<path value="DocumentReference.content"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment">
-			<path value="DocumentReference.content.attachment"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.extension">
-			<path value="DocumentReference.content.attachment.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="DocumentReference.content.attachment.extension:data-absent-reason">
-			<path value="DocumentReference.content.attachment.extension"/>
-			<sliceName value="data-absent-reason"/>
-			<definition value="Die Extension ist auszufüllen, wenn das Dokument noch nicht vorhanden ist, weil dieses bspw. nachgereicht wird."/>
-			<min value="0"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="http://hl7.org/fhir/StructureDefinition/data-absent-reason"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.extension:data-absent-reason.value[x]">
-			<path value="DocumentReference.content.attachment.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.extension:data-absent-reason.value[x]:valueCode">
-			<path value="DocumentReference.content.attachment.extension.value[x]"/>
-			<sliceName value="valueCode"/>
-			<min value="1"/>
-			<patternCode value="temp-unknown"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.language">
-			<path value="DocumentReference.content.attachment.language"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.content.attachment.data">
-			<path value="DocumentReference.content.attachment.data"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.url">
-			<path value="DocumentReference.content.attachment.url"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.content.attachment.size">
-			<path value="DocumentReference.content.attachment.size"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.content.attachment.hash">
-			<path value="DocumentReference.content.attachment.hash"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.content.attachment.title">
-			<path value="DocumentReference.content.attachment.title"/>
-			<definition value="Hier kann der Titel des Dokuments angegeben werden."/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.attachment.creation">
-			<path value="DocumentReference.content.attachment.creation"/>
-			<definition value="Das Datum, welches im Dokument selbst angegeben wird."/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DocumentReference.content.format">
-			<path value="DocumentReference.content.format"/>
-			<max value="0"/>
-		</element>
-		<element id="DocumentReference.context">
-			<path value="DocumentReference.context"/>
-			<max value="0"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-DocumentReference" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_DocumentReference" />
+  <title value="KBV_PR_MIO_KHE_DocumentReference" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Hier kann auf ein externes Dokument verwiesen und/oder ein Dokument angehängt werden." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DocumentReference" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DocumentReference" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DocumentReference">
+      <path value="DocumentReference" />
+      <definition value="Hier kann auf ein externes Dokument verwiesen und/oder ein Dokument angehängt werden." />
+    </element>
+    <element id="DocumentReference.meta">
+      <path value="DocumentReference.meta" />
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.meta.versionId">
+      <path value="DocumentReference.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.lastUpdated">
+      <path value="DocumentReference.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.source">
+      <path value="DocumentReference.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.profile">
+      <path value="DocumentReference.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="DocumentReference.meta.profile:mioProfile">
+      <path value="DocumentReference.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DocumentReference|1.0.0" />
+    </element>
+    <element id="DocumentReference.meta.security">
+      <path value="DocumentReference.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.meta.tag">
+      <path value="DocumentReference.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.implicitRules">
+      <path value="DocumentReference.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.language">
+      <path value="DocumentReference.language" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.text">
+      <path value="DocumentReference.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="DocumentReference.text.status">
+      <path value="DocumentReference.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="DocumentReference.contained">
+      <path value="DocumentReference.contained" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.masterIdentifier">
+      <path value="DocumentReference.masterIdentifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.identifier">
+      <path value="DocumentReference.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.status">
+      <path value="DocumentReference.status" />
+      <definition value="Hier wird der Status des Dokumentenverweises bzw. Anhanges angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.docStatus">
+      <path value="DocumentReference.docStatus" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.type">
+      <path value="DocumentReference.type" />
+      <definition value="Hier kann der Typ des Dokuments angegeben werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding">
+      <path value="DocumentReference.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier wird der Dokumententyp als codierte Information angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:xds">
+      <path value="DocumentReference.type.coding" />
+      <sliceName value="xds" />
+      <definition value="Hier kann der Dokumenttyp gem. IHE-De-Terminologie in codierter Form angeben werden." />
+      <max value="1" />
+      <!-- <patternCoding>
+        <system value="http://ihe-d.de/CodeSystems/IHEXDStypeCode" />
+      </patternCoding> -->
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDStypeCode" />
+      </binding>
+    </element>
+    <element id="DocumentReference.type.coding:xds.system">
+      <path value="DocumentReference.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:xds.version">
+      <path value="DocumentReference.type.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:xds.code">
+      <path value="DocumentReference.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:xds.display">
+      <path value="DocumentReference.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:xds.userSelected">
+      <path value="DocumentReference.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.type.coding:kdl">
+      <path value="DocumentReference.type.coding" />
+      <sliceName value="kdl" />
+      <definition value="Die Klinische Dokumentenklassen-Liste (KDL) besteht aus einer Auswahl von Dokumententyp-Benennungen und wird vom Fachverband für Dokumentation und Informationsmanagement in der Medizin (DVMD) erarbeitet." />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://dvmd.de/fhir/CodeSystem/kdl" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://dvmd.de/fhir/ValueSet/kdl" />
+      </binding>
+    </element>
+    <element id="DocumentReference.type.coding:kdl.system">
+      <path value="DocumentReference.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:kdl.version">
+      <path value="DocumentReference.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:kdl.code">
+      <path value="DocumentReference.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:kdl.display">
+      <path value="DocumentReference.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:kdl.userSelected">
+      <path value="DocumentReference.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste">
+      <path value="DocumentReference.type.coding" />
+      <sliceName value="beispielWerteliste" />
+      <definition value="Mithilfe dieser Werteliste kann der Dokumententyp erfasst werden." />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Results_Type" />
+      </binding>
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste.system">
+      <path value="DocumentReference.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste.version">
+      <path value="DocumentReference.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste.code">
+      <path value="DocumentReference.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste.display">
+      <path value="DocumentReference.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.type.coding:beispielWerteliste.userSelected">
+      <path value="DocumentReference.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.type.text">
+      <path value="DocumentReference.type.text" />
+      <definition value="Hier kann der Typ als Freitext angegeben werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category">
+      <path value="DocumentReference.category" />
+      <definition value="Hier kann das Dokument kategorisiert werden." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding">
+      <path value="DocumentReference.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier wird die Kategorie des Dokuments als codierte Information angegeben." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:xds">
+      <path value="DocumentReference.category.coding" />
+      <sliceName value="xds" />
+      <definition value="Hier kann der Dokumententype gem. IHE-De-Terminologie in codierter Form angeben werden." />
+      <max value="1" />
+      <!--<patternCoding>
+        <system value="http://ihe-d.de/CodeSystems/IHEXDSclassCode" />
+      </patternCoding>-->
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://ihe-d.de/ValueSets/IHEXDSclassCode" />
+      </binding>
+    </element>
+    <element id="DocumentReference.category.coding:xds.system">
+      <path value="DocumentReference.category.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:xds.version">
+      <path value="DocumentReference.category.coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:xds.code">
+      <path value="DocumentReference.category.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:xds.display">
+      <path value="DocumentReference.category.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.category.coding:xds.userSelected">
+      <path value="DocumentReference.category.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.category.text">
+      <path value="DocumentReference.category.text" />
+      <definition value="Hier kann die Kategorie als Freitext angegeben werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject">
+      <path value="DocumentReference.subject" />
+      <definition value="Hier erfolgt die Referenz auf die zu behandelnde Person."/>
+	  <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject.reference">
+      <path value="DocumentReference.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.subject.type">
+      <path value="DocumentReference.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.subject.identifier">
+      <path value="DocumentReference.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.subject.display">
+      <path value="DocumentReference.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.date">
+      <path value="DocumentReference.date" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author">
+      <path value="DocumentReference.author" />
+      <definition value="Hier werden Personen, Einrichtungen oder Geräte, die das Dokument erzeugt haben, referenziert." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_PractitionerRole|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Practitioner|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author.reference">
+      <path value="DocumentReference.author.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.author.type">
+      <path value="DocumentReference.author.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author.identifier">
+      <path value="DocumentReference.author.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.author.display">
+      <path value="DocumentReference.author.display" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.authenticator">
+      <path value="DocumentReference.authenticator" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.custodian">
+      <path value="DocumentReference.custodian" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.relatesTo">
+      <path value="DocumentReference.relatesTo" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.description">
+      <path value="DocumentReference.description" />
+      <definition value="Hier wird der Dokumentenverweis als Freitext erfasst, z. B. &quot;Arztbrief vom 28.04.2020&quot;." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.securityLabel">
+      <path value="DocumentReference.securityLabel" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content">
+      <path value="DocumentReference.content" />
+      <slicing>
+        <discriminator>
+          <type value="exists" />
+          <path value="attachment.url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <definition value="Hier kann die Angabe einer strukturierten Referenz auf einen anderen Inhalt, bspw. ein anderes Dokument in der ePA enthalten sein oder ein Dokument in der Form eines formatierten Anhangs abgebildet werden"/>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis">
+      <path value="DocumentReference.content" />
+      <sliceName value="verweis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment">
+      <path value="DocumentReference.content.attachment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <definition value="URI des Eintrags." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.size">
+      <path value="DocumentReference.content.attachment.size" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.hash">
+      <path value="DocumentReference.content.attachment.hash" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.title">
+      <path value="DocumentReference.content.attachment.title" />
+      <definition value="Name des referenzierten Dokumentes." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis.attachment.creation">
+      <path value="DocumentReference.content.attachment.creation" />
+      <definition value="Hier wird der Zeitpunkt der Erstellung des referenzierten Dokumentes angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:verweis.format">
+      <path value="DocumentReference.content.format" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:anhang">
+      <path value="DocumentReference.content" />
+      <sliceName value="anhang" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment">
+      <path value="DocumentReference.content.attachment" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.contentType">
+      <path value="DocumentReference.content.attachment.contentType" />
+      <definition value="Hier wird das Dateiformat ausgewählt.\nEs ist ein Code aus dem System urn:ietf:bcp:13 zu wählen" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.language">
+      <path value="DocumentReference.content.attachment.language" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.data">
+      <path value="DocumentReference.content.attachment.data" />
+      <definition value="Hier wird das Dokument als Datei angehängt." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.url">
+      <path value="DocumentReference.content.attachment.url" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.size">
+      <path value="DocumentReference.content.attachment.size" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.hash">
+      <path value="DocumentReference.content.attachment.hash" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.title">
+      <path value="DocumentReference.content.attachment.title" />
+      <definition value="Hier wird ein Titel bzw. eine Bezeichnung für die angehängte Datei angegeben." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.attachment.creation">
+      <path value="DocumentReference.content.attachment.creation" />
+      <definition value="Hier wird der Zeitpunkt der Erstellung des Anhangs angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.content:anhang.format">
+      <path value="DocumentReference.content.format" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context">
+      <path value="DocumentReference.context" />
+	  <definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden."/>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.context.encounter">
+      <path value="DocumentReference.context.encounter" />
+      <definition value="Fallbezug mit der Referenz auf den Encounter (Falldaten) herstellen. Wenn die Information vorhanden ist, soll das Feld ausgefüllt werden." />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.context.encounter.reference">
+      <path value="DocumentReference.context.encounter.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DocumentReference.context.encounter.type">
+      <path value="DocumentReference.context.encounter.type" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.encounter.identifier">
+      <path value="DocumentReference.context.encounter.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.encounter.display">
+      <path value="DocumentReference.context.encounter.display" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.event">
+      <path value="DocumentReference.context.event" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.period">
+      <path value="DocumentReference.context.period" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.facilityType">
+      <path value="DocumentReference.context.facilityType" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.practiceSetting">
+      <path value="DocumentReference.context.practiceSetting" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.sourcePatientInfo">
+      <path value="DocumentReference.context.sourcePatientInfo" />
+      <max value="0" />
+    </element>
+    <element id="DocumentReference.context.related">
+      <path value="DocumentReference.context.related" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

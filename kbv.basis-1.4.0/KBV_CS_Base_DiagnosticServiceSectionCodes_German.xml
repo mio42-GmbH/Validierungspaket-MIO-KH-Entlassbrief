@@ -1,0 +1,184 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="KBV-CS-Base-DiagnosticServiceSectionCodes-German"/>
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_DiagnosticServiceSectionCodes_German"/>
+    <version value="1.4.0"/>
+    <name value="KBV_CS_Base_DiagnosticServiceSectionCodes_German"/>
+    <title value="Diagnostic Service Section Codes"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Codesystem enthält die Codes für deutsche Bezeichner für Diagnostic Service Section Codes."/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="Audiologie"/>
+        <display value="Audiologie"/>
+    </concept>
+    <concept>
+        <code value="Blutgase"/>
+        <display value="Blutgase"/>
+    </concept>
+    <concept>
+        <code value="Blutbank"/>
+        <display value="Blutbank"/>
+    </concept>
+    <concept>
+        <code value="Zytogenetik"/>
+        <display value="Zytogenetik"/>
+    </concept>
+    <concept>
+        <code value="KlinischeChemie"/>
+        <display value="Klinische Chemie"/>
+    </concept>
+    <concept>
+        <code value="Zellpathologie"/>
+        <display value="Zellpathologie"/>
+    </concept>
+    <concept>
+        <code value="Herzkatheter"/>
+        <display value="Herzkatheter"/>
+    </concept>
+    <concept>
+        <code value="Computertomographie"/>
+        <display value="Computertomographie"/>
+    </concept>
+    <concept>
+        <code value="KardiologischeUltraschalluntersuchung"/>
+        <display value="Kardiologische Ultraschalluntersuchung"/>
+    </concept>
+    <concept>
+        <code value="Elektrokardiographie"/>
+        <display value="Elektrokardiographie"/>
+    </concept>
+    <concept>
+        <code value="ElektroneurographieElektroencephalographie"/>
+        <display value="Elektroneurographie, Elektroencephalographie"/>
+    </concept>
+    <concept>
+        <code value="Genetik"/>
+        <display value="Genetik"/>
+    </concept>
+    <concept>
+        <code value="Haematologie"/>
+        <display value="Hämatologie"/>
+    </concept>
+    <concept>
+        <code value="BettseitigesintensivmedizinischesMonitoring"/>
+        <display value="Bettseitiges intensivmedizinisches Monitoring"/>
+    </concept>
+    <concept>
+        <code value="Immunologie"/>
+        <display value="Immunologie"/>
+    </concept>
+    <concept>
+        <code value="Labor"/>
+        <display value="Labor"/>
+    </concept>
+    <concept>
+        <code value="Mikrobiologie"/>
+        <display value="Mikrobiologie"/>
+    </concept>
+    <concept>
+        <code value="Mykobakteriologie"/>
+        <display value="Mykobakteriologie"/>
+    </concept>
+    <concept>
+        <code value="Mykologie"/>
+        <display value="Mykologie"/>
+    </concept>
+    <concept>
+        <code value="KernspintomographieMR"/>
+        <display value="Kernspintomographie (MR)"/>
+    </concept>
+    <concept>
+        <code value="Szintigramm"/>
+        <display value="Szintigramm"/>
+    </concept>
+    <concept>
+        <code value="Pflegemassnahme"/>
+        <display value="Pflegemaßnahme"/>
+    </concept>
+    <concept>
+        <code value="ExternesLabor"/>
+        <display value="Externes Labor"/>
+    </concept>
+    <concept>
+        <code value="Andere"/>
+        <display value="Andere"/>
+    </concept>
+    <concept>
+        <code value="Beschaeftigungstherapie"/>
+        <display value="Beschäftigungstherapie"/>
+    </concept>
+    <concept>
+        <code value="GeburtshilficheUltraschalluntersuchung"/>
+        <display value="Geburtshilfiche Ultraschalluntersuchung"/>
+    </concept>
+    <concept>
+        <code value="Lungenfunktion"/>
+        <display value="Lungenfunktion"/>
+    </concept>
+    <concept>
+        <code value="Apotheke"/>
+        <display value="Apotheke"/>
+    </concept>
+    <concept>
+        <code value="ArztKrankengeschichteDiagnoseAufnahmeuntersuchung"/>
+        <display value="Arzt (Krankengeschichte, Diagnose, Aufnahmeuntersuchung)"/>
+    </concept>
+    <concept>
+        <code value="physiklischeTherapie"/>
+        <display value="physiklische Therapie"/>
+    </concept>
+    <concept>
+        <code value="Radiologie"/>
+        <display value="Radiologie"/>
+    </concept>
+    <concept>
+        <code value="Atemtherapie"/>
+        <display value="Atemtherapie"/>
+    </concept>
+    <concept>
+        <code value="Strahlentherapie"/>
+        <display value="Strahlentherapie"/>
+    </concept>
+    <concept>
+        <code value="RadiologischeUltraschalluntersuchung"/>
+        <display value="Radiologische Ultraschalluntersuchung"/>
+    </concept>
+    <concept>
+        <code value="Roentgenaufnahme"/>
+        <display value="Röntgenaufnahme"/>
+    </concept>
+    <concept>
+        <code value="OperativePathologie"/>
+        <display value="Operative Pathologie"/>
+    </concept>
+    <concept>
+        <code value="Serologie"/>
+        <display value="Serologie"/>
+    </concept>
+    <concept>
+        <code value="Toxikologie"/>
+        <display value="Toxikologie"/>
+    </concept>
+    <concept>
+        <code value="Virologie"/>
+        <display value="Virologie"/>
+    </concept>
+    <concept>
+        <code value="UltraschalluntersuchungderGefaesse"/>
+        <display value="Ultraschalluntersuchung der Gefäße"/>
+    </concept>
+    <concept>
+        <code value="Roentgenkinematographie"/>
+        <display value="Röntgenkinematographie"/>
+    </concept>
+</CodeSystem>

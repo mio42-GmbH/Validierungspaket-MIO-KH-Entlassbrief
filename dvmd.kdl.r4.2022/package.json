@@ -1,0 +1,12 @@
+{
+  "name": "dvmd.kdl.r4.2022",
+  "version": "2022.1.2",
+  "description": "Publikation der Terminologie-Ressourcen für die Nutzung der Klinische Dokumentenklassen-Liste (KDL) des DVMD\r\nVersion 2022",
+  "author": "simoneheckmann",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  }
+}

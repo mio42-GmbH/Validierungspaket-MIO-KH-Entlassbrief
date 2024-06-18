@@ -1,370 +1,970 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-Encounter-Case-Records"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_Encounter_Case_Records"/>
-	<title value="KBV_PR_MIO_KHE_Encounter_Case_Records"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet die Falldaten ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="Encounter"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="Encounter">
-			<path value="Encounter"/>
-			<definition value="Dieses Profil bildet die Falldaten ab."/>
-		</element>
-		<element id="Encounter.meta">
-			<path value="Encounter.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.meta.versionId">
-			<path value="Encounter.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.meta.lastUpdated">
-			<path value="Encounter.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.meta.source">
-			<path value="Encounter.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.meta.profile">
-			<path value="Encounter.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
-		</element>
-		<element id="Encounter.meta.security">
-			<path value="Encounter.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.meta.tag">
-			<path value="Encounter.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.implicitRules">
-			<path value="Encounter.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.language">
-			<path value="Encounter.language"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.text">
-			<path value="Encounter.text"/>
-		</element>
-		<element id="Encounter.text.status">
-			<path value="Encounter.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="Encounter.contained">
-			<path value="Encounter.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.extension">
-			<path value="Encounter.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="2"/>
-		</element>
-		<element id="Encounter.extension:zustimmungEntlassmanagement">
-			<path value="Encounter.extension"/>
-			<sliceName value="zustimmungEntlassmanagement"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Discharge_Management"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.extension:einwilligungUnterstuetzungEntlassmangement">
-			<path value="Encounter.extension"/>
-			<sliceName value="einwilligungUnterstuetzungEntlassmangement"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_Consent_Support_Care_Insurance"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.identifier">
-			<path value="Encounter.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.status">
-			<path value="Encounter.status"/>
-			<patternCode value="finished"/>
-		</element>
-		<element id="Encounter.statusHistory">
-			<path value="Encounter.statusHistory"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.classHistory">
-			<path value="Encounter.classHistory"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.type">
-			<path value="Encounter.type"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.serviceType">
-			<path value="Encounter.serviceType"/>
-			<short value="Fachabteilungsschlüssel"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.serviceType.coding">
-			<path value="Encounter.serviceType.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Department_DKG|1.0.0"/>
-			</binding>
-		</element>
-		<element id="Encounter.serviceType.coding.system">
-			<path value="Encounter.serviceType.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.serviceType.coding.version">
-			<path value="Encounter.serviceType.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.serviceType.coding.code">
-			<path value="Encounter.serviceType.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.serviceType.coding.display">
-			<path value="Encounter.serviceType.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.serviceType.coding.userSelected">
-			<path value="Encounter.serviceType.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.serviceType.text">
-			<path value="Encounter.serviceType.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.priority">
-			<path value="Encounter.priority"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.subject">
-			<path value="Encounter.subject"/>
-			<min value="1"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.subject.reference">
-			<path value="Encounter.subject.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.subject.type">
-			<path value="Encounter.subject.type"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.subject.identifier">
-			<path value="Encounter.subject.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.subject.display">
-			<path value="Encounter.subject.display"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.episodeOfCare">
-			<path value="Encounter.episodeOfCare"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.basedOn">
-			<path value="Encounter.basedOn"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.participant">
-			<path value="Encounter.participant"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.appointment">
-			<path value="Encounter.appointment"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.period">
-			<path value="Encounter.period"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.period.start">
-			<path value="Encounter.period.start"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.period.end">
-			<path value="Encounter.period.end"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.length">
-			<path value="Encounter.length"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.reasonCode">
-			<path value="Encounter.reasonCode"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.reasonReference">
-			<path value="Encounter.reasonReference"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.diagnosis">
-			<path value="Encounter.diagnosis"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.account">
-			<path value="Encounter.account"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization">
-			<path value="Encounter.hospitalization"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.hospitalization.preAdmissionIdentifier">
-			<path value="Encounter.hospitalization.preAdmissionIdentifier"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.origin">
-			<path value="Encounter.hospitalization.origin"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource">
-			<path value="Encounter.hospitalization.admitSource"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding">
-			<path value="Encounter.hospitalization.admitSource.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Admission_Event_DKG|1.0.0"/>
-			</binding>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding.system">
-			<path value="Encounter.hospitalization.admitSource.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding.version">
-			<path value="Encounter.hospitalization.admitSource.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding.code">
-			<path value="Encounter.hospitalization.admitSource.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding.display">
-			<path value="Encounter.hospitalization.admitSource.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.coding.userSelected">
-			<path value="Encounter.hospitalization.admitSource.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.admitSource.text">
-			<path value="Encounter.hospitalization.admitSource.text"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.reAdmission">
-			<path value="Encounter.hospitalization.reAdmission"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.dietPreference">
-			<path value="Encounter.hospitalization.dietPreference"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.specialCourtesy">
-			<path value="Encounter.hospitalization.specialCourtesy"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.specialArrangement">
-			<path value="Encounter.hospitalization.specialArrangement"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.destination">
-			<path value="Encounter.hospitalization.destination"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition">
-			<path value="Encounter.hospitalization.dischargeDisposition"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding"/>
-			<min value="1"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Discharge_Disposition|1.0.0"/>
-			</binding>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding.system">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding.version">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding.code">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding.display">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.coding.userSelected">
-			<path value="Encounter.hospitalization.dischargeDisposition.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.hospitalization.dischargeDisposition.text">
-			<path value="Encounter.hospitalization.dischargeDisposition.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="Encounter.location">
-			<path value="Encounter.location"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.serviceProvider">
-			<path value="Encounter.serviceProvider"/>
-			<max value="0"/>
-		</element>
-		<element id="Encounter.partOf">
-			<path value="Encounter.partOf"/>
-			<max value="0"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-Encounter-Case-Records" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_Encounter_Case_Records" />
+  <title value="KBV_PR_MIO_KHE_Encounter_Case_Records" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet die Falldaten ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter">
+      <path value="Encounter" />
+      <definition value="Dieses Profil bildet die Falldaten ab." />
+    </element>
+    <element id="Encounter.meta">
+      <path value="Encounter.meta" />
+      <min value="1" />
+    </element>
+    <element id="Encounter.meta.versionId">
+      <path value="Encounter.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.meta.lastUpdated">
+      <path value="Encounter.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.meta.source">
+      <path value="Encounter.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.meta.profile">
+      <path value="Encounter.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Encounter.meta.profile:mioProfile">
+      <path value="Encounter.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0" />
+    </element>
+    <element id="Encounter.meta.security">
+      <path value="Encounter.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.meta.tag">
+      <path value="Encounter.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.implicitRules">
+      <path value="Encounter.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.language">
+      <path value="Encounter.language" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.text">
+      <path value="Encounter.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="Encounter.text.status">
+      <path value="Encounter.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="Encounter.contained">
+      <path value="Encounter.contained" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.extension">
+      <path value="Encounter.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.extension:entlassmanagement">
+      <path value="Encounter.extension" />
+      <sliceName value="entlassmanagement" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Discharge_Management_Performed" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.extension:entlassmanagement.value[x]">
+      <path value="Encounter.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.extension:entlassmanagement.value[x]:valueBoolean">
+      <path value="Encounter.extension.value[x]" />
+      <sliceName value="valueBoolean" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.identifier">
+      <path value="Encounter.identifier" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.status">
+      <path value="Encounter.status" />
+      <definition value="Hier wird der Status des Termins bzw. des Aufenthalts angegeben. Da der Status des Termins bzw. Aufenthaltes bei Erstellen des Krankenhausentlassbriefs abgeschlossen ist, wurde der Status entsprechend auf &quot;abgeschlossen&quot; festgesetzt." />
+      <patternCode value="finished" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Encounter_Status" />
+      </binding>
+    </element>
+    <element id="Encounter.statusHistory">
+      <path value="Encounter.statusHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.class">
+      <path value="Encounter.class" />
+      <short value="Setting" />
+      <definition value="Hier wird das Setting des Termins bzw. des Aufenthalts als codierte Information angegeben." />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Encounter_Setting" />
+      </binding>
+    </element>
+    <element id="Encounter.class.system">
+      <path value="Encounter.class.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.version">
+      <path value="Encounter.class.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.code">
+      <path value="Encounter.class.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.display">
+      <path value="Encounter.class.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.class.userSelected">
+      <path value="Encounter.class.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.classHistory">
+      <path value="Encounter.classHistory" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.type">
+      <path value="Encounter.type" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <short value="Typ der stationären Behandlung" />
+      <definition value="Hier kann die Ebene und Art der stationären Behandlung abgebildet werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart">
+      <path value="Encounter.type" />
+      <sliceName value="Kontaktart" />
+      <definition value="Hier kann die Art der stationären Behandlung abgebildet werden." />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/kontaktart-de" />
+          <version value="1.4.0" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Contact_Type" />
+      </binding>
+    </element>
+    <element id="Encounter.type:Kontaktart.coding">
+      <path value="Encounter.type.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart.coding.system">
+      <path value="Encounter.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart.coding.version">
+      <path value="Encounter.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart.coding.code">
+      <path value="Encounter.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart.coding.display">
+      <path value="Encounter.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktart.coding.userSelected">
+      <path value="Encounter.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.type:Kontaktart.text">
+      <path value="Encounter.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.type:Kontaktebene">
+      <path value="Encounter.type" />
+      <sliceName value="Kontaktebene" />
+      <definition value="Hier kann die Ebene der stationären Behandlung abgebildet werden, auf der die Behandlung des Patienten stattgefunden hat." />
+      <min value="0" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://fhir.de/CodeSystem/Kontaktebene" />
+          <version value="1.4.0" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Contact_Level" />
+      </binding>
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding">
+      <path value="Encounter.type.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding.system">
+      <path value="Encounter.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding.version">
+      <path value="Encounter.type.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding.code">
+      <path value="Encounter.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding.display">
+      <path value="Encounter.type.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.coding.userSelected">
+      <path value="Encounter.type.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.type:Kontaktebene.text">
+      <path value="Encounter.type.text" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.serviceType">
+      <path value="Encounter.serviceType" />
+      <definition value="Hier wird die medizinische Fachrichtung bzw. die Fachabteilung einer Einrichtung angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding">
+      <path value="Encounter.serviceType.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel">
+      <path value="Encounter.serviceType.coding" />
+      <sliceName value="fachabteilungsschluessel" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;Fachabteilungsschlüssel&quot; der HL7®-Basis Deutschland angegeben. Die Codes entsprechen den in der Vereinbarung zur Datenübermittlung nach § 301 SGB V hinterlegten Fachabteilungsschlüsseln." />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel" />
+        <version value="1.4.0" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel" />
+      </binding>
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.system">
+      <path value="Encounter.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.version">
+      <path value="Encounter.serviceType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.code">
+      <path value="Encounter.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.display">
+      <path value="Encounter.serviceType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:fachabteilungsschluessel.userSelected">
+      <path value="Encounter.serviceType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel">
+      <path value="Encounter.serviceType.coding" />
+      <sliceName value="erweiterterFachabteilungsschluessel" />
+      <definition value="Hier wird die Fachrichtung/Fachabteilung anhand eines Codes aus dem Codesystem &quot;FachabteilungsschlüsselErweitert&quot; der HL7®-Basis Deutschland angegeben. Die Codes entsprechen den in der Vereinbarung zur Datenübermittlung nach § 301 SGB V hinterlegten Fachabteilungsschlüsseln." />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://fhir.de/CodeSystem/dkgev/Fachabteilungsschluessel-erweitert" />
+        <version value="1.4.0" />
+      </patternCoding>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/dkgev/Fachabteilungsschluessel-erweitert" />
+      </binding>
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel.system">
+      <path value="Encounter.serviceType.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel.version">
+      <path value="Encounter.serviceType.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel.code">
+      <path value="Encounter.serviceType.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel.display">
+      <path value="Encounter.serviceType.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceType.coding:erweiterterFachabteilungsschluessel.userSelected">
+      <path value="Encounter.serviceType.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.serviceType.text">
+      <path value="Encounter.serviceType.text" />
+      <definition value="Hier wird die Fachrichtung als Freitext angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.priority">
+      <path value="Encounter.priority" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.subject">
+      <path value="Encounter.subject" />
+      <definition value="Hier erfolgt die Referenzierung der zu behandelnden Person."/>
+	  <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.subject.reference">
+      <path value="Encounter.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.subject.type">
+      <path value="Encounter.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.subject.identifier">
+      <path value="Encounter.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.subject.display">
+      <path value="Encounter.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.episodeOfCare">
+      <path value="Encounter.episodeOfCare" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.basedOn">
+      <path value="Encounter.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.participant">
+      <path value="Encounter.participant" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.appointment">
+      <path value="Encounter.appointment" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.period">
+      <path value="Encounter.period" />
+      <definition value="Hier wird der Zeitraum des Termins bzw. des Aufenthalts von der Aufnahme bis zur Entlassung angegeben." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.start">
+      <path value="Encounter.period.start" />
+      <definition value="Hier wird der Beginn des Aufenthaltes angegeben, wobei dieser mindestens das Jahr beinhalten muss." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.period.end">
+      <path value="Encounter.period.end" />
+      <definition value="Hier wird das Ende des Aufenthaltes angegeben, wobei dieser mindestens das Jahr beinhalten muss." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.length">
+      <path value="Encounter.length" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reasonCode">
+      <path value="Encounter.reasonCode" />
+      <short value="Aufnahmegrund" />
+      <definition value="Hier wird die Begründung für den Aufenthalt anhand eines entsprechenden Codes oder alternativ mit einem Freitext angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding">
+      <path value="Encounter.reasonCode.coding" />
+      <definition value="Hier wird der Grund in codierter Form angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding.system">
+      <path value="Encounter.reasonCode.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding.version">
+      <path value="Encounter.reasonCode.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding.code">
+      <path value="Encounter.reasonCode.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding.display">
+      <path value="Encounter.reasonCode.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonCode.coding.userSelected">
+      <path value="Encounter.reasonCode.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reasonCode.text">
+      <path value="Encounter.reasonCode.text" />
+      <definition value="Hier wird der Grund als Freitext angegeben." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.reasonReference">
+      <path value="Encounter.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis">
+      <path value="Encounter.diagnosis" />
+      <definition value="Hier kann eine Diagnose abgebildet werden, die im Rahmen des stationären Falls relevant ist." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition">
+      <path value="Encounter.diagnosis.condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Condition_Diagnosis|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition.reference">
+      <path value="Encounter.diagnosis.condition.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.condition.type">
+      <path value="Encounter.diagnosis.condition.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis.condition.identifier">
+      <path value="Encounter.diagnosis.condition.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis.condition.display">
+      <path value="Encounter.diagnosis.condition.display" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis.use">
+      <path value="Encounter.diagnosis.use" />
+      <definition value="Hier kann der Typ und Subtyp einer Diagnose abgebildet werden." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding">
+      <path value="Encounter.diagnosis.use.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp">
+      <path value="Encounter.diagnosis.use.coding" />
+      <sliceName value="Diagnosetyp" />
+      <definition value="Hier kann der Typ einer Diagnose abgebildet werden." />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/DiagnoseTyp" />
+      </binding>
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp.system">
+      <path value="Encounter.diagnosis.use.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp.version">
+      <path value="Encounter.diagnosis.use.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp.code">
+      <path value="Encounter.diagnosis.use.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp.display">
+      <path value="Encounter.diagnosis.use.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosetyp.userSelected">
+      <path value="Encounter.diagnosis.use.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp">
+      <path value="Encounter.diagnosis.use.coding" />
+      <sliceName value="Diagnosesubtyp" />
+      <definition value="Hier kann der Subtyp einer Diagnose abgebildet werden." />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/Diagnosesubtyp" />
+      </binding>
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp.system">
+      <path value="Encounter.diagnosis.use.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp.version">
+      <path value="Encounter.diagnosis.use.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp.code">
+      <path value="Encounter.diagnosis.use.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp.display">
+      <path value="Encounter.diagnosis.use.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.diagnosis.use.coding:Diagnosesubtyp.userSelected">
+      <path value="Encounter.diagnosis.use.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.diagnosis.use.text">
+      <path value="Encounter.diagnosis.use.text" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.account">
+      <path value="Encounter.account" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization">
+      <path value="Encounter.hospitalization" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.preAdmissionIdentifier">
+      <path value="Encounter.hospitalization.preAdmissionIdentifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.origin">
+      <path value="Encounter.hospitalization.origin" />
+	  <definition value="Hier erfolgt die Referenzierung der einweisenden Person/Einrichtung."/>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.origin.extension">
+      <path value="Encounter.hospitalization.origin.extension" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.origin.extension:einweisendePersonEinrichtung">
+      <path value="Encounter.hospitalization.origin.extension" />
+      <sliceName value="einweisendePersonEinrichtung" />
+      <definition value="Hier kann eine einweisende Person mit einer zugeordneten Einrichtung angegeben werden." />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.hospitalization.origin.extension:einweisendePersonEinrichtung.value[x]">
+      <path value="Encounter.hospitalization.origin.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.origin.extension:einweisendePersonEinrichtung.value[x]:valueReference">
+      <path value="Encounter.hospitalization.origin.extension.value[x]" />
+      <sliceName value="valueReference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.origin.extension:einweisendePersonEinrichtung.value[x]:valueReference.reference">
+      <path value="Encounter.hospitalization.origin.extension.value[x].reference" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.origin.reference">
+      <path value="Encounter.hospitalization.origin.reference" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.origin.type">
+      <path value="Encounter.hospitalization.origin.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.origin.identifier">
+      <path value="Encounter.hospitalization.origin.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.origin.display">
+      <path value="Encounter.hospitalization.origin.display" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource">
+      <path value="Encounter.hospitalization.admitSource" />
+      <definition value="Hier kann der Aufnahmeanlass abgebildet werden." />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://fhir.de/ValueSet/dgkev/Aufnahmeanlass" />
+      </binding>
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding">
+      <path value="Encounter.hospitalization.admitSource.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.system">
+      <path value="Encounter.hospitalization.admitSource.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.version">
+      <path value="Encounter.hospitalization.admitSource.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.code">
+      <path value="Encounter.hospitalization.admitSource.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.display">
+      <path value="Encounter.hospitalization.admitSource.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.coding.userSelected">
+      <path value="Encounter.hospitalization.admitSource.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.admitSource.text">
+      <path value="Encounter.hospitalization.admitSource.text" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.reAdmission">
+      <path value="Encounter.hospitalization.reAdmission" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dietPreference">
+      <path value="Encounter.hospitalization.dietPreference" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.specialCourtesy">
+      <path value="Encounter.hospitalization.specialCourtesy" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.specialArrangement">
+      <path value="Encounter.hospitalization.specialArrangement" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.destination">
+      <path value="Encounter.hospitalization.destination" />
+      <definition value="Hier erfolgt die Referenzierung der nachfolgenden Versorgungseinrichtung."/>
+	  <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.destination.extension">
+      <path value="Encounter.hospitalization.destination.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.destination.extension:nachfolgendeVersorgungseinrichtung">
+      <path value="Encounter.hospitalization.destination.extension" />
+      <sliceName value="nachfolgendeVersorgungseinrichtung" />
+      <definition value="Hier können Angaben zu der nachfolgenden Versorgungseinrichtung gemacht werden, sofern zutreffend. Diese Angaben sind nicht von der Zustimmung des Patienten / der Patientin abhängig." />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Reference_PractitionerRole" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.hospitalization.destination.reference">
+      <path value="Encounter.hospitalization.destination.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.destination.type">
+      <path value="Encounter.hospitalization.destination.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.destination.identifier">
+      <path value="Encounter.hospitalization.destination.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.destination.display">
+      <path value="Encounter.hospitalization.destination.display" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition">
+      <path value="Encounter.hospitalization.dischargeDisposition" />
+      <definition value="Hier kann der Entlassungsgrund abgebildet werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension" />
+      <sliceName value="extenstionEntlassungsgrund" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/Entlassungsgrund" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension" />
+      <sliceName value="ErsteUndZweiteStelle" />
+      <definition value="Hier wird der Entlassungsgrund (Erste und Zweite Stelle) aus der bereitgestellten Auswahlliste ausgewählt." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x]" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding.system">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding.version">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding.code">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding.display">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:ErsteUndZweiteStelle.value[x]:valueCoding.userSelected">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension" />
+      <sliceName value="DritteStelle" />
+      <definition value="Hier wird der Entlassungsgrund (Dritte Stelle) aus der bereitgestellten Auswahlliste ausgewählt." />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x]" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding.system">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding.version">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding.code">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding.display">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.extension:extenstionEntlassungsgrund.extension:DritteStelle.value[x]:valueCoding.userSelected">
+      <path value="Encounter.hospitalization.dischargeDisposition.extension.extension.value[x].userSelected" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.coding">
+      <path value="Encounter.hospitalization.dischargeDisposition.coding" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.hospitalization.dischargeDisposition.text">
+      <path value="Encounter.hospitalization.dischargeDisposition.text" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.serviceProvider">
+      <path value="Encounter.serviceProvider" />
+      <definition value="Hier wird die Einrichtung referenziert, die den Patienten entlässt." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Organization|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceProvider.reference">
+      <path value="Encounter.serviceProvider.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Encounter.serviceProvider.type">
+      <path value="Encounter.serviceProvider.type" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.partOf">
+      <path value="Encounter.partOf" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

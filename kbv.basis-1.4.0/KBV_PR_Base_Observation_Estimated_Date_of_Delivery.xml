@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="KBV-PR-Base-Observation-Estimated-Date-of-Delivery" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Observation_Estimated_Date_of_Delivery" />
+  <version value="1.4.0" />
+  <name value="KBV_PR_Base_Observation_Estimated_Date_of_Delivery" />
+  <status value="draft" />
+  <description value="Dieses Profil bildet einen geschätzten Entbindungstermin ab." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <version value="2.73" />
+        <code value="11778-8" />
+        <display value="Delivery date Estimated" />
+      </patternCoding>
+    </element>
+    <element id="Observation.code.coding:loinc.system">
+      <path value="Observation.code.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.version">
+      <path value="Observation.code.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.code">
+      <path value="Observation.code.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.code.coding:loinc.display">
+      <path value="Observation.code.coding.display" />
+      <min value="1" />
+	</element>
+    <element id="Observation.subject">
+      <path value="Observation.subject"/>
+      <type>
+        <code value="Reference"/>
+		    <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Patient|1.4.0" />
+		    <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Device|1.4.0" />
+      </type>
+    </element>
+    <element id="Observation.focus">
+      <path value="Observation.focus" />
+      <max value="0" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <definition value="Hier wird der Zeitpunkt angegeben an dem der geschätzte Entbindungstermin erfasst wurde." />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <definition value="Hier soll der geschätzte Entbindungstermin angegeben werden." />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <definition value="Hier wird die Methode der Untersuchung anhand eines entsprechenden Codes oder alternativ mit einem Freitext angegeben." />
+    </element>
+    <element id="Observation.method.coding">
+      <path value="Observation.method.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:loinc">
+      <path value="Observation.method.coding" />
+      <sliceName value="loinc" />
+      <definition value="Hier kann die Methode der Bestimmung als LOINC®-Code angegeben werden." />
+      <min value="1" />
+      <max value="1" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_Base_Estimated_Date_of_Delivery_Method_LOINC" />
+      </binding>
+    </element>
+    <element id="Observation.method.coding:loinc.system">
+      <path value="Observation.method.coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:loinc.version">
+      <path value="Observation.method.coding.version" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:loinc.code">
+      <path value="Observation.method.coding.code" />
+      <min value="1" />
+    </element>
+    <element id="Observation.method.coding:loinc.display">
+      <path value="Observation.method.coding.display" />
+      <min value="1" />
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+  </differential>
+</StructureDefinition>

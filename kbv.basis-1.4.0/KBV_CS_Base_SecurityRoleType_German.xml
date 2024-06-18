@@ -1,0 +1,288 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="KBV-CS-Base-SecurityRoleType-German"/>
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_SecurityRoleType_German"/>
+    <version value="1.4.0"/>
+    <name value="KBV_CS_Base_SecurityRoleType_German"/>
+    <title value="SecurityRoleType"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Codesystem enthält die Codes für deutsche Bezeichner für SecurityRoleType."/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="Anwendung"/>
+        <display value="Anwendung"/>
+    </concept>
+    <concept>
+        <code value="StartanwendungdesProgramms"/>
+        <display value="Startanwendung des Programms"/>
+    </concept>
+    <concept>
+        <code value="ZielrollenID"/>
+        <display value="Zielrollen-ID"/>
+    </concept>
+    <concept>
+        <code value="QuellrollenID"/>
+        <display value="Quellrollen-ID"/>
+    </concept>
+    <concept>
+        <code value="ZielMedium"/>
+        <display value="Ziel-Medium"/>
+    </concept>
+    <concept>
+        <code value="QuellMedium"/>
+        <display value="Quell-Medium"/>
+    </concept>
+    <concept>
+        <code value="ZugehoerigeEntitaet"/>
+        <display value="Zugehörige Entität"/>
+    </concept>
+    <concept>
+        <code value="VertretendeEntitaet"/>
+        <display value="Vertretende Entität"/>
+    </concept>
+    <concept>
+        <code value="AnpassendePerson"/>
+        <display value="Anpassende Person"/>
+    </concept>
+    <concept>
+        <code value="BeauftragteEntitaet"/>
+        <display value="Beauftragte Entität"/>
+    </concept>
+    <concept>
+        <code value="AuskunftsberechtigtePerson"/>
+        <display value="Auskunftsberechtigte Person"/>
+    </concept>
+    <concept>
+        <code value="AuskunftsberechtigterGesundheitsdienstleister"/>
+        <display value="Auskunftsberechtigter Gesundheitsdienstleister"/>
+    </concept>
+    <concept>
+        <code value="AuskunftsberechtigtesMitgliedeineVersorgungsteams"/>
+        <display value="Auskunftsberechtigtes Mitglied eine Versorgungsteams"/>
+    </concept>
+    <concept>
+        <code value="UrspruenglichverfassendeEntitaet"/>
+        <display value="Ursprünglich verfassende Entität"/>
+    </concept>
+    <concept>
+        <code value="AuskunftsberechtigterArbeitsbereich"/>
+        <display value="Auskunftsberechtigter Arbeitsbereich"/>
+    </concept>
+    <concept>
+        <code value="AntragsstellendeEntitaet"/>
+        <display value="Antragsstellende Entität"/>
+    </concept>
+    <concept>
+        <code value="KlassifizierendeEntitaet"/>
+        <display value="Klassifizierende Entität"/>
+    </concept>
+    <concept>
+        <code value="MitverfassendeEntitaet"/>
+        <display value="Mitverfassende Entität"/>
+    </concept>
+    <concept>
+        <code value="EinwilligendeEntitaet"/>
+        <display value="Einwilligende Entität"/>
+    </concept>
+    <concept>
+        <code value="BezeugendeEntitaetderEinwilligung"/>
+        <display value="Bezeugende Entität der Einwilligung"/>
+    </concept>
+    <concept>
+        <code value="Kontakt"/>
+        <display value="Kontakt"/>
+    </concept>
+    <concept>
+        <code value="BeteiligteEntitaet"/>
+        <display value="Beteiligte Entität"/>
+    </concept>
+    <concept>
+        <code value="VersichertePerson"/>
+        <display value="Versicherte Person"/>
+    </concept>
+    <concept>
+        <code value="VerwaltendeEntitaet"/>
+        <display value="Verwaltende Entität"/>
+    </concept>
+    <concept>
+        <code value="DeklassifizierendeEntitaet"/>
+        <display value="Deklassifizierende Entität"/>
+    </concept>
+    <concept>
+        <code value="AbgeordneteEntitaet"/>
+        <display value="Abgeordnete Entität"/>
+    </concept>
+    <concept>
+        <code value="DelegierendeEntitaet"/>
+        <display value="Delegierende Entität"/>
+    </concept>
+    <concept>
+        <code value="AbhaengigePerson"/>
+        <display value="Abhängige Person"/>
+    </concept>
+    <concept>
+        <code value="HerabstufendeEntitaetderKlassifizierung"/>
+        <display value="Herabstufende Entität der Klassifizierung"/>
+    </concept>
+    <concept>
+        <code value="DauerhaftbevollmaechtigePerson"/>
+        <display value="Dauerhaft bevollmächtige Person"/>
+    </concept>
+    <concept>
+        <code value="Notfallkontakt"/>
+        <display value="Notfallkontakt"/>
+    </concept>
+    <concept>
+        <code value="AngestelltePerson"/>
+        <display value="Angestellte Person"/>
+    </concept>
+    <concept>
+        <code value="BezeugendePersoneinesEreignisses"/>
+        <display value="Bezeugende Person eines Ereignisses"/>
+    </concept>
+    <concept>
+        <code value="NachlassverwaltendeEntitaet"/>
+        <display value="Nachlassverwaltende Entität"/>
+    </concept>
+    <concept>
+        <code value="BefugnissempfangendeEntitaet"/>
+        <display value="Befugnissempfangende Entität"/>
+    </concept>
+    <concept>
+        <code value="BefugnisserteilendeEntitaet"/>
+        <display value="Befugnisserteilende Entität"/>
+    </concept>
+    <concept>
+        <code value="BuergendeEntitaet"/>
+        <display value="Bürgende Entität"/>
+    </concept>
+    <concept>
+        <code value="GesetzlichbetreuendePersoneinerminderjaehrigenPerson"/>
+        <display value="Gesetzlich betreuende Person einer minderjährigen Person"/>
+    </concept>
+    <concept>
+        <code value="GesetzlicherVormund"/>
+        <display value="Gesetzlicher Vormund"/>
+    </concept>
+    <concept>
+        <code value="VorsorgebevollmaechtigtePerson"/>
+        <display value="Vorsorgebevollmächtigte Person"/>
+    </concept>
+    <concept>
+        <code value="AuskunftsgebendeEntitaet"/>
+        <display value="Auskunftsgebende Entität"/>
+    </concept>
+    <concept>
+        <code value="DolmetschendeEntitaet"/>
+        <display value="Dolmetschende Entität"/>
+    </concept>
+    <concept>
+        <code value="Untersuchungsgegenstand"/>
+        <display value="Untersuchungsgegenstand"/>
+    </concept>
+    <concept>
+        <code value="InformationsempfangendeEntitaet"/>
+        <display value="Informationsempfangende Entität"/>
+    </concept>
+    <concept>
+        <code value="BeglaubigendeEntitaet"/>
+        <display value="Beglaubigende Entität"/>
+    </concept>
+    <concept>
+        <code value="VersicherteEntitaet"/>
+        <display value="Versicherte Entität"/>
+    </concept>
+    <concept>
+        <code value="NaechsteangehoerigePerson"/>
+        <display value="Nächste angehörige Person"/>
+    </concept>
+    <concept>
+        <code value="NotariellbeglaubigendePerson"/>
+        <display value="Notariell beglaubigende Person"/>
+    </concept>
+    <concept>
+        <code value="Patientenrolle"/>
+        <display value="Patientenrolle"/>
+    </concept>
+    <concept>
+        <code value="BevollmaechtigtePerson"/>
+        <display value="Bevollmächtigte Person"/>
+    </concept>
+    <concept>
+        <code value="VerfassendeEntitaet"/>
+        <display value="Verfassende Entität"/>
+    </concept>
+    <concept>
+        <code value="AnonymisierungsberechtigterGesundheitsdienstleister"/>
+        <display value="Anonymisierungsberechtigter Gesundheitsdienstleister"/>
+    </concept>
+    <concept>
+        <code value="Gesundheitsdienstleistung"/>
+        <display value="Gesundheitsdienstleistung"/>
+    </concept>
+    <concept>
+        <code value="RechtlichverantwortlicheEntitaet"/>
+        <display value="Rechtlich verantwortliche Entität"/>
+    </concept>
+    <concept>
+        <code value="PruefendeEntitaet"/>
+        <display value="Prüfende Entität"/>
+    </concept>
+    <concept>
+        <code value="Quelle"/>
+        <display value="Quelle"/>
+    </concept>
+    <concept>
+        <code value="SonderbevollmaechtigtePerson"/>
+        <display value="Sonderbevollmächtigte Person"/>
+    </concept>
+    <concept>
+        <code value="EintragendeEntitaet"/>
+        <display value="Eintragende Entität"/>
+    </concept>
+    <concept>
+        <code value="SekundaerinformationsempfangendeEntitaet"/>
+        <display value="Sekundär informationsempfangende Entität"/>
+    </concept>
+    <concept>
+        <code value="ValidierendePerson"/>
+        <display value="Validierende Person"/>
+    </concept>
+    <concept>
+        <code value="VerifizierendePerson"/>
+        <display value="Verifizierende Person"/>
+    </concept>
+    <concept>
+        <code value="BezeugendePerson"/>
+        <display value="Bezeugende Person"/>
+    </concept>
+    <concept>
+        <code value="BerechtigendeEntitaet"/>
+        <display value="Berechtigende Entität"/>
+    </concept>
+    <concept>
+        <code value="DatenerfassendeEntitaet"/>
+        <display value="Datenerfassende Entität"/>
+    </concept>
+    <concept>
+        <code value="DatenverarbeitendeEntitaet"/>
+        <display value="Datenverarbeitende Entität"/>
+    </concept>
+    <concept>
+        <code value="SubjektderDatenverarbeitung"/>
+        <display value="Subjekt der Datenverarbeitung"/>
+    </concept>
+    <concept>
+        <code value="AnwendendePerson"/>
+        <display value="Anwendende Person"/>
+    </concept>
+</CodeSystem>

@@ -1,0 +1,44 @@
+<Encounter xmlns="http://hl7.org/fhir">
+	<id value="05257314-0fb3-405a-8c6e-672e4715dbf9"/>
+	<meta>
+		<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Encounter_Case_Records|1.0.0"/>
+	</meta>
+	<extension url="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Discharge_Management_Performed">
+		<valueBoolean value="true"/>
+	</extension>
+	<status value="finished"/>
+	<class>
+		<system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+		<version value="3.0.0"/>
+		<code value="IMP"/>
+		<display value="inpatient encounter"/>
+	</class>
+	<type>
+		<coding>
+			<system value="http://fhir.de/CodeSystem/Kontaktebene"/>
+            <version value="1.4.0"/>
+            <code value="abteilungskontakt"/>
+            <display value="Abteilungskontakt"/>
+		</coding>
+	</type>
+	<subject>
+		<reference value="urn:uuid:38c5926b-10b4-44f4-82fb-7dc3c2888b17"/>
+	</subject>
+	<period>
+		<start value="2022-09-06"/>
+		<end value="2022-11-06"/>
+	</period>
+	<diagnosis>
+		<condition>
+			<reference value="urn:uuid:20b28c05-c82d-4b5b-b249-f5033695d8d4"/>
+		</condition>
+		<use>
+			<coding>
+				<system value="http://fhir.de/CodeSystem/KontaktDiagnoseProzedur"/>
+				<version value="1.4.0"/>
+				<code value="referral-diagnosis"/>
+				<display value="Überweisungsdiagnose"/>
+			</coding>
+		</use>
+	</diagnosis>
+</Encounter>

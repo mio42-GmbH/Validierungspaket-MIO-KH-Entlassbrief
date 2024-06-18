@@ -1,0 +1,124 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="KBV-CS-Base-EventTiming-German"/>
+    <url value="https://fhir.kbv.de/CodeSystem/KBV_CS_Base_EventTiming_German"/>
+    <version value="1.4.0"/>
+    <name value="KBV_CS_Base_EventTiming_German"/>
+    <title value="EventTiming"/>
+    <status value="draft"/>
+    <experimental value="false"/>
+    <publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
+    <contact>
+        <telecom>
+            <system value="url"/>
+            <value value="https://mio.kbv.de"/>
+        </telecom>
+    </contact>
+    <description value="Dieses Codesystem enthält die Codes für deutsche Bezeichner für EventTiming."/>
+    <copyright value="Im folgenden Profil können Codes aus den Codesystemen Snomed, Loinc oder Ucum enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of SNOMED International. All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists. SNOMED and SNOMED CT are registered trademarks of SNOMED International. Implementers of these artefacts must have the appropriate SNOMED CT Affiliate license. This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED &quot;AS IS.&quot; ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE."/>
+    <caseSensitive value="true"/>
+    <content value="complete"/>
+    <concept>
+        <code value="VordemMittagessen"/>
+        <display value="Vor dem Mittagessen"/>
+    </concept>
+    <concept>
+        <code value="VordemFruehstueck"/>
+        <display value="Vor dem Frühstück"/>
+    </concept>
+    <concept>
+        <code value="VordemAbendessen"/>
+        <display value="Vor dem Abendessen"/>
+    </concept>
+    <concept>
+        <code value="VordemEssen"/>
+        <display value="Vor dem Essen"/>
+    </concept>
+    <concept>
+        <code value="FrueherNachmittag"/>
+        <display value="Früher Nachmittag"/>
+    </concept>
+    <concept>
+        <code value="SpaeterNachmittag"/>
+        <display value="Später Nachmittag"/>
+    </concept>
+    <concept>
+        <code value="Nachmittag"/>
+        <display value="Nachmittag"/>
+    </concept>
+    <concept>
+        <code value="MitdemMittagessen"/>
+        <display value="Mit dem Mittagessen"/>
+    </concept>
+    <concept>
+        <code value="MitdemFruehstueck"/>
+        <display value="Mit dem Frühstück"/>
+    </concept>
+    <concept>
+        <code value="MitdemAbendessen"/>
+        <display value="Mit dem Abendessen"/>
+    </concept>
+    <concept>
+        <code value="MitderMahlzeit"/>
+        <display value="Mit der Mahlzeit"/>
+    </concept>
+    <concept>
+        <code value="FrueherAbend"/>
+        <display value="Früher Abend"/>
+    </concept>
+    <concept>
+        <code value="SpaeterAbend"/>
+        <display value="Später Abend"/>
+    </concept>
+    <concept>
+        <code value="Abends"/>
+        <display value="Abends"/>
+    </concept>
+    <concept>
+        <code value="VordemSchlafengehen"/>
+        <display value="Vor dem Schlafengehen"/>
+    </concept>
+    <concept>
+        <code value="FrueherMorgen"/>
+        <display value="Früher Morgen"/>
+    </concept>
+    <concept>
+        <code value="SpaeterVormittag"/>
+        <display value="Später Vormittag"/>
+    </concept>
+    <concept>
+        <code value="Morgens"/>
+        <display value="Morgens"/>
+    </concept>
+    <concept>
+        <code value="Nachts"/>
+        <display value="Nachts"/>
+    </concept>
+    <concept>
+        <code value="Mittags"/>
+        <display value="Mittags"/>
+    </concept>
+    <concept>
+        <code value="NachdemMittagessen"/>
+        <display value="Nach dem Mittagessen"/>
+    </concept>
+    <concept>
+        <code value="NachdemFruehstueck"/>
+        <display value="Nach dem Frühstück"/>
+    </concept>
+    <concept>
+        <code value="NachdemAbendessen"/>
+        <display value="Nach dem Abendessen"/>
+    </concept>
+    <concept>
+        <code value="NachdemEssen"/>
+        <display value="Nach dem Essen"/>
+    </concept>
+    <concept>
+        <code value="NachdemEinschlafen"/>
+        <display value="Nach dem Einschlafen"/>
+    </concept>
+    <concept>
+        <code value="NachdemAufwachen"/>
+        <display value="Nach dem Aufwachen"/>
+    </concept>
+</CodeSystem>

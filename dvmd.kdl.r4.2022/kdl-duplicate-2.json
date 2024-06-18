@@ -1,0 +1,67 @@
+{
+    "resourceType": "ImplementationGuide",
+    "url": "http://dvmd.de/fhir/kdl-guide",
+    "version": "2019",
+    "name": "KDL Implementierungsleitfaden 2019",
+    "status": "draft",
+    "description": "Implementierungsleitfaden für die Konsolidierte Dokumentenliste (KDL) des Deutschen Verbands für Dokumentation und Informationsmanagement in der Medizin (DVMD)",
+    "fhirVersion": [
+        "4.0.0"
+    ],
+    "definition": {
+        "page": {
+            "title": "KDL Implementierungsleitfaden 2019",
+            "page": [
+                {
+                    "nameUrl": "Home.md",
+                    "title": "Hauptseite",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "CodeSystem.md",
+                    "title": "CodeSystem",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "ValueSet.md",
+                    "title": "ValueSet",
+                    "generation": "markdown"
+                },
+                {
+                    "nameUrl": "ConceptMap.md",
+                    "title": "ConceptMap",
+                    "generation": "markdown",
+                    "page": [
+                        {
+                            "nameUrl": "MappingvonKDLnachIHETypeCode.md",
+                            "title": "Mapping von KDL nach IHE TypeCode",
+                            "generation": "markdown"
+                        },
+                        {
+                            "nameUrl": "MappingvonKDLnachIHEClassCode.md",
+                            "title": "Mapping von KDL nach IHE ClassCode",
+                            "generation": "markdown"
+                        }
+                    ]
+                },
+                {
+                    "nameUrl": "Beispiele.md",
+                    "title": "Beispiele",
+                    "generation": "markdown",
+                    "page": [
+                        {
+                            "nameUrl": "Newitem-duplicate-3.md",
+                            "title": "Beispiel: DocumentReference mit KDL-Typecode",
+                            "generation": "markdown"
+                        },
+                        {
+                            "nameUrl": "Newitem-duplicate-4.md",
+                            "title": "Beispiel: DocumentReference mit IHE-Codes",
+                            "generation": "markdown"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

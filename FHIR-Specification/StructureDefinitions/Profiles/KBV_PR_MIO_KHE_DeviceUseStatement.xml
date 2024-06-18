@@ -1,212 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-DeviceUseStatement"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_DeviceUseStatement"/>
-	<title value="KBV_PR_MIO_KHE_DeviceUseStatement"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet Informationen zur Benutzung eines Implantats ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="DeviceUseStatement"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="DeviceUseStatement">
-			<path value="DeviceUseStatement"/>
-			<definition value="Dieses Profil bildet Informationen zur Benutzung eines Implantats ab."/>
-		</element>
-		<element id="DeviceUseStatement.meta">
-			<path value="DeviceUseStatement.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="DeviceUseStatement.meta.versionId">
-			<path value="DeviceUseStatement.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.meta.lastUpdated">
-			<path value="DeviceUseStatement.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.meta.source">
-			<path value="DeviceUseStatement.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.meta.profile">
-			<path value="DeviceUseStatement.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement|1.0.0"/>
-		</element>
-		<element id="DeviceUseStatement.meta.security">
-			<path value="DeviceUseStatement.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.meta.tag">
-			<path value="DeviceUseStatement.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.implicitRules">
-			<path value="DeviceUseStatement.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.language">
-			<path value="DeviceUseStatement.language"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.text">
-			<path value="DeviceUseStatement.text"/>
-		</element>
-		<element id="DeviceUseStatement.text.status">
-			<path value="DeviceUseStatement.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="DeviceUseStatement.contained">
-			<path value="DeviceUseStatement.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.extension">
-			<path value="DeviceUseStatement.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="DeviceUseStatement.extension:menge">
-			<path value="DeviceUseStatement.extension"/>
-			<sliceName value="menge"/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Amount"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.extension:seitenlokalisation">
-			<path value="DeviceUseStatement.extension"/>
-			<sliceName value="seitenlokalisation"/>
-			<min value="0"/>
-			<max value="1"/>
-			<type>
-				<code value="Extension"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Site_Localization"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.identifier">
-			<path value="DeviceUseStatement.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.basedOn">
-			<path value="DeviceUseStatement.basedOn"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.status">
-			<path value="DeviceUseStatement.status"/>
-			<patternCode value="completed"/>
-		</element>
-		<element id="DeviceUseStatement.subject">
-			<path value="DeviceUseStatement.subject"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.subject.reference">
-			<path value="DeviceUseStatement.subject.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.subject.type">
-			<path value="DeviceUseStatement.subject.type"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.subject.identifier">
-			<path value="DeviceUseStatement.subject.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.subject.display">
-			<path value="DeviceUseStatement.subject.display"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.derivedFrom">
-			<path value="DeviceUseStatement.derivedFrom"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.timing[x]">
-			<path value="DeviceUseStatement.timing[x]"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.recordedOn">
-			<path value="DeviceUseStatement.recordedOn"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.source">
-			<path value="DeviceUseStatement.source"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.device">
-			<path value="DeviceUseStatement.device"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.device.reference">
-			<path value="DeviceUseStatement.device.reference"/>
-			<min value="1"/>
-		</element>
-		<element id="DeviceUseStatement.device.type">
-			<path value="DeviceUseStatement.device.type"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.device.identifier">
-			<path value="DeviceUseStatement.device.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.device.display">
-			<path value="DeviceUseStatement.device.display"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.reasonCode">
-			<path value="DeviceUseStatement.reasonCode"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.reasonReference">
-			<path value="DeviceUseStatement.reasonReference"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.bodySite">
-			<path value="DeviceUseStatement.bodySite"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.note">
-			<path value="DeviceUseStatement.note"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="DeviceUseStatement.note.author[x]">
-			<path value="DeviceUseStatement.note.author[x]"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.note.time">
-			<path value="DeviceUseStatement.note.time"/>
-			<max value="0"/>
-		</element>
-		<element id="DeviceUseStatement.note.text">
-			<path value="DeviceUseStatement.note.text"/>
-			<mustSupport value="true"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-DeviceUseStatement" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_DeviceUseStatement" />
+  <title value="KBV_PR_MIO_KHE_DeviceUseStatement" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet Informationen zur Benutzung eines Implantats oder Gerätes ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DeviceUseStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DeviceUseStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DeviceUseStatement">
+		<path value="DeviceUseStatement"/>
+		<definition value="Dieses Profil bildet Informationen zur Benutzung eines Implantats oder Gerätes ab."/>
+		<constraint>
+			<key value="dev-khe-1" />
+			<severity value="error" />
+			<human value="If timingPeriod.start exists at least year, month and day are needed" />
+			<expression value="timingPeriod.start.exists() implies timingPeriod.start.toString().length() &gt;= 10" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement" />
+      </constraint>
+	  <constraint>
+			<key value="dev-khe-2" />
+			<severity value="error" />
+			<human value="If timingPeriod.end exists at least year, month and day are needed" />
+			<expression value="timingPeriod.end.exists() implies timingPeriod.end.toString().length() &gt;= 10" />
+        <source value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement" />
+      </constraint>
+	</element>
+	<element id="DeviceUseStatement.meta">
+      <path value="DeviceUseStatement.meta" />
+      <min value="1" />
+    </element>
+    <element id="DeviceUseStatement.meta.versionId">
+      <path value="DeviceUseStatement.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.meta.lastUpdated">
+      <path value="DeviceUseStatement.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.meta.source">
+      <path value="DeviceUseStatement.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.meta.profile">
+      <path value="DeviceUseStatement.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="DeviceUseStatement.meta.profile:mioProfile">
+      <path value="DeviceUseStatement.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_DeviceUseStatement|1.0.0" />
+    </element>
+    <element id="DeviceUseStatement.meta.security">
+      <path value="DeviceUseStatement.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.meta.tag">
+      <path value="DeviceUseStatement.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.implicitRules">
+      <path value="DeviceUseStatement.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.language">
+      <path value="DeviceUseStatement.language" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.text">
+      <path value="DeviceUseStatement.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="DeviceUseStatement.text.status">
+      <path value="DeviceUseStatement.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="DeviceUseStatement.contained">
+      <path value="DeviceUseStatement.contained" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.extension">
+      <path value="DeviceUseStatement.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="2" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:menge">
+      <path value="DeviceUseStatement.extension" />
+      <sliceName value="menge" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Amount" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="DeviceUseStatement.extension:menge.value[x]">
+      <path value="DeviceUseStatement.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:menge.value[x]:valueInteger">
+      <path value="DeviceUseStatement.extension.value[x]" />
+      <sliceName value="valueInteger" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation">
+      <path value="DeviceUseStatement.extension" />
+      <sliceName value="seitenlokalisation" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="https://fhir.kbv.de/StructureDefinition/KBV_EX_MIO_KHE_Site_Localization" />
+      </type>
+      <mustSupport value="true" />
+      <isModifier value="false" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]">
+      <path value="DeviceUseStatement.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept">
+      <path value="DeviceUseStatement.extension.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept.coding">
+      <path value="DeviceUseStatement.extension.value[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept.coding.system">
+      <path value="DeviceUseStatement.extension.value[x].coding.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept.coding.version">
+      <path value="DeviceUseStatement.extension.value[x].coding.version" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept.coding.code">
+      <path value="DeviceUseStatement.extension.value[x].coding.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.extension:seitenlokalisation.value[x]:valueCodeableConcept.coding.display">
+      <path value="DeviceUseStatement.extension.value[x].coding.display" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.identifier">
+      <path value="DeviceUseStatement.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.basedOn">
+      <path value="DeviceUseStatement.basedOn" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.subject">
+      <path value="DeviceUseStatement.subject" />
+      <definition value="Hier wird die zu behandelnde Person referenziert" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.subject.reference">
+      <path value="DeviceUseStatement.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.subject.type">
+      <path value="DeviceUseStatement.subject.type" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.subject.identifier">
+      <path value="DeviceUseStatement.subject.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.subject.display">
+      <path value="DeviceUseStatement.subject.display" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.derivedFrom">
+      <path value="DeviceUseStatement.derivedFrom" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.timing[x]">
+      <path value="DeviceUseStatement.timing[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <definition value="Hier kann das Datum der Implantation und Explantation abgebildet werden." />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.timing[x]:timingPeriod">
+      <path value="DeviceUseStatement.timing[x]" />
+      <sliceName value="timingPeriod" />
+      <type>
+        <code value="Period" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.timing[x]:timingPeriod.start">
+      <path value="DeviceUseStatement.timing[x].start" />
+      <definition value="Hier kann das Datum der Implantation abgebildet werden." />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.timing[x]:timingPeriod.end">
+      <path value="DeviceUseStatement.timing[x].end" />
+      <definition value="Hier kann das Datum der Explantation abgebildet werden." />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.recordedOn">
+      <path value="DeviceUseStatement.recordedOn" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.source">
+      <path value="DeviceUseStatement.source" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.device">
+      <path value="DeviceUseStatement.device" />
+      <definition value="Hier erfolgt die Referenzierung auf das zugehörige Gerät/Implantat." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Device_Implant|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.device.reference">
+      <path value="DeviceUseStatement.device.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="DeviceUseStatement.device.type">
+      <path value="DeviceUseStatement.device.type" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.device.identifier">
+      <path value="DeviceUseStatement.device.identifier" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.device.display">
+      <path value="DeviceUseStatement.device.display" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.reasonCode">
+      <path value="DeviceUseStatement.reasonCode" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.reasonReference">
+      <path value="DeviceUseStatement.reasonReference" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.bodySite">
+      <path value="DeviceUseStatement.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="DeviceUseStatement.note">
+      <path value="DeviceUseStatement.note" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>

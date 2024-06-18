@@ -1,539 +1,689 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-	<id value="KBV-PR-MIO-KHE-RelatedPerson-Contact-Person"/>
-	<url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person"/>
-	<version value="1.0.0"/>
-	<name value="KBV_PR_MIO_KHE_RelatedPerson_Contact_Person"/>
-	<title value="KBV_PR_MIO_KHE_RelatedPerson_Contact_Person"/>
-	<status value="draft"/>
-	<publisher value="Kassenärztliche Bundesvereinigung (KBV)"/>
-	<description value="Dieses Profil bildet eine Kontaktperson ab."/>
-	<copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation."/>
-	<fhirVersion value="4.0.1"/>
-	<kind value="resource"/>
-	<abstract value="false"/>
-	<type value="RelatedPerson"/>
-	<baseDefinition value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
-	<derivation value="constraint"/>
-	<differential>
-		<element id="RelatedPerson">
-			<path value="RelatedPerson"/>
-			<definition value="Dieses Profil bildet eine Kontaktperson ab."/>
-		</element>
-		<element id="RelatedPerson.meta">
-			<path value="RelatedPerson.meta"/>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.meta.versionId">
-			<path value="RelatedPerson.meta.versionId"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.meta.lastUpdated">
-			<path value="RelatedPerson.meta.lastUpdated"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.meta.source">
-			<path value="RelatedPerson.meta.source"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.meta.profile">
-			<path value="RelatedPerson.meta.profile"/>
-			<min value="1"/>
-			<max value="1"/>
-			<patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0"/>
-		</element>
-		<element id="RelatedPerson.meta.security">
-			<path value="RelatedPerson.meta.security"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.meta.tag">
-			<path value="RelatedPerson.meta.tag"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.implicitRules">
-			<path value="RelatedPerson.implicitRules"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.language">
-			<path value="RelatedPerson.language"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.text">
-			<path value="RelatedPerson.text"/>
-		</element>
-		<element id="RelatedPerson.text.status">
-			<path value="RelatedPerson.text.status"/>
-			<patternCode value="extensions"/>
-		</element>
-		<element id="RelatedPerson.contained">
-			<path value="RelatedPerson.contained"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.identifier">
-			<path value="RelatedPerson.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.active">
-			<path value="RelatedPerson.active"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.patient">
-			<path value="RelatedPerson.patient"/>
-			<type>
-				<code value="Reference"/>
-				<targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.patient.reference">
-			<path value="RelatedPerson.patient.reference"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.patient.type">
-			<path value="RelatedPerson.patient.type"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.patient.identifier">
-			<path value="RelatedPerson.patient.identifier"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.patient.display">
-			<path value="RelatedPerson.patient.display"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.relationship">
-			<path value="RelatedPerson.relationship"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.relationship.coding">
-			<path value="RelatedPerson.relationship.coding"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-			<binding>
-				<strength value="required"/>
-				<valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Role_Contact_Person_MIO42|1.0.0"/>
-			</binding>
-		</element>
-		<element id="RelatedPerson.relationship.coding.system">
-			<path value="RelatedPerson.relationship.coding.system"/>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.relationship.coding.version">
-			<path value="RelatedPerson.relationship.coding.version"/>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.relationship.coding.code">
-			<path value="RelatedPerson.relationship.coding.code"/>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.relationship.coding.display">
-			<path value="RelatedPerson.relationship.coding.display"/>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.relationship.coding.userSelected">
-			<path value="RelatedPerson.relationship.coding.userSelected"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.relationship.text">
-			<path value="RelatedPerson.relationship.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name">
-			<path value="RelatedPerson.name"/>
-			<min value="1"/>
-			<max value="1"/>
-			<type>
-				<code value="HumanName"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Name|1.2.1"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.text">
-			<path value="RelatedPerson.name.text"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family">
-			<path value="RelatedPerson.name.family"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension">
-			<path value="RelatedPerson.name.family.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:namenszusatz">
-			<path value="RelatedPerson.name.family.extension"/>
-			<sliceName value="namenszusatz"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:namenszusatz.value[x]">
-			<path value="RelatedPerson.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:namenszusatz.value[x]:valueString">
-			<path value="RelatedPerson.name.family.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:nachname">
-			<path value="RelatedPerson.name.family.extension"/>
-			<sliceName value="nachname"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:nachname.value[x]">
-			<path value="RelatedPerson.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:nachname.value[x]:valueString">
-			<path value="RelatedPerson.name.family.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:vorsatzwort">
-			<path value="RelatedPerson.name.family.extension"/>
-			<sliceName value="vorsatzwort"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:vorsatzwort.value[x]">
-			<path value="RelatedPerson.name.family.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.family.extension:vorsatzwort.value[x]:valueString">
-			<path value="RelatedPerson.name.family.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.given">
-			<path value="RelatedPerson.name.given"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.prefix">
-			<path value="RelatedPerson.name.prefix"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.prefix.extension">
-			<path value="RelatedPerson.name.prefix.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.name.prefix.extension:prefix-qualifier">
-			<path value="RelatedPerson.name.prefix.extension"/>
-			<sliceName value="prefix-qualifier"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.prefix.extension:prefix-qualifier.value[x]">
-			<path value="RelatedPerson.name.prefix.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.prefix.extension:prefix-qualifier.value[x]:valueCode">
-			<path value="RelatedPerson.name.prefix.extension.valueCode"/>
-			<sliceName value="valueCode"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.name.suffix">
-			<path value="RelatedPerson.name.suffix"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.name.period">
-			<path value="RelatedPerson.name.period"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.telecom">
-			<path value="RelatedPerson.telecom"/>
-			<type>
-				<code value="ContactPoint"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Contactpoint|1.2.1"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.system">
-			<path value="RelatedPerson.telecom.system"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension">
-			<path value="RelatedPerson.telecom.system.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension:anzeigenameCode">
-			<path value="RelatedPerson.telecom.system.extension"/>
-			<sliceName value="anzeigenameCode"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension:anzeigenameCode.extension">
-			<path value="RelatedPerson.telecom.system.extension.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="1"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension:anzeigenameCode.extension:content">
-			<path value="RelatedPerson.telecom.system.extension.extension"/>
-			<sliceName value="content"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension:anzeigenameCode.extension:content.value[x]">
-			<path value="RelatedPerson.telecom.system.extension.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.system.extension:anzeigenameCode.extension:content.value[x]:valueString">
-			<path value="RelatedPerson.telecom.system.extension.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.value">
-			<path value="RelatedPerson.telecom.value"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.telecom.use">
-			<path value="RelatedPerson.telecom.use"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.telecom.rank">
-			<path value="RelatedPerson.telecom.rank"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.telecom.period">
-			<path value="RelatedPerson.telecom.period"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.gender">
-			<path value="RelatedPerson.gender"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.birthDate">
-			<path value="RelatedPerson.birthDate"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.address">
-			<path value="RelatedPerson.address"/>
-			<type>
-				<code value="Address"/>
-				<profile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_Datatype_Street_Address|1.2.1"/>
-			</type>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.extension">
-			<path value="RelatedPerson.address.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="RelatedPerson.address.extension:Stadtteil">
-			<path value="RelatedPerson.address.extension"/>
-			<sliceName value="Stadtteil"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.extension:Stadtteil.value[x]">
-			<path value="RelatedPerson.address.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.extension:Stadtteil.value[x]:valueString">
-			<path value="RelatedPerson.address.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line">
-			<path value="RelatedPerson.address.line"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension">
-			<path value="RelatedPerson.address.line.extension"/>
-			<slicing>
-				<discriminator>
-					<type value="value"/>
-					<path value="url"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<min value="0"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Strasse">
-			<path value="RelatedPerson.address.line.extension"/>
-			<sliceName value="Strasse"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Strasse.value[x]">
-			<path value="RelatedPerson.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Strasse.value[x]:valueString">
-			<path value="RelatedPerson.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Hausnummer">
-			<path value="RelatedPerson.address.line.extension"/>
-			<sliceName value="Hausnummer"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Hausnummer.value[x]">
-			<path value="RelatedPerson.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Hausnummer.value[x]:valueString">
-			<path value="RelatedPerson.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Adresszusatz">
-			<path value="RelatedPerson.address.line.extension"/>
-			<sliceName value="Adresszusatz"/>
-			<min value="0"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Adresszusatz.value[x]">
-			<path value="RelatedPerson.address.line.extension.value[x]"/>
-			<slicing>
-				<discriminator>
-					<type value="type"/>
-					<path value="$this"/>
-				</discriminator>
-				<rules value="closed"/>
-			</slicing>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.line.extension:Adresszusatz.value[x]:valueString">
-			<path value="RelatedPerson.address.line.extension.valueString"/>
-			<sliceName value="valueString"/>
-			<min value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.city">
-			<path value="RelatedPerson.address.city"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.state">
-			<path value="RelatedPerson.address.state"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.address.postalCode">
-			<path value="RelatedPerson.address.postalCode"/>
-			<max value="1"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.country">
-			<path value="RelatedPerson.address.country"/>
-			<mustSupport value="true"/>
-		</element>
-		<element id="RelatedPerson.address.period">
-			<path value="RelatedPerson.address.period"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.photo">
-			<path value="RelatedPerson.photo"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.period">
-			<path value="RelatedPerson.period"/>
-			<max value="0"/>
-		</element>
-		<element id="RelatedPerson.communication">
-			<path value="RelatedPerson.communication"/>
-			<max value="0"/>
-		</element>
-	</differential>
+  <id value="KBV-PR-MIO-KHE-RelatedPerson-Contact-Person" />
+  <url value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person" />
+  <version value="1.0.0" />
+  <name value="KBV_PR_MIO_KHE_RelatedPerson_Contact_Person" />
+  <title value="KBV_PR_MIO_KHE_RelatedPerson_Contact_Person" />
+  <status value="draft" />
+  <publisher value="Kassenärztliche Bundesvereinigung (KBV)" />
+  <description value="Dieses Profil bildet eine Kontaktperson ab." />
+  <copyright value="Im folgenden Profil können Codes aus den Code-Systemen SNOMED CT®, LOINC, Ucum, ATC, ICD-10-GM, ICD-10-WHO, OPS, Alpha-ID/Alpha-ID-SE und ICF enthalten sein, die dem folgenden Urheberrecht unterliegen: This material includes SNOMED CT® Clinical Terms® (SNOMED CT® CT®) which is used by permission of SNOMED CT® International. All rights reserved. SNOMED CT® CT®, was originally created by The College of American Pathologists. SNOMED CT® and SNOMED CT® CT are registered trademarks of SNOMED CT® International. Implementers of these artefacts must have the appropriate SNOMED CT® CT Affiliate license. This material contains content from LOINC (http://LOINC.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://LOINC.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc. This product includes all or a portion of the UCUM table, UCUM codes, and UCUM definitions or is derived from it, subject to a license from Regenstrief Institute, Inc. and The UCUM Organization. Your use of the UCUM table, UCUM codes, UCUM definitions also is subject to this license, a copy of which is available at ​http://unitsofmeasure.org. The current complete UCUM table, UCUM Specification are available for download at ​http://unitsofmeasure.org. The UCUM table and UCUM codes are copyright © 1995-2009, Regenstrief Institute, Inc. and the Unified Codes for Units of Measures (UCUM) Organization. All rights reserved. THE UCUM TABLE (IN ALL FORMATS), UCUM DEFINITIONS, AND SPECIFICATION ARE PROVIDED 'AS IS.' ANY EXPRESS OR IMPLIED WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. Dieses Material enthält Inhalte aus ATC. Die Erstellung erfolgte unter Verwendung der Datenträger der amtlichen Fassung der ATC-Klassifikation mit DDD des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICD-10-GM, ICD-10-WHO, OPS Alpha-ID ans Alpha-ID-SE. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Bundesinstituts für Arzneimittel und Medizinprodukte (BfArM). Dieses Material enthält Inhalte aus ICF. Die Erstellung erfolgt unter Verwendung der maschinenlesbaren Fassung des Deutschen Instituts für Medizinische Dokumentation und Information (DIMDI). ICF-Kodes, -Begriffe und -Texte © Weltgesundheitsorganisation, übersetzt und herausgegeben durch das Deutsche Institut für Medizinische Dokumentation und Information von der International classification of functioning, disability and health – ICF, herausgegeben durch die Weltgesundheitsorganisation." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="RelatedPerson" />
+  <baseDefinition value="https://fhir.kbv.de/StructureDefinition/KBV_PR_Base_RelatedPerson|1.4.0" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="RelatedPerson.meta">
+      <path value="RelatedPerson.meta" />
+      <min value="1" />
+    </element>
+    <element id="RelatedPerson.meta.versionId">
+      <path value="RelatedPerson.meta.versionId" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.meta.lastUpdated">
+      <path value="RelatedPerson.meta.lastUpdated" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.meta.source">
+      <path value="RelatedPerson.meta.source" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.meta.profile">
+      <path value="RelatedPerson.meta.profile" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="RelatedPerson.meta.profile:mioProfile">
+      <path value="RelatedPerson.meta.profile" />
+      <sliceName value="mioProfile" />
+      <min value="1" />
+      <max value="1" />
+      <patternCanonical value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_RelatedPerson_Contact_Person|1.0.0" />
+    </element>
+    <element id="RelatedPerson.meta.security">
+      <path value="RelatedPerson.meta.security" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.meta.tag">
+      <path value="RelatedPerson.meta.tag" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.implicitRules">
+      <path value="RelatedPerson.implicitRules" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.language">
+      <path value="RelatedPerson.language" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.text">
+      <path value="RelatedPerson.text" />
+      <definition value="In diesem Element können die in der Instanz enthaltenen Informationen in einer menschenlesbaren Form zusammengefasst werden. Dabei ist zu beachten, dass keine Informationen aufgenommen werden dürfen, die nicht in strukturierter Form an anderer Stelle in der Instanz enthalten sind." />
+    </element>
+    <element id="RelatedPerson.text.status">
+      <path value="RelatedPerson.text.status" />
+      <patternCode value="extensions" />
+    </element>
+    <element id="RelatedPerson.contained">
+      <path value="RelatedPerson.contained" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.extension">
+      <path value="RelatedPerson.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.extension:Hinweis">
+      <path value="RelatedPerson.extension" />
+      <sliceName value="Hinweis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.extension:Hinweis.value[x]">
+      <path value="RelatedPerson.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.extension:Hinweis.value[x]:valueString">
+      <path value="RelatedPerson.extension.value[x]" />
+      <sliceName value="valueString" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.identifier">
+      <path value="RelatedPerson.identifier" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.active">
+      <path value="RelatedPerson.active" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.patient">
+      <path value="RelatedPerson.patient" />
+      <definition value="Hier erfolgt die Referenzierung auf die zu behandelnde Person." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://fhir.kbv.de/StructureDefinition/KBV_PR_MIO_KHE_Patient|1.0.0" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.patient.reference">
+      <path value="RelatedPerson.patient.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.patient.type">
+      <path value="RelatedPerson.patient.type" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.patient.identifier">
+      <path value="RelatedPerson.patient.identifier" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.patient.display">
+      <path value="RelatedPerson.patient.display" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.relationship">
+      <path value="RelatedPerson.relationship" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding">
+      <path value="RelatedPerson.relationship.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste">
+      <path value="RelatedPerson.relationship.coding" />
+      <sliceName value="bevorzugteWerteliste" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="https://fhir.kbv.de/ValueSet/KBV_VS_MIO_KHE_Contact_Person_Relationship_Type" />
+      </binding>
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste.system">
+      <path value="RelatedPerson.relationship.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste.version">
+      <path value="RelatedPerson.relationship.coding.version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste.code">
+      <path value="RelatedPerson.relationship.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste.display">
+      <path value="RelatedPerson.relationship.coding.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.relationship.coding:bevorzugteWerteliste.userSelected">
+      <path value="RelatedPerson.relationship.coding.userSelected" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.relationship.text">
+      <path value="RelatedPerson.relationship.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name">
+      <path value="RelatedPerson.name" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.text">
+      <path value="RelatedPerson.name.text" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family">
+      <path value="RelatedPerson.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension">
+      <path value="RelatedPerson.name.family.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:namenszusatz">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:namenszusatz.value[x]">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:namenszusatz.value[x]:valueString">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:nachname">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="nachname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:nachname.value[x]">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:nachname.value[x]:valueString">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:vorsatzwort">
+      <path value="RelatedPerson.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:vorsatzwort.value[x]">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.family.extension:vorsatzwort.value[x]:valueString">
+      <path value="RelatedPerson.name.family.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.given">
+      <path value="RelatedPerson.name.given" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.prefix">
+      <path value="RelatedPerson.name.prefix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.prefix.extension">
+      <path value="RelatedPerson.name.prefix.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.prefix.extension:prefix-qualifier">
+      <path value="RelatedPerson.name.prefix.extension" />
+      <sliceName value="prefix-qualifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.prefix.extension:prefix-qualifier.value[x]">
+      <path value="RelatedPerson.name.prefix.extension.value[x]" />
+      <slicing>
+		<discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.prefix.extension:prefix-qualifier.value[x]:valueCode">
+      <path value="RelatedPerson.name.prefix.extension.value[x]" />
+      <sliceName value="valueCode" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.name.suffix">
+      <path value="RelatedPerson.name.suffix" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.name.period">
+      <path value="RelatedPerson.name.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.telecom">
+      <path value="RelatedPerson.telecom" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.telecom.system">
+      <path value="RelatedPerson.telecom.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.telecom.value">
+      <path value="RelatedPerson.telecom.value" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.telecom.use">
+      <path value="RelatedPerson.telecom.use" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.telecom.rank">
+      <path value="RelatedPerson.telecom.rank" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.telecom.period">
+      <path value="RelatedPerson.telecom.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.gender">
+      <path value="RelatedPerson.gender" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension">
+      <path value="RelatedPerson.gender.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich">
+      <path value="RelatedPerson.gender.extension" />
+      <sliceName value="other-amtlich" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]">
+      <path value="RelatedPerson.gender.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding">
+      <path value="RelatedPerson.gender.extension.value[x]" />
+      <sliceName value="valueCoding" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding.system">
+      <path value="RelatedPerson.gender.extension.value[x].system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding.version">
+      <path value="RelatedPerson.gender.extension.value[x].version" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding.code">
+      <path value="RelatedPerson.gender.extension.value[x].code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding.display">
+      <path value="RelatedPerson.gender.extension.value[x].display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.gender.extension:other-amtlich.value[x]:valueCoding.userSelected">
+      <path value="RelatedPerson.gender.extension.value[x].userSelected" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.birthDate">
+      <path value="RelatedPerson.birthDate" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address">
+      <path value="RelatedPerson.address" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift">
+      <path value="RelatedPerson.address" />
+      <sliceName value="Strassenanschrift" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.extension">
+      <path value="RelatedPerson.address.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.extension:Stadtteil">
+      <path value="RelatedPerson.address.extension" />
+      <sliceName value="Stadtteil" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.extension:Stadtteil.value[x]">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.extension:Stadtteil.value[x]:valueString">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.use">
+      <path value="RelatedPerson.address.use" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.text">
+      <path value="RelatedPerson.address.text" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line">
+      <path value="RelatedPerson.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension">
+      <path value="RelatedPerson.address.line.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Strasse">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Strasse" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Strasse.value[x]">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Strasse.value[x]:valueString">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Hausnummer">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Hausnummer.value[x]">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Hausnummer.value[x]:valueString">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Adresszusatz">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.line.extension:Adresszusatz.value[x]:valueString">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.city">
+      <path value="RelatedPerson.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.state">
+      <path value="RelatedPerson.address.state" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.postalCode">
+      <path value="RelatedPerson.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.country">
+      <path value="RelatedPerson.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Strassenanschrift.period">
+      <path value="RelatedPerson.address.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach">
+      <path value="RelatedPerson.address" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension">
+      <path value="RelatedPerson.address.extension" />
+      <slicing>
+		<discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil">
+      <path value="RelatedPerson.address.extension" />
+      <sliceName value="Stadtteil" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.extension:Stadtteil.value[x]:valueString">
+      <path value="RelatedPerson.address.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.use">
+      <path value="RelatedPerson.address.use" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.text">
+      <path value="RelatedPerson.address.text" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line">
+      <path value="RelatedPerson.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach">
+      <path value="RelatedPerson.address.line.extension" />
+      <sliceName value="Postfach" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.line.extension:Postfach.value[x]:valueString">
+      <path value="RelatedPerson.address.line.extension.value[x]" />
+      <sliceName value="valueString" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.city">
+      <path value="RelatedPerson.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.state">
+      <path value="RelatedPerson.address.state" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.postalCode">
+      <path value="RelatedPerson.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.country">
+      <path value="RelatedPerson.address.country" />
+      <mustSupport value="true" />
+    </element>
+    <element id="RelatedPerson.address:Postfach.period">
+      <path value="RelatedPerson.address.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.photo">
+      <path value="RelatedPerson.photo" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.period">
+      <path value="RelatedPerson.period" />
+      <max value="0" />
+    </element>
+    <element id="RelatedPerson.communication">
+      <path value="RelatedPerson.communication" />
+      <max value="0" />
+    </element>
+  </differential>
 </StructureDefinition>
