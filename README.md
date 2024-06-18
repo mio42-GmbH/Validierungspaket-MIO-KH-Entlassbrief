@@ -1,4 +1,4 @@
-# Validationpackage MIO KH-Entlassbrief Version 1.0.0 update
+# Validationpackage MIO KH-Entlassbrief Version 1.0.0 Update
 
 Disclaimer: This service is intended to help with the validation process. However, please note there is no claim to completeness, correctness or reliability.
 
